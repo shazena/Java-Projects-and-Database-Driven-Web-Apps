@@ -1,0 +1,160 @@
+2020-07-10T01:05:36.031721200 : Exception thrown in method: validateAndCalculateOrder: Date must be in the future.
+2020-07-10T01:07:46.906839300 : Exception thrown in method: validateAndCalculateOrder: Date must be in the future.
+2020-07-10T01:09:05.836268 : Exception thrown in method: validateAndCalculateOrder: Customer Name must contain only letters, numbers, commas, and periods.
+2020-07-10T01:12:33.702381200 : Exception thrown in method: validateAndCalculateOrder: Customer Name must contain only letters, numbers, commas, and periods.
+2020-07-10T01:13:06.411980800 : Exception thrown in method: validateAndCalculateOrder: Date must be in the future.
+2020-07-10T01:13:36.526411600 : addAnOrder: Order{dateOfOrder=2020-12-29, customerName=Shazena, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=Texas, taxRate=null}, productType=ProductType{productType=Wood, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=250, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}N
+2020-07-10T01:40:45.510682900 : addAnOrder: Order{dateOfOrder=1999-12-23, customerName=Shazena$$$, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=Texas, taxRate=null}, productType=ProductType{productType=Wood, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=250, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}N
+2020-07-10T01:55:38.051434700 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T01:55:38.055433600 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T01:55:38.056435 : Exception thrown in method: run: null
+2020-07-10T01:56:15.747192800 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T01:56:15.749197300 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T01:56:15.749197300 : Exception thrown in method: run: null
+2020-07-10T02:05:30.897096500 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:05:30.898096 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:05:30.899096400 : Exception thrown in method: run: null
+2020-07-10T02:05:50.047485 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:05:50.049485800 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:05:50.049485800 : Exception thrown in method: run: null
+2020-07-10T02:08:40.189682300 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:08:40.191681300 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:08:40.191681300 : Exception thrown in method: run: null
+2020-07-10T02:09:51.975965700 : Exception thrown in method: validateAndCalculateOrder: null
+2020-07-10T02:11:10.379397400 : addAnOrder: Order{dateOfOrder=2020-12-24, customerName=Sam, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=ca, taxRate=null}, productType=ProductType{productType=sda, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=null, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}N
+2020-07-10T02:13:49.979912 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:13:49.981911600 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:13:49.981911600 : Exception thrown in method: run: null
+2020-07-10T02:18:18.685767900 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:18:18.688767500 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:18:18.688767500 : Exception thrown in method: run: null
+2020-07-10T02:22:22.419189400 : addAnOrder: Order{dateOfOrder=2020-12-23, customerName=Shazena, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=teasd, taxRate=null}, productType=ProductType{productType=asf, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=234, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}N
+2020-07-10T02:25:42.748118500 : Exception thrown in method: validateAndCalculateOrder: null
+2020-07-10T02:26:34.508945300 : addAnOrder: Order{dateOfOrder=2021-03-04, customerName=Shaz, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=cali, taxRate=null}, productType=ProductType{productType=tile, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=345, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}N
+2020-07-10T02:26:52.812533 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:26:52.812533 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:26:52.812533 : Exception thrown in method: run: null
+2020-07-10T02:33:56.698009500 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:33:56.701004200 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:33:56.701004200 : Exception thrown in method: run: null
+2020-07-10T02:35:04.623820600 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:35:04.626811400 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:35:04.627810600 : Exception thrown in method: run: null
+2020-07-10T02:37:09.901608500 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:37:09.903602200 : Exception thrown in method: run: null
+2020-07-10T02:38:17.041343 : Exception thrown in method: getAllOrdersForSpecifiedDate: null
+2020-07-10T02:38:17.044374100 : Exception thrown in method: run: null
+2020-07-10T02:45:34.651468300 : Exception thrown in method: getAllOrdersForSpecifiedDate: There are no orders for 03/12/1999
+2020-07-10T04:15:08.005813700 : Exception thrown in method: getOneOrder: null
+2020-07-10T04:15:08.007814700 : Exception thrown in method: getAnOrder: null
+2020-07-10T04:15:08.007814700 : Exception thrown in method: run: null
+2020-07-10T04:20:29.213238800 : Exception thrown in method: getAnOrder: null
+2020-07-10T04:20:29.215239700 : Exception thrown in method: run: null
+2020-07-10T04:21:42.753492500 : Exception thrown in method: getAnOrder: That order does not exist
+2020-07-10T04:22:39.985886200 : Exception thrown in method: getAnOrder: That order does not exist
+2020-07-10T04:23:51.085212100 : Exception thrown in method: getAnOrder: That order does not exist
+2020-07-10T04:26:25.168536800 : addAnOrder: Order{dateOfOrder=2020-12-29, customerName=Shazena, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Laminate, costPerSquareFoot=1.75, laborCostPerSquareFoot=2.10}, area=250, orderNumber=4, materialCostForOrder=437.50, laborCostForOrder=525.00, taxForOrder=42.831250, totalForOrder=1005.331250}Y
+2020-07-10T04:29:15.408013600 : editAnOrder: Order{dateOfOrder=2020-12-29, customerName=Shazena, Inc., taxInfo=StateTaxInfo{stateAbbreviation=CA, stateName=California, taxRate=25.00}, productType=ProductType{productType=Wood, costPerSquareFoot=5.15, laborCostPerSquareFoot=4.75}, area=230, orderNumber=5, materialCostForOrder=1184.50, laborCostForOrder=1092.50, taxForOrder=569.2500, totalForOrder=2846.2500}Y
+2020-07-10T04:33:52.257768100 : editAnOrder: Order{dateOfOrder=2020-12-29, customerName=Shaz, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Laminate, costPerSquareFoot=1.75, laborCostPerSquareFoot=2.10}, area=250, orderNumber=6, materialCostForOrder=437.50, laborCostForOrder=525.00, taxForOrder=42.831250, totalForOrder=1005.331250}Y
+2020-07-10T04:35:09.301457900 : editAnOrder: Order{dateOfOrder=2020-12-29, customerName=SK Incorporated, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Laminate, costPerSquareFoot=1.75, laborCostPerSquareFoot=2.10}, area=250, orderNumber=4, materialCostForOrder=437.50, laborCostForOrder=525.00, taxForOrder=42.831250, totalForOrder=1005.331250}Y
+2020-07-10T04:37:12.005812800 : Exception thrown in method: getAnOrder: That order does not exist
+2020-07-10T04:37:45.863762500 : removeAnOrder: 2020-12-294Y
+2020-07-10T04:38:35.794448400 : removeAnOrder: 2020-12-295Y
+2020-07-10T04:40:56.457853200 : addAnOrder: Order{dateOfOrder=2020-07-12, customerName=Tenzin, taxInfo=StateTaxInfo{stateAbbreviation=CA, stateName=California, taxRate=25.00}, productType=ProductType{productType=Wood, costPerSquareFoot=5.15, laborCostPerSquareFoot=4.75}, area=140, orderNumber=7, materialCostForOrder=721.00, laborCostForOrder=665.00, taxForOrder=346.5000, totalForOrder=1732.5000}Y
+2020-07-10T04:43:18.828718600 : removeAnOrder: 2020-12-296Y
+2020-07-10T15:35:58.167313600 : Exception thrown in method: validateAndCalculateOrder: null
+2020-07-10T15:37:49.770824100 : removeAnOrder: 2013-06-011Y
+2020-07-10T17:04:42.398177200 : Exception thrown in method: getAllOrdersForSpecifiedDate: There are no orders for 06/01/2013
+2020-07-10T17:06:38.961322500 : Exception thrown in method: validateAndCalculateOrder: null
+2020-07-10T17:12:01.376731800 : Exception thrown in method: getAnOrder: That order does not exist
+2020-07-11T00:48:39.822496600 : Exception thrown in method: getAllOrdersForSpecifiedDate: null : There are no orders for 04/20/0059
+2020-07-11T00:52:24.693039 : Exception thrown in method: getAllOrdersForSpecifiedDate: There are no orders for 04/20/1959
+2020-07-11T01:02:45.385034200 : Exception thrown in method: validateAndCalculateOrder: begin 0, end 1, length 0
+2020-07-11T01:02:45.387999100 : Exception thrown in method: run: begin 0, end 1, length 0
+2020-07-11T01:05:52.484724200 : Exception thrown in method: validateAndCalculateOrder: begin 0, end 1, length 0
+2020-07-11T01:05:52.487113400 : Exception thrown in method: run: begin 0, end 1, length 0
+2020-07-11T01:08:29.017528400 : Exception thrown in method: validateAndCalculateOrder: begin 0, end 1, length 0
+2020-07-11T01:08:29.019525600 : Exception thrown in method: run: begin 0, end 1, length 0
+2020-07-11T01:09:58.584685100 : Exception thrown in method: validateAndCalculateOrder: begin 0, end 1, length 0
+2020-07-11T01:09:58.585684700 : Exception thrown in method: run: begin 0, end 1, length 0
+2020-07-11T01:20:51.647766900 : Exception thrown in method: editValidateAndCalculateOrder: null
+2020-07-11T01:22:48.896103400 : editAnOrder: Order{dateOfOrder=2020-07-12, customerName=Tenzin, taxInfo=StateTaxInfo{stateAbbreviation=CA, stateName=California, taxRate=25.00}, productType=ProductType{productType=Laminate, costPerSquareFoot=1.75, laborCostPerSquareFoot=2.10}, area=140, orderNumber=7, materialCostForOrder=245.00, laborCostForOrder=294.00, taxForOrder=134.7500, totalForOrder=673.7500}Y
+2020-07-11T01:47:40.158546900 : Exception thrown in method: getAnOrder: That order does not exist
+2020-07-11T01:48:36.750368 : Exception thrown in method: getAnOrder: That order does not exist
+2020-07-11T01:51:16.923266900 : Exception thrown in method: getAnOrder: That order does not exist
+2020-07-11T01:52:41.628591 : editAnOrder: Order{dateOfOrder=2013-06-02, customerName=Albert Einstein, taxInfo=StateTaxInfo{stateAbbreviation=KY, stateName=Kentucky, taxRate=6.00}, productType=ProductType{productType=Wood, costPerSquareFoot=5.15, laborCostPerSquareFoot=4.75}, area=217.00, orderNumber=3, materialCostForOrder=1117.5500, laborCostForOrder=1030.7500, taxForOrder=128.898000, totalForOrder=2277.198000}N
+2020-07-11T01:55:57.603277900 : editAnOrder: Order{dateOfOrder=2013-06-02, customerName=Albert Einstein, taxInfo=StateTaxInfo{stateAbbreviation=KY, stateName=Kentucky, taxRate=6.00}, productType=ProductType{productType=Wood, costPerSquareFoot=5.15, laborCostPerSquareFoot=4.75}, area=230, orderNumber=3, materialCostForOrder=1184.50, laborCostForOrder=1092.50, taxForOrder=136.6200, totalForOrder=2413.6200}N
+2020-07-11T01:56:33.752473800 : editAnOrder: Order{dateOfOrder=2013-06-02, customerName=Albert Einstein, taxInfo=StateTaxInfo{stateAbbreviation=KY, stateName=Kentucky, taxRate=6.00}, productType=ProductType{productType=Carpet, costPerSquareFoot=2.25, laborCostPerSquareFoot=2.10}, area=217.00, orderNumber=3, materialCostForOrder=488.2500, laborCostForOrder=455.7000, taxForOrder=56.637000, totalForOrder=1000.587000}N
+2020-07-13T15:35:38.510705200 : Exception thrown in method: editValidateAndCalculateOrder: Orders from the past cannot be edited
+2020-07-13T15:37:40.928624 : Exception thrown in method: editValidateAndCalculateOrder: Orders from the past cannot be edited
+2020-07-13T15:37:53.361837100 : Exception thrown in method: getAnOrder: That order does not exist
+2020-07-13T16:39:42.644851200 : addAnOrder: Order{dateOfOrder=2020-12-29, customerName=Shazena Khan, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Tile, costPerSquareFoot=3.50, laborCostPerSquareFoot=4.15}, area=145, orderNumber=8, materialCostForOrder=507.50, laborCostForOrder=601.75, taxForOrder=49.361625, totalForOrder=1158.611625}Y
+2020-07-13T16:40:26.276693800 : Exception thrown in method: editValidateAndCalculateOrder: null
+2020-07-13T17:28:02.322555300 : Exception thrown in method: editValidateAndCalculateOrder: null
+2020-07-13T17:31:23.560004100 : Exception thrown in method: editValidateAndCalculateOrder: Orders from the past cannot be edited
+2020-07-14T14:44:30.672034 : Exception thrown in method: editValidateAndCalculateOrder: null
+2020-07-14T15:03:53.243399200 : Exception thrown in method: editValidateAndCalculateOrder: null
+2020-07-14T15:04:18.473858500 : Exception thrown in method: getAnOrder: That order does not exist
+2020-07-14T15:04:45.313412500 : Exception thrown in method: editValidateAndCalculateOrder: null
+2020-07-14T15:24:05.423816500 : Exception thrown in method: getAnOrderForEditing: null
+2020-07-14T16:39:55.698321100 : Exception thrown in method: getAllOrdersForSpecifiedDate: There are no orders for 12/29/1545
+2020-07-14T16:41:36.762652800 : Exception thrown in method: validateAndCalculateOrder: Area needs to be at least 100 SqFt., 
+2020-07-14T16:42:22.210656900 : Exception thrown in method: validateAndCalculateOrder: Date must be in the future., Customer Name must contain only letters, numbers, commas, and periods., State is not one that is sold in., Product not one of the available products., Area needs to be at least 100 SqFt., 
+2020-07-14T16:49:13.423394300 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2015-12-15, customerName=Sam$$, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=NY, taxRate=null}, productType=ProductType{productType=cArPeT, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=99, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: Date must be in the future., Customer Name must contain only letters, numbers, commas, and periods., State is not one that is sold in., Area needs to be at least 100 SqFt., 2020-07-15T05:09:04.818782 : addAnOrder: Order{dateOfOrder=2021-05-27, customerName=Zean, taxInfo=StateTaxInfo{stateAbbreviation=WA, stateName=Washington, taxRate=9.25}, productType=ProductType{productType=Tile, costPerSquareFoot=3.50, laborCostPerSquareFoot=4.15}, area=199, orderNumber=9, materialCostForOrder=696.50, laborCostForOrder=825.85, taxForOrder=140.817375, totalForOrder=1663.167375}Y
+2020-07-15T05:42:21.246416700 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2021-04-20, customerName=, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=NY, taxRate=null}, productType=ProductType{productType=, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=100, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: 
+2020-07-15T10:38:16.232906400 : removeAnOrder: 2020-07-127Y
+2020-07-15T10:39:05.735289800 : removeAnOrder: 2020-12-298Y
+2020-07-15T10:39:37.271350500 : removeAnOrder: 2021-05-279Y
+2020-07-15T10:40:19.289036600 : addAnOrder: Order{dateOfOrder=2020-07-30, customerName=Shazena, taxInfo=StateTaxInfo{stateAbbreviation=WA, stateName=Washington, taxRate=9.25}, productType=ProductType{productType=Laminate, costPerSquareFoot=1.75, laborCostPerSquareFoot=2.10}, area=125, orderNumber=4, materialCostForOrder=218.75, laborCostForOrder=262.50, taxForOrder=44.52, totalForOrder=525.77}Y
+2020-07-15T10:42:40.467139200 : addAnOrder: Order{dateOfOrder=2020-12-29, customerName=Shazena, Inc., taxInfo=StateTaxInfo{stateAbbreviation=WA, stateName=Washington, taxRate=9.25}, productType=ProductType{productType=Tile, costPerSquareFoot=3.50, laborCostPerSquareFoot=4.15}, area=199, orderNumber=5, materialCostForOrder=696.50, laborCostForOrder=825.85, taxForOrder=140.82, totalForOrder=1663.17}Y
+2020-07-15T12:02:19.313952600 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2020-07-12, customerName=Shazena, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=New York, taxRate=null}, productType=ProductType{productType=Carpet, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=99, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: Date must be in the future., State is not one that is sold in., Area needs to be at least 100 SqFt., 
+2020-07-15T12:36:20.272770900 : addAnOrder: Order{dateOfOrder=2020-12-29, customerName=Tony Stark, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Tile, costPerSquareFoot=3.50, laborCostPerSquareFoot=4.15}, area=200, orderNumber=6, materialCostForOrder=700.00, laborCostForOrder=830.00, taxForOrder=68.09, totalForOrder=1598.09}Y
+2020-07-15T12:37:44.997024800 : addAnOrder: Order{dateOfOrder=2020-07-30, customerName=Bucky Barnes, taxInfo=StateTaxInfo{stateAbbreviation=CA, stateName=California, taxRate=25.00}, productType=ProductType{productType=Wood, costPerSquareFoot=5.15, laborCostPerSquareFoot=4.75}, area=450, orderNumber=7, materialCostForOrder=2317.50, laborCostForOrder=2137.50, taxForOrder=1113.75, totalForOrder=5568.75}Y
+2020-07-15T12:59:28.563473800 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2020-07-30, customerName=Dean Winchester, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=68798, taxRate=null}, productType=ProductType{productType=658798, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=45, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: State is not one that is sold in., Product not one of the available products., Area needs to be at least 100 SqFt., 
+2020-07-15T13:16:29.957827800 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2020-07-30, customerName=Bruce Banner, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=New York, taxRate=null}, productType=ProductType{productType=laminate, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=56, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: State is not one that is sold in., Area needs to be at least 100 SqFt., 
+2020-07-15T13:17:40.762633800 : addAnOrder: Order{dateOfOrder=2020-07-30, customerName=Bruce Banner, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Wood, costPerSquareFoot=5.15, laborCostPerSquareFoot=4.75}, area=567, orderNumber=8, materialCostForOrder=2920.05, laborCostForOrder=2693.25, taxForOrder=249.79, totalForOrder=5863.09}Y
+2020-07-16T15:01:07.385904100 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2020-07-16, customerName=narish singh, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=NY, taxRate=null}, productType=ProductType{productType=wOoD, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=99, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: Date must be in the future., State is not one that is sold in., Area needs to be at least 100 SqFt., 
+2020-07-16T16:58:19.150662500 : Exception thrown in method: getAnOrderForEditing: Arguments: 2013-06-023 Errors: Orders from the past cannot be edited, 
+2020-07-16T18:10:26.903193400 : Exception thrown in method: getAnOrderForEditing: Arguments: 2020-12-254 Errors: 
+2020-07-16T18:11:31.027968300 : Exception thrown in method: getAnOrderForEditing: Arguments: 1969-04-302 Errors: 
+2020-07-16T18:12:30.017681900 : Exception thrown in method: getAnOrderForEditing: Arguments: 2020-06-023 Errors: 
+2020-07-16T18:12:38.544716200 : Exception thrown in method: getAnOrderForEditing: Arguments: 2013-06-023 Errors: Orders from the past cannot be edited, 
+2020-07-16T18:13:02.821661500 : Exception thrown in method: getAnOrderForEditing: Arguments: 2013-06-023 Errors: Orders from the past cannot be edited, 
+2020-07-16T18:13:33.989212700 : Exception thrown in method: getAnOrderForEditing: Arguments: 2013-06-023 Errors: Orders from the past cannot be edited, 
+2020-07-18T00:41:35.734914200 : editAnOrder: Order{dateOfOrder=2013-06-02, customerName=Alberto Einstein, taxInfo=StateTaxInfo{stateAbbreviation=KY, stateName=Kentucky, taxRate=6.00}, productType=ProductType{productType=Carpet, costPerSquareFoot=2.25, laborCostPerSquareFoot=2.10}, area=217.00, orderNumber=3, materialCostForOrder=488.25, laborCostForOrder=455.70, taxForOrder=56.64, totalForOrder=1000.59} :: Y :: 
+2020-07-18T00:42:43.307340500 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=1999-12-15, customerName=Alexi$, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=Wyoming, taxRate=null}, productType=ProductType{productType=Hardwood, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=99, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: Date must be in the future., Customer Name must contain only letters, numbers, commas, and periods., State is not one that is sold in., Product not one of the available products., Area needs to be at least 100 SqFt., 
+2020-07-18T00:43:11.773179200 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2020-12-29, customerName=Shazena Khan, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=New York, taxRate=null}, productType=ProductType{productType=Carpet, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=125, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: State is not one that is sold in., 
+2020-07-18T00:44:11.271925 : addAnOrder: Order{dateOfOrder=2020-12-29, customerName=Shazena, taxInfo=StateTaxInfo{stateAbbreviation=WA, stateName=Washington, taxRate=9.25}, productType=ProductType{productType=Tile, costPerSquareFoot=3.50, laborCostPerSquareFoot=4.15}, area=125, orderNumber=9, materialCostForOrder=437.50, laborCostForOrder=518.75, taxForOrder=86.06, totalForOrder=1042.31} :: Y :: 
+2020-07-18T00:45:39.310822400 : Exception thrown in method: getAnOrder: Arguments: 2940-12-203 Errors: 
+2020-07-18T00:48:22.246915500 : Exception thrown in method: getAllOrdersForSpecifiedDate: Arguments: 2040-12-20 Errors: 
+2020-07-18T00:49:41.670020300 : Exception thrown in method: getAllOrdersForSpecifiedDate: Arguments: 2040-12-23 : There are no orders for 12/23/2040
+2020-07-18T00:52:06.726784300 : addAnOrder: Order{dateOfOrder=2020-12-29, customerName=Scott Lang, taxInfo=StateTaxInfo{stateAbbreviation=CA, stateName=California, taxRate=25.00}, productType=ProductType{productType=Laminate, costPerSquareFoot=1.75, laborCostPerSquareFoot=2.10}, area=134, orderNumber=10, materialCostForOrder=234.50, laborCostForOrder=281.40, taxForOrder=128.98, totalForOrder=644.88} :: Y :: 
+2020-07-18T00:53:17.499357100 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=1999-12-14, customerName=Mari$a, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=New York, taxRate=null}, productType=ProductType{productType=Grass, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=45, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: Date must be in the future., Customer Name must contain only letters, numbers, commas, and periods., State is not one that is sold in., Product not one of the available products., Area needs to be at least 100 SqFt., 
+2020-07-18T00:56:14.149747300 : Exception thrown in method: getAnOrder: Arguments: 2020-02-233 : That order does not exist
+2020-07-21T00:28:50.547638800 : removeAnOrder: 2020-07-30 :: 7 :: N :: 
+2020-07-21T00:30:35.853458400 : removeAnOrder: 2020-07-30 :: 7 :: N :: 
+2020-07-21T00:35:19.284519800 : Exception thrown in method: getAnOrder: Arguments: 0200-07-307 : That order does not exist
+2020-07-21T00:35:29.645746200 : removeAnOrder: 2020-07-30 :: 7 :: Y :: 
+2020-07-22T00:27:40.453037500 : addAnOrder: Order{dateOfOrder=2020-12-29, customerName=Tenzin Woesel, taxInfo=StateTaxInfo{stateAbbreviation=KY, stateName=Kentucky, taxRate=6.00}, productType=ProductType{productType=Tile, costPerSquareFoot=3.50, laborCostPerSquareFoot=4.15}, area=145, orderNumber=11, materialCostForOrder=507.50, laborCostForOrder=601.75, taxForOrder=66.56, totalForOrder=1175.81} :: N :: 
+2020-07-22T00:55:56.428967300 : addAnOrder: Order{dateOfOrder=2020-10-19, customerName=Tenzin Woesel, taxInfo=StateTaxInfo{stateAbbreviation=CA, stateName=California, taxRate=25.00}, productType=ProductType{productType=Wood, costPerSquareFoot=5.15, laborCostPerSquareFoot=4.75}, area=124, orderNumber=11, materialCostForOrder=638.60, laborCostForOrder=589.00, taxForOrder=306.90, totalForOrder=1534.50} :: Y :: 
+2020-07-22T00:56:22.186048300 : addAnOrder: Order{dateOfOrder=2021-05-27, customerName=Zean Khan, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Laminate, costPerSquareFoot=1.75, laborCostPerSquareFoot=2.10}, area=134, orderNumber=12, materialCostForOrder=234.50, laborCostForOrder=281.40, taxForOrder=20.64, totalForOrder=536.54} :: N :: 
+2020-07-22T00:56:41.130265500 : Exception thrown in method: getAnOrder: Arguments: 2020-10-204 : That order does not exist
+2020-07-22T00:57:29.696658900 : editAnOrder: Order{dateOfOrder=2020-10-19, customerName=Tenzin, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Wood, costPerSquareFoot=5.15, laborCostPerSquareFoot=4.75}, area=124, orderNumber=11, materialCostForOrder=638.60, laborCostForOrder=589.00, taxForOrder=49.10, totalForOrder=1276.70} :: Y :: 
+2020-07-22T00:58:00.426131900 : editAnOrder: Order{dateOfOrder=2020-10-19, customerName=Tenzin Woesel, taxInfo=StateTaxInfo{stateAbbreviation=WA, stateName=Washington, taxRate=9.25}, productType=ProductType{productType=Carpet, costPerSquareFoot=2.25, laborCostPerSquareFoot=2.10}, area=124, orderNumber=11, materialCostForOrder=279.00, laborCostForOrder=260.40, taxForOrder=48.55, totalForOrder=587.95} :: N :: 
+2020-07-22T00:58:15.202967700 : removeAnOrder: 2020-10-19 :: 11 :: N :: 
+2020-07-22T00:59:26.480234400 : removeAnOrder: 2020-10-19 :: 11 :: N :: 
+2020-07-22T00:59:39.373339500 : removeAnOrder: 2020-10-19 :: 11 :: Y :: 
+2020-07-22T16:52:00.691672100 : addAnOrder: Order{dateOfOrder=2020-07-30, customerName=Samuel, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Laminate, costPerSquareFoot=1.75, laborCostPerSquareFoot=2.10}, area=123, orderNumber=11, materialCostForOrder=215.25, laborCostForOrder=258.30, taxForOrder=18.94, totalForOrder=492.49} :: N :: 
+2020-07-23T15:13:17.805297100 : Exception thrown in method: getAllOrdersForSpecifiedDate: Arguments: 2020-12-29 : There are no orders for 12/29/2020
+2020-07-23T15:13:29.563969800 : Exception thrown in method: getAllOrdersForSpecifiedDate: Arguments: 0200-12-29 : There are no orders for 12/29/0200
+2020-07-23T15:14:00.552132600 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2020-12-29, customerName=Shazena Khan, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=Texss, taxRate=null}, productType=ProductType{productType=Laminate, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=123, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: State is not one that is sold in., 
+2020-07-23T15:14:16.091243400 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2020-12-29, customerName=Shazena Khan, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=Texas, taxRate=null}, productType=ProductType{productType=Carpet, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=123, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 : No value present
+2020-07-23T15:14:16.092245600 : Exception thrown in method: run: Arguments:  : No value present
+2020-07-23T15:16:47.391537300 : Exception thrown in method: getAllOrdersForSpecifiedDate: Arguments: 2020-12-29 : There are no orders for 12/29/2020
+2020-07-23T15:17:01.075425300 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2020-12-29, customerName=Shazena, taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=Texas, taxRate=null}, productType=ProductType{productType=Tile, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=123, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 : No value present
+2020-07-23T15:17:01.075425300 : Exception thrown in method: run: Arguments:  : No value present
+2020-07-23T15:18:14.807255200 : addAnOrder: Order{dateOfOrder=2020-12-29, customerName=Shazena, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Tile, costPerSquareFoot=3.50, laborCostPerSquareFoot=4.15}, area=123, orderNumber=1, materialCostForOrder=430.50, laborCostForOrder=510.45, taxForOrder=37.64, totalForOrder=978.59} :: N :: 
+2020-07-24T10:02:59.322324800 : Exception thrown in method: validateAndCalculateOrder: Arguments: Order{dateOfOrder=2020-08-12, customerName=Acme, Inc., taxInfo=StateTaxInfo{stateAbbreviation=null, stateName=New York, taxRate=null}, productType=ProductType{productType=Hardwood, costPerSquareFoot=null, laborCostPerSquareFoot=null}, area=99, orderNumber=0, materialCostForOrder=null, laborCostForOrder=null, taxForOrder=null, totalForOrder=null}0 Errors: State is not one that is sold in., Product not one of the available products., Area needs to be at least 100 SqFt., 
+2020-07-24T10:03:52.470262100 : addAnOrder: Order{dateOfOrder=2020-09-01, customerName=Randy, taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Tile, costPerSquareFoot=3.50, laborCostPerSquareFoot=4.15}, area=123, orderNumber=11, materialCostForOrder=430.50, laborCostForOrder=510.45, taxForOrder=37.64, totalForOrder=978.59} :: Y :: 
+2020-07-24T10:06:37.399987500 : removeAnOrder: 2020-09-01 :: 11 :: Y :: 
+2020-07-24T10:08:06.965869500 : editAnOrder: Order{dateOfOrder=2020-12-29, customerName=Shazena, Inc., taxInfo=StateTaxInfo{stateAbbreviation=TX, stateName=Texas, taxRate=4.45}, productType=ProductType{productType=Wood, costPerSquareFoot=5.15, laborCostPerSquareFoot=4.75}, area=345, orderNumber=5, materialCostForOrder=1776.75, laborCostForOrder=1638.75, taxForOrder=136.62, totalForOrder=3552.12} :: Y :: 

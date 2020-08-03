@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop  
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+        
+    <bean id = "userIO" class = "com.skshazena.flooringmastery.ui.UserIOConsoleImpl"/>
+    <bean id = "view" class = "com.skshazena.flooringmastery.ui.FlooringView">
+        <constructor-arg ref = "userIO"/>
+    </bean>
+    
+    <bean id = "orderDao" class = "com.skshazena.flooringmastery.dao.FlooringOrderDaoFileImpl"/>
+    <bean id = "productDao" class = "com.skshazena.flooringmastery.dao.FlooringProductDaoFileImpl"/>
+    <bean id = "taxDao" class = "com.skshazena.flooringmastery.dao.FlooringTaxDaoFileImpl"/>
+    <bean id = "exportDao" class = "com.skshazena.flooringmastery.dao.FlooringExportDaoFileImpl"/>
+    
+    <bean id = "auditDao" class = "com.skshazena.flooringmastery.dao.FlooringAuditDaoFileImpl"/>
+    
+    <bean id = "service" class="com.skshazena.flooringmastery.service.FlooringServiceImpl">
+        <constructor-arg ref = "orderDao"/>
+        <constructor-arg ref = "productDao"/>
+        <constructor-arg ref = "taxDao"/>
+        <constructor-arg ref = "exportDao"/>
+    </bean>
+    
+    <bean id = "controller" class = "com.skshazena.flooringmastery.controller.FlooringController">
+        <constructor-arg ref = "view"/>
+        <constructor-arg ref = "service"/>
+    </bean>
+    
+    <bean id = "loggingAdvice" class = "com.skshazena.flooringmastery.advice.LoggingAdvice">
+        <constructor-arg ref = "auditDao"/>
+    </bean>
+    
+    <aop:config>
+        <aop:aspect ref = "loggingAdvice">
+            <aop:after-returning 
+                method="writeAuditEntry"
+                pointcut="execution(* com.skshazena.flooringmastery.service.FlooringService.addAnOrder(..))"
+            />
+            <aop:after-returning 
+                method="writeAuditEntry"
+                pointcut="execution(* com.skshazena.flooringmastery.service.FlooringService.editAnOrder(..))"
+            />
+            <aop:after-returning 
+                method="writeAuditEntry"
+                pointcut="execution(* com.skshazena.flooringmastery.service.FlooringService.removeAnOrder(..))"
+            />
+            <aop:after-throwing 
+                method="writeExceptionAuditEntry"
+                pointcut="execution (* *(..))"
+                throwing="ex"
+            />
+        </aop:aspect>
+    </aop:config>
+    
+</beans>
+

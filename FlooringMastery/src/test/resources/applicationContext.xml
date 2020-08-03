@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop  
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <!--    TEST FILE    -->
+
+    <bean id = "flooringOrderDao" class="com.skshazena.flooringmastery.dao.FlooringOrderDaoFileImpl"> 
+        <constructor-arg value=".\\Test\\Orders"/>
+    </bean>   
+    
+    <bean id = "flooringProductDao" class="com.skshazena.flooringmastery.dao.FlooringProductDaoFileImpl">    
+        <constructor-arg value = ".\\Test\\Data\\Products.txt"/>
+    </bean>   
+    
+    <bean id = "flooringTaxDao" class="com.skshazena.flooringmastery.dao.FlooringTaxDaoFileImpl">    
+        <constructor-arg value = ".\\Test\\Data\\Taxes.txt"/>
+    </bean>   
+    
+    <bean id = "flooringOrderDaoStub" class = "com.skshazena.flooringmastery.service.FlooringOrderDaoStubImpl"/> 
+    <bean id = "flooringProductDaoStub" class = "com.skshazena.flooringmastery.service.FlooringProductDaoStubImpl"/> 
+    <bean id = "flooringTaxDaoStub" class = "com.skshazena.flooringmastery.service.FlooringTaxDaoStubImpl"/> 
+    <bean id = "flooringExportDaoStub" class = "com.skshazena.flooringmastery.service.FlooringExportDaoStubImpl"/> 
+    
+    <bean id = "service" class = "com.skshazena.flooringmastery.service.FlooringServiceImpl">
+        <constructor-arg ref = "flooringExportDaoStub"/>
+        <constructor-arg ref = "flooringOrderDaoStub"/>
+        <constructor-arg ref = "flooringProductDaoStub"/>
+        <constructor-arg ref = "flooringTaxDaoStub"/>
+    </bean>
+   
+</beans>

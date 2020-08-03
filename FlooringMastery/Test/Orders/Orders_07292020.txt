@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+1,Scott Lang,NY,4.50,Carpet,129,2.45,3.98,316.05,513.42,37.33,866.80

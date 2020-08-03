@@ -1,0 +1,7 @@
+Water::0.25::10
+Apples::1.00::0
+Snickers::1.35::16
+Bananas::0.75::10
+Twix::2.00::24
+Oranges::2.00::11
+M&Ms::1.00::32

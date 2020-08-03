@@ -1,0 +1,4 @@
+com\skshazena\vendingmachine\service\VendingMachineServiceImplTest.class
+com\skshazena\vendingmachine\dao\VendingMachineDaoFileImplTest.class
+com\skshazena\vendingmachine\service\VendingMachineDaoStubImpl.class
+com\skshazena\vendingmachine\service\VendingMachineAuditDaoStubImpl.class

@@ -1,0 +1,8 @@
+com\skshazena\dvdlibrary\App.class
+com\skshazena\dvdlibrary\ui\UserIO.class
+com\skshazena\dvdlibrary\controller\DVDLibraryController.class
+com\skshazena\dvdlibrary\dao\DVDLibraryDao.class
+com\skshazena\dvdlibrary\ui\DVDLibraryView.class
+com\skshazena\dvdlibrary\dto\DVD.class
+com\skshazena\dvdlibrary\ui\UserIOConsoleImpl.class
+com\skshazena\dvdlibrary\dao\DVDLibraryDaoFileImpl.class

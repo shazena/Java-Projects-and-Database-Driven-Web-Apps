@@ -1,0 +1,8 @@
+com\skshazena\flooringmastery\service\FlooringTaxDaoStubImpl.class
+com\skshazena\flooringmastery\dao\FlooringTaxDaoFileImplTest.class
+com\skshazena\flooringmastery\dao\FlooringOrderDaoFileImplTest.class
+com\skshazena\flooringmastery\service\FlooringProductDaoStubImpl.class
+com\skshazena\flooringmastery\service\FlooringExportDaoStubImpl.class
+com\skshazena\flooringmastery\service\FlooringOrderDaoStubImpl.class
+com\skshazena\flooringmastery\service\FlooringServiceImplTest.class
+com\skshazena\flooringmastery\dao\FlooringProductDaoFileImplTest.class

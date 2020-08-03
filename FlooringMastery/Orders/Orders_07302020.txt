@@ -1,0 +1,3 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+4,Shazena,WA,9.25,Laminate,125,1.75,2.10,218.75,262.50,44.52,525.77
+8,Bruce Banner,TX,4.45,Wood,567,5.15,4.75,2920.05,2693.25,249.79,5863.09

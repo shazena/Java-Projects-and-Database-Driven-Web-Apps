@@ -1,0 +1,267 @@
+2020-06-06T14:00:53.223572 : Snickers has been updated.No Change in PriceOld Quantity: 12 New Quantity: 15
+2020-06-06T14:01:19.039749300 : Snickers has been updated.No Change in PriceOld Quantity: 12 New Quantity: 15
+2020-06-06T14:02:23.265773700 : Snickers has been updated.No Change in PriceOld Quantity: 12 New Quantity: 15
+2020-06-06T14:02:23.279659100 : Twix has been updated.Old Price: $2. New Price: $1Old Quantity: 10 New Quantity: 21
+2020-06-06T14:04:10.548216400 : Snickers has been updated. No Change in Price. Old Quantity: 12 New Quantity: 15
+2020-06-06T14:04:10.563958800 : Twix has been updated. Old Price: $2. New Price: $1Old Quantity: 10 New Quantity: 21
+2020-06-06T14:04:38.931816 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:04:38.956994200 : Twix has been updated.  Old Price: $2. New Price: $1 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:06:45.993929200 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:06:46.013451500 : Twix has been updated.  Old Price: $2. New Price: $1 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:06:46.028851800 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:25:21.690620200 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:25:21.708572600 : Twix has been updated.  Old Price: $2. New Price: $1 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:25:47.261075700 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:25:47.272048100 : Twix has been updated.  Old Price: $2. New Price: $1 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:25:47.284014300 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:26:18.583907400 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:26:18.601860 : Twix has been updated.  Old Price: $2. New Price: $1 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:26:18.624801300 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:26:45.879680200 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:26:45.890651200 : Twix has been updated.  Old Price: $2. New Price: $1 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:26:45.901622 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:27:05.061346800 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:27:05.072318200 : Twix has been updated.  Old Price: $2. New Price: $1 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:27:05.086279800 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:31:50.873907500 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:31:50.887872100 : Twix has been updated.  Old Price: $2. New Price: $1 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:31:50.903830300 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:31:50.905825 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:31:50.908816400 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:32:30.840918100 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:32:30.861861800 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:32:30.883803200 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:33:15.202023100 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:33:15.212993300 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:34:26.009079500 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:34:26.021047400 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:34:57.371043 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:34:57.392980800 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:34:57.413925900 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:34:57.417915600 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:34:57.421904300 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:40:31.922881600 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:40:31.935847200 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:40:31.949810500 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:40:31.952803100 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:40:31.954797600 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:40:31.961779 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:41:59.039648200 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:41:59.053125 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:41:59.067088500 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:41:59.071075500 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:42:33.032025 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:42:33.048492500 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:42:33.063452500 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:42:33.067442700 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:42:33.070434700 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:42:33.078413100 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:43:49.016070 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:43:49.026588 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:43:49.037521900 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:43:49.039516500 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:43:49.042508700 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:43:49.048492500 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:44:32.367057300 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:44:32.385008700 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:44:32.402956900 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:44:32.406948200 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:44:32.408977 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:44:32.417916800 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:44:48.248359200 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:44:48.261292400 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:44:48.274257700 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:44:48.276255300 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:45:09.916482700 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:45:09.928449300 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:45:09.942413500 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:45:09.944407700 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:45:09.947398800 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:45:09.954381100 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:45:30.126211200 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:45:30.142168 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:45:30.160119500 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:45:30.163111600 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:46:03.150272100 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:46:03.164235600 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:46:03.179195500 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:46:03.181189900 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:46:03.183186400 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:46:03.190170200 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:46:41.457813 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:46:41.470777400 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:46:41.482745600 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:46:41.484740600 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:46:41.487732200 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:46:41.492719800 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:47:22.370273 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:47:22.387231100 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:47:22.408172200 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:47:22.413158500 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:47:22.417148300 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:47:22.426124500 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:48:08.344053200 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:48:08.356030700 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:48:08.366994700 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:48:08.369983400 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:48:08.372975200 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:48:08.378962200 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:51:58.177292900 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:51:58.192253200 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:51:58.203224500 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:51:58.206217400 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:52:08.831226900 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:52:08.842227700 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:52:08.854166 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:52:08.856161 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:52:08.858155300 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:52:08.863141800 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:52:08.871121400 : Snickerswas purchased. Qty remaining: 15
+2020-06-06T14:54:10.976770700 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:54:10.986741500 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:54:10.997712400 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:54:11.000704700 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:54:11.002700700 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:54:11.009691500 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:54:11.020650700 : Snickerswas purchased. Qty remaining: 14
+2020-06-06T14:56:06.099649800 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:56:06.118598300 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:56:06.135553100 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:56:06.140539800 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:56:06.143529 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:56:06.152504500 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:56:06.167468100 : Snickerswas purchased. Qty remaining: 14
+2020-06-06T14:56:06.174449800 : Snickerswas purchased. Qty remaining: 13
+2020-06-06T14:56:22.186962500 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:56:22.197962 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:56:22.209904400 : New Item, Ritz Qty: 10 has been added.
+2020-06-06T14:56:22.211897900 : New Item, Honey Bun Qty: 14 has been added.
+2020-06-06T14:56:22.214890600 : New Item, Chips Qty: 20 has been added.
+2020-06-06T14:56:22.220872100 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:56:22.229847700 : Snickerswas purchased. Qty remaining: 14
+2020-06-06T14:56:22.232842100 : Snickerswas purchased. Qty remaining: 13
+2020-06-06T14:58:35.478815800 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T14:58:35.489786100 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T14:58:35.502751200 : New Item, Ritz, Qty: 10, has been added.
+2020-06-06T14:58:35.505743700 : New Item, Honey Bun, Qty: 14, has been added.
+2020-06-06T14:58:35.508735500 : New Item, Chips, Qty: 20, has been added.
+2020-06-06T14:58:35.513721900 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T14:58:35.522697900 : Snickers was purchased. Qty remaining: 14
+2020-06-06T14:58:35.525690500 : Snickers was purchased. Qty remaining: 13
+2020-06-06T15:04:15.146700600 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T15:04:15.160663100 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T15:04:15.172634 : New Item, Ritz, Qty: 10, has been added.
+2020-06-06T15:04:15.176621200 : New Item, Honey Bun, Qty: 14, has been added.
+2020-06-06T15:04:15.179612900 : New Item, Chips, Qty: 20, has been added.
+2020-06-06T15:04:15.185596700 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T15:04:15.196567600 : Snickers was purchased. Qty remaining: 14
+2020-06-06T15:04:15.199559300 : Snickers was purchased. Qty remaining: 13
+2020-06-06T16:06:26.802532300 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T16:06:26.818547900 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T16:06:26.832303400 : New Item, Ritz, Qty: 10, has been added.
+2020-06-06T16:06:26.835522400 : New Item, Honey Bun, Qty: 14, has been added.
+2020-06-06T16:06:26.838568900 : New Item, Chips, Qty: 20, has been added.
+2020-06-06T16:06:26.846491700 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T16:06:26.859456300 : Snickers was purchased. Qty remaining: 14
+2020-06-06T16:06:26.865775200 : Snickers was purchased. Qty remaining: 13
+2020-06-06T16:07:11.950287300 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T16:07:11.967686600 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T16:07:11.985667100 : New Item, Ritz, Qty: 10, has been added.
+2020-06-06T16:07:11.988657900 : New Item, Honey Bun, Qty: 14, has been added.
+2020-06-06T16:07:11.991651100 : New Item, Chips, Qty: 20, has been added.
+2020-06-06T16:07:12.000662500 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T16:07:12.016930500 : Snickers was purchased. Qty remaining: 14
+2020-06-06T16:07:12.022914400 : Snickers was purchased. Qty remaining: 13
+2020-06-06T16:07:47.902566500 : Snickers has been updated. No Change in Price.  Old Quantity: 12 New Quantity: 15
+2020-06-06T16:07:47.946485100 : Twix has been updated.  Old Price: $2.00. New Price: $1.00 Old Quantity: 10 New Quantity: 21
+2020-06-06T16:07:47.992382300 : New Item, Ritz, Qty: 10, has been added.
+2020-06-06T16:07:47.998367 : New Item, Honey Bun, Qty: 14, has been added.
+2020-06-06T16:07:48.014360200 : New Item, Chips, Qty: 20, has been added.
+2020-06-06T16:07:48.021389700 : Chips has been updated. No Change in Price.  Old Quantity: 20 New Quantity: 12
+2020-06-06T16:07:48.034275200 : Snickers was purchased. Qty remaining: 14
+2020-06-06T16:07:48.042277200 : Snickers was purchased. Qty remaining: 13
+2020-06-07T15:06:01.891993100 : Twix was purchased. Qty remaining: 4
+2020-06-07T15:12:23.039314900 : Twix was purchased. Qty remaining: 3
+2020-06-07T15:12:37.048571800 : Snickers was purchased. Qty remaining: 9
+2020-06-07T15:16:16.229729100 : Snickers was purchased. Qty remaining: 8
+2020-06-07T15:16:46.964512 : Twix was purchased. Qty remaining: 2
+2020-06-07T15:17:48.064911500 : Twix was purchased. Qty remaining: 1
+2020-06-07T15:22:05.446228100 : Twix was purchased. Qty remaining: 0
+2020-06-07T15:49:48.822902400 : Snickers was purchased. Qty remaining: 7
+2020-06-07T16:13:04.270405200 : Snickers was purchased. Qty remaining: 6
+2020-06-07T16:14:27.319349900 : Twix was purchased. Qty remaining: 19
+2020-06-07T16:22:39.270987500 : Snickers was purchased. Qty remaining: 5
+2020-06-07T16:25:07.859013900 : Twix was purchased. Qty remaining: 18
+2020-06-07T16:25:50.963681700 : Snickers was purchased. Qty remaining: 4
+2020-06-07T23:25:31.300990100 : Snickers has been updated. No Change in Price.  Old Quantity: 4 New Quantity: 14
+2020-06-07T23:27:55.285540200 : Snickers has been removed from the vending machine.
+2020-06-07T23:32:52.508171700 : Twix has been updated. No Change in Price.  Old Quantity: 18 New Quantity: 15
+2020-06-07T23:36:36.302771400 : Twix has been updated. No Change in Price.  Old Quantity: 15 New Quantity: 25
+2020-06-07T23:37:07.046640700 : New Item, Snickers, Qty: 20, has been added.
+2020-06-07T23:37:25.650217100 : Lays Potato Chips has been removed from the vending machine.
+2020-06-07T23:40:35.748860700 : Snickers was purchased. Qty remaining: 19
+2020-06-07T23:50:15.337506900 : New Item, Apples, Qty: 10, has been added.
+2020-06-07T23:50:30.087167900 : Sneakers has been updated. No Change in Price.  Old Quantity: 0 New Quantity: 1
+2020-06-07T23:50:49.528445500 : Sneakers has been removed from the vending machine.
+2020-06-07T23:51:10.841620100 : New Item, Bananas, Qty: 10, has been added.
+2020-06-07T23:52:17.417804400 : Apples was purchased. Qty remaining: 9
+2020-06-07T23:56:53.622124500 : New Item, Water, Qty: 2, has been added.
+2020-06-08T00:00:26.599089500 : Apples has been updated. No Change in Price.  Old Quantity: 9 New Quantity: 13
+2020-06-08T00:06:10.037531800 : New Item, Sandals, Qty: 3, has been added.
+2020-06-08T00:07:21.526153800 : Apples has been updated.  Old Price: $0.50. New Price: $0.00 Old Quantity: 13 New Quantity: 14
+2020-06-08T00:07:56.205780 : Apples has been updated. No Change in Price. No Change in Quantity. 
+2020-06-08T00:13:40.109104200 : Apples has been updated.  Old Price: $0.00. New Price: $3.00No Change in Quantity. 
+2020-06-08T00:13:59.580696400 : Apples has been updated.  Old Price: $3.00. New Price: $0.00No Change in Quantity. 
+2020-06-08T11:17:28.330760900 : Apples was purchased. Qty remaining: 13
+2020-06-08T11:18:08.466321700 : New Item, Oranges, Qty: 12, has been added.
+2020-06-08T14:43:55.388698200 : Apples has been updated.  Old Price: $0.00. New Price: $2.00 Old Quantity: 13 New Quantity: 23
+2020-06-08T14:45:34.670768600 : Apples has been updated. No Change in Price.  Old Quantity: 23 New Quantity: 21
+2020-06-08T14:45:52.206820400 : Apples has been updated.  Old Price: $2.00. New Price: $0.00No Change in Quantity. 
+2020-06-08T14:55:14.296796800 : Apples has been updated.  Old Price: $0.00. New Price: $2.00No Change in Quantity. 
+2020-06-08T14:56:31.118695400 : Apples has been updated. No Change in Price. No Change in Quantity. 
+2020-06-08T14:56:53.523792200 : Apples has been updated. No Change in Price. No Change in Quantity. 
+2020-06-08T16:35:47.151869400 : Apples has been updated. No Change in Price. No Change in Quantity. 
+2020-06-08T22:23:55.739372600 : Bananas was purchased. Qty remaining: 9
+2020-06-08T23:22:37.386145 : Water was purchased. Qty remaining: 1
+2020-06-08T23:22:46.710596100 : Water was purchased. Qty remaining: 0
+2020-06-08T23:23:47.011880400 : Sandals has been removed from the vending machine.
+2020-06-08T23:23:56.998735 : Water has been updated. No Change in Price.  Old Quantity: 0 New Quantity: 10 
+2020-06-08T23:33:23.832309500 : Apples has been updated. No Change in Price.  Old Quantity: 21 New Quantity: 19 
+2020-06-08T23:47:11.329484300 : Apples has been updated. No Change in Price. No Change in Quantity. 
+2020-06-08T23:49:11.002892700 : New Item, sdf, Qty: 1, has been added.
+2020-06-08T23:49:23.673063900 : sdf has been removed from the vending machine.
+2020-06-10T23:40:28.570820800 : Bananas was purchased. Qty remaining: 8
+2020-06-10T23:40:49.114838 : Snickers was purchased. Qty remaining: 18
+2020-06-10T23:41:15.348029 : Apples has been updated.  Old Price: $2.00. New Price: $1.25 No Change in Quantity. 
+2020-06-10T23:42:32.508559 : Water has been updated. No Change in Price.  Old Quantity: 10 New Quantity: 2 
+2020-06-10T23:42:46.893655800 : Water was purchased. Qty remaining: 1
+2020-06-10T23:42:55.763567100 : Water was purchased. Qty remaining: 0
+2020-06-10T23:43:18.890001600 : Water has been removed from the vending machine.
+2020-06-11T00:40:54.765024200 : New Item, Water, Qty: 15, has been added.
+2020-06-11T00:41:09.865172100 : Water was purchased. Qty remaining: 14
+2020-06-11T00:41:25.422492800 : Apples was purchased. Qty remaining: 18
+2020-06-15T00:07:51.427749700 : Bananas has been updated. No Change in Price.  Old Quantity: 8 New Quantity: 2 
+2020-06-15T00:08:59.951894 : New Item, Laneige, Qty: 4, has been added.
+2020-06-15T00:10:25.168179800 : Laneige has been removed from the vending machine.
+2020-06-15T00:10:57.877980700 : Bananas was purchased. Qty remaining: 1
+2020-06-15T00:11:23.742945700 : Apples was purchased. Qty remaining: 17
+2020-06-15T00:11:37.222184300 : Bananas was purchased. Qty remaining: 0
+2020-06-15T09:46:01.025427100 : Bananas has been updated. No Change in Price.  Old Quantity: 0 New Quantity: 10 
+2020-06-15T09:46:59.205627600 : Snickers was purchased. Qty remaining: 17
+2020-06-15T09:49:07.932390 : New Item, Milky Way, Qty: 1, has been added.
+2020-06-15T09:49:29.348408600 : Milky Way was purchased. Qty remaining: 0
+2020-06-15T11:09:34.161862600 : Snickers was purchased. Qty remaining: 16
+2020-06-15T15:46:43.993772700 : Water was purchased. Qty remaining: 13
+2020-06-15T15:47:29.649416800 : Water was purchased. Qty remaining: 12
+2020-06-15T15:48:15.374201800 : Water was purchased. Qty remaining: 11
+2020-06-15T15:50:15.489748600 : Water was purchased. Qty remaining: 10
+2020-06-15T15:51:55.517687200 : Milky Way has been updated.  Old Price: $1.00. New Price: $100.00  Old Quantity: 0 New Quantity: 10 
+2020-06-17T20:24:34.661394500 : Twix was purchased. Qty remaining: 24
+2020-06-22T15:50:08.008636600 : removeItemFromInventory: Milky Way
+2020-06-22T15:52:10.216606800 : addNewItemToInventory: Item{name = M&Ms, price = 1.00, quanity = 30}
+2020-06-22T15:52:32.220178400 : updateInventory: Item{name = M&Ms, price = 1.00, quanity = 32}
+2020-06-22T15:53:17.108502500 : purchaseItem: Oranges100.39
+2020-06-29T12:23:44.269638700 : removeItemFromInventory: Apples
+2020-06-29T12:23:55.580950300 : addNewItemToInventory: Item{name = Apples, price = 1.00, quanity = 1}
+2020-06-29T12:24:13.258467100 : Exception thrown: Not enough money provided. $0.50 was given. Still need $0.50
+2020-06-29T12:24:26.520862300 : purchaseItem: Apples1.25

@@ -1,0 +1,2 @@
+State,StateName,TaxRate
+WV,Oklahoma,4.59

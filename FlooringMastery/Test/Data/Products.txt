@@ -1,0 +1,2 @@
+ProductType,CostPerSquareFoot,LaborCostPerSquareFoot
+Uno,4.29,9.23

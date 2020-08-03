@@ -1,0 +1,5 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+5,Shazena%$^&?&#% Inc.,TX,4.45,Wood,345,5.15,4.75,1776.75,1638.75,136.62,3552.12
+6,Tony Stark,TX,4.45,Tile,200,3.50,4.15,700.00,830.00,68.09,1598.09
+9,Shazena,WA,9.25,Tile,125,3.50,4.15,437.50,518.75,86.06,1042.31
+10,Scott Lang,CA,25.00,Laminate,134,1.75,2.10,234.50,281.40,128.98,644.88

@@ -1,0 +1,195 @@
+@startuml
+
+package com.skshazena.vendingmachine.controller{
+  
+    class VendingMachineController{
+        -VendingMachineView view
+        -VendingMachineService service
+
+        +VendingMachineController(VendingMachineService service, VendingMachineView view)
+
+        +void run()
+        -collectInfoAndAddNewItem()
+        -collectInfoAndRemoveItem()
+        -collectInfoAndUpdateItem()
+        -collectMoneyAndPurchaseItem()
+        -enterMaintenanceMode()
+        -enterPurchaseMode()
+        -exitMessage()
+        -getAndDisplayInventoryMaintenance()
+        -getAndDisplayInventoryPurchase()
+        -getMenuSelection()
+
+    }
+}
+
+package com.skshazena.vendingmachine.dto{
+    class Item{
+        -String name
+        -BigDecimal price
+        -int quantity
+
+        +Item() {name: String, price: BigDecimal, quantity: int}
+
+        +String getName()
+        +BigDecimal getPrice()
+        +int getQuantity()
+        +void setPrice() {price: BigDecimal}
+        +void getQuantity() {quantity: int}
+        +boolean equals() {object: Object}
+        +int hashCode() 
+        +String toString()
+    }
+
+    enum Coins{
+        QUARTERS
+        DIMES
+        NICKELS
+        PENNIES
+
+        -int value
+
+        -Coins() {value: int}
+
+        +int getValue() 
+        +Coins valueOf() {name: String}
+        +Coins[] values() 
+    }
+}
+
+package com.skshazena.vendingmachine.dao{
+    interface VendingMachineDao{
+        +List<Item> getAllItems()
+        +Item addItem() {itemName: String, item Item}
+        +Item removeItem() {itemName: String}
+        +Item getItem() {itemName: String}
+    }
+
+    class VendingMachineDaoFileImpl <VendingMachineDao>{
+        -Map<String, Item> inventory
+        -final String INVENTORY_FILE
+        +final String DELIMETER
+
+        +VendingMahcineDaoFileImpl()
+        +VendingMachineDaoFileImpl() {INVENTORY_FILE: String}
+        -Item unmarshallItem() {itemAsString: String}
+        -String marshallItem() {anItem: Item}
+        -void loadInventory()
+        -void writeInventory()
+    }
+
+    interface VendingMachineAuditDao{
+        +writeAuditEntry() {entry: String}
+    }
+    
+    class VendingMachineAuditDaoImpl <VendingMachineAuditDao>{
+        +String AUDIT_FILE
+    }
+}
+
+package com.skshazena.vendingmachine.service{
+
+    interface VendingMachineService{
+        +void addNewItemToInventory() {newItem: Item}
+        +void updateInventory() {item: Item}
+        +void removeItem() {itemName: String}
+        +List<Item> getAllItemsMaintenance()
+        +Item getItemMaintenance() {itemName: String}
+        
+        +List<Item> getAllItemsPurchase()
+        +Item getItemPurchase() {itemName: String}
+        +Item purchaseItem() {itemName: String, moneyGiven: BigDecimal}
+        +int[] calculateChangeInCoins() {itemName: String, moneyGiven: BigDecimal}
+    }
+    
+    class VendingMachineServiceImpl <VendingMachineService>{
+        -VendingMachineDao dao
+        -VendingMachineAuditDao auditDao
+        
+        +VendingMachineServiceImpl() {dao: VendingMachineDao, auditDao: VendingMachineAuditDao}
+
+        -validateItem() {anItem: Item}
+    }
+    
+    class Change{
+        -int quarters
+        -int dimes
+        -int nickels
+        -int pennies
+
+        +int getQuarters()
+        +int getDimes()
+        +int getNickels()
+        +int getPennies()
+        -int calculateQuarters() {totalChange: int}
+        -int calculateDimes() {totalChange: int}
+        -int calculateNickels() {totalChange: int}
+        +calculateChange() {change: int}
+    }
+
+}
+
+
+package com.skshazena.vendingmachine.ui{
+    class VendingMachineView{
+        -UserIO io
+
+        +VendingMachineView() {io: UserIO}
+
+        +void welcomeMessage()
+        +void displayMainMenuBanner()
+        +int displayMainMenuAndGetSelection()
+        
+        +void displayAllInventoryPurchase() {listOfItems: List<Item>}
+        +void displayOneItemPurchase() {anItem: Item}
+        +int displayPurchaseMenuAndGetSelection()
+        +BigDecimal getMoney()
+        +String getItemName()
+        +void displaySuccessfulPurchaseInfo() {purchasedItem: Item, changeInCoins: int[]}
+
+        +void displayMaintenanceModeBanner()
+        +String getMaintenancePassword()
+        +void displayMaintenanceIncorrectPasswordBanner()
+        +int displayMaintenanceMenuAndGetSelection()
+        +void displayAllInventoryMaintenance() {listOfItems: List<Item>}
+        +void displayOneItemMaintenance() {anItem: Item}
+        +Item getUpdatedItemInfo() {itemToUpdate: Item}
+        +void displayMaintenanceSuccessBanner() {itemName: String, whatHappened: String}
+        +Item getNewItemInfo() {newItemName: String}
+
+        +void displayExitBanner()
+        +void displayErrorMessage() {errorMsg: String}
+    }
+
+    interface UserIO{
+        +void print() {String prompt}
+        +String readString() {String prompt}
+        +int readInt() {String prompt}
+        +int readInt() {String prompt, int min, int max}
+        +double readDouble() {String prompt}
+        +double readDouble() {String prompt, double min, double max}
+        +float readFloat() {String prompt}
+        +float readFloat() {String prompt, float min, float max}
+        +long readLong() {String prompt}
+        +long readLong() {String prompt, long min, long max}
+    }
+
+    class UserIOConsoleImpl <UserIO>{
+        +Scanner inputReader
+    }
+}
+
+/'Arrows'/
+VendingMachineController o--|> VendingMachineView : view
+VendingMachineController o--|> VendingMachineService : service
+VendingMachineService o--|> VendingMachineDao : dao
+VendingMachineService o--|> VendingMachineAuditDao : auditDao
+VendingMachineView o--|> UserIO : io
+VendingMachineDaoFileImpl o--> Item: inventory
+VendingMachineDao <|.. VendingMachineDaoFileImpl : implements
+VendingMachineAuditDao <|.. VendingMachineAuditDaoImpl : implements
+VendingMachineService <|.. VendingMachineServiceImpl : implements
+UserIO <|.. UserIOConsoleImpl : implements
+
+@enduml
+

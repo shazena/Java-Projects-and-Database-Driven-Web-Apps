@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop  
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <!-- Bean definitions go here -->
+    
+    
+    
+    <!--    UserIO io = new UserIOConsoleImpl();
+    VendingMachineView view = new VendingMachineView(io);
+    VendingMachineDao dao = new VendingMachineDaoFileImpl();
+    VendingMachineAuditDao auditDao = new VendingMachineAuditDaoImpl();
+    VendingMachineService service = new VendingMachineServiceImpl(dao, auditDao);
+    VendingMachineController controller = new VendingMachineController(service, view);-->
+    
+    <bean id = "userIO" class = "com.skshazena.vendingmachine.ui.UserIOConsoleImpl"/>   
+    <bean id = "view" class = "com.skshazena.vendingmachine.ui.VendingMachineView">
+        <constructor-arg ref = "userIO"/>
+    </bean>
+ 
+    <bean id = "dao" class = "com.skshazena.vendingmachine.dao.VendingMachineDaoFileImpl"/>
+    
+    <bean id = "auditDao" class = "com.skshazena.vendingmachine.dao.VendingMachineAuditDaoImpl"/>
+    
+    <bean id = "service" class = "com.skshazena.vendingmachine.service.VendingMachineServiceImpl">
+        <constructor-arg ref = "dao"/>   
+        <constructor-arg ref = "auditDao"/>
+    </bean>
+    
+    <bean id = "controller" class = "com.skshazena.vendingmachine.controller.VendingMachineController">
+        <constructor-arg ref = "service"/>
+        <constructor-arg ref = "view"/>
+    </bean> 
+    
+    <bean id = "loggingAdvice" class = "com.skshazena.vendingmachine.advice.LoggingAdvice">
+        <constructor-arg ref = "auditDao"/>
+    </bean>
+    
+    <aop:config>
+        <aop:aspect ref="loggingAdvice">
+            <aop:after-returning
+                method="writeAuditEntry"
+                pointcut="execution(* com.skshazena.vendingmachine.service.VendingMachineService.addNewItemToInventory(..))"
+            />
+            <aop:after-returning
+                method="writeAuditEntry"
+                pointcut="execution(* com.skshazena.vendingmachine.service.VendingMachineService.updateInventory(..))"
+            />
+            <aop:after-returning
+                method="writeAuditEntry"
+                pointcut="execution(* com.skshazena.vendingmachine.service.VendingMachineService.removeItemFromInventory(..))"
+            />
+            <aop:after-returning
+                method="writeAuditEntry"
+                pointcut="execution(* com.skshazena.vendingmachine.service.VendingMachineService.purchaseItem(..))"
+            />
+            <aop:after-throwing 
+                method="createExceptionAuditEntry"
+                pointcut = "execution ( * * (..))"
+                throwing = "ex"
+            />
+
+        </aop:aspect>
+    </aop:config>
+        
+    
+    
+    
+</beans>
