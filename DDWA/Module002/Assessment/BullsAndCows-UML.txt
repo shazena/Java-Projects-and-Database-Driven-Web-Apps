@@ -1,0 +1,135 @@
+@startuml
+top to bottom direction
+package com.skshazena.bullsandcows.controller{
+
+class BullsAndCowsController{
+-service: BullsAndCowsService
+
++BullsAndCowsController() {BullsAndCowsService service}
+
++beginGame(): String
++makeAGuess(): Round {round: Round}
++getAllGames(): List<Game>
++getGameById(): Game {gameId: int}
++getAllRoundsByGameId(): List<Round> {gameId: int}
+}
+}
+
+package com.skshazena.bullsandcows.dto{
+top to bottom direction
+class Game{
+-gameId: int
+-answer: String
+-status: boolean
+-listOfRounds: List<Round>
+
++getGameId(): int
++setGameId(): void {gameId: int}
++getAnswer(): String
++setAnswer(): void {answer: String}
++isStatus(): boolean
++setStatus(): void {status: boolean}
++getListOfRounds(): List<Round>
++setListOfRounds(): void {listOfRounds: List<Round>}
++equals(): boolean {object: Object}
++hashCode(): int
++toString(): String
+}
+
+class Round{
+-roundId: int
+-gameId: int
+-guess: String
+-timeOfGuess: LocalDateTime
+-resultOfGuess: String
+
++getRoundId(): int
++setRoundId(): void {roundId: int}
++getGameId(): int
++setGameId(): void {gameId: int}
++getGuess(): String
++setGuess(): void {guess: String}
++getTimeOfGuess(): LocalDateTime
++setTimeOfGuess(): void {timeOfGuess: LocalDateTime}
++getResultOfGuess(): String
++setResultOfGuess(): void {resultOfGuess: String}
++equals(): boolean {object: Object}
++hashCode(): int
++toString(): String
+}
+}
+
+package com.skshazena.bullsandcows.dao{
+
+interface GameDao{
++getGameById(): Game {gameId: int}
++getAllGames(): List<Game>
++addGame(): Game {game: Game}
++updateGame(): Game {game: Game}
++deleteGameById(): Game {gameId: int}
+}
+
+class GameDaoDB <GameDao>{
++jdbc: JdbcTemplate
+
+-addRoundsToGame(): Game {game: Game}
+}
+
+class GameMapper <RowMapper<Game>>{
++mapRow(): Game {rs: ResultSet, index: int}
+}
+
+interface RoundDao{
++getRoundById(): Round {roundId: int}
++getAllRounds(): List<Round>
++getAllRoundsByGameId(): List<Round> {gameId: int}
+'not sure the above method is needed
++addRound(): Round {round: Round}
++updateRound(): Round {round: Round}
++deleteRoundById(): Round {roundId: int}
+}
+
+class RoundDaoDB <RoundDao>{
++jdbc: JdbcTemplate
+}
+
+class RoundMapper <RowMapper<Round>>{
++mapRow(): Round {rs: ResultSet, index: int}
+}
+}
+
+package com.skshazena.bullsandcows.service{
+
+interface BullsAndCowsService{
++beginGame(): int
++validateGuess(): Round {round: Round}
++getAllGames(): List<Games>
++getGameById(): Game {gameId: int}
++getAllRoundsByGameId(): List<Round> {gameId: int}
+}
+
+class BullsAndCowsServiceImpl{
+-gameDao: GameDao
+-roundDao: RoundDao
+
++BullsAndCowsServiceImpl() {gameDao: GameDao, roundDao: RoundDao}
+}
+}
+
+
+/'Arrows'/
+top to bottom direction
+BullsAndCowsServiceImpl o-down-|> GameDao : gameDao
+BullsAndCowsServiceImpl o--|> RoundDao : roundDao
+BullsAndCowsService o-down-|> BullsAndCowsServiceImpl
+
+
+BullsAndCowsController o--|> BullsAndCowsService : service
+
+GameDao <|.. GameDaoDB : implements
+GameDaoDB o-down-> GameMapper: uses
+RoundDao <|.. RoundDaoDB : implements
+RoundDaoDB o-down-> RoundMapper: uses
+
+
+@enduml

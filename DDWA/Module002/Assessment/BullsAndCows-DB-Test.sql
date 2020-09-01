@@ -1,0 +1,21 @@
+DROP DATABASE IF EXISTS BullsAndCowsTEST;
+
+CREATE DATABASE BullsAndCowsTEST;
+
+USE BullsAndCowsTEST;
+
+CREATE TABLE Game (
+    GameId INT PRIMARY KEY AUTO_INCREMENT,
+    Answer CHAR(4) NOT NULL,
+    Status BIT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE Round (
+    RoundId INT PRIMARY KEY AUTO_INCREMENT,
+    GameId INT NOT NULL,
+    Guess CHAR(4) NOT NULL,
+    TimeOfGuess DATETIME NOT NULL,
+    ResultOfGuess CHAR(7) NOT NULL,
+    FOREIGN KEY (GameId)
+        REFERENCES Game (GameId)
+);

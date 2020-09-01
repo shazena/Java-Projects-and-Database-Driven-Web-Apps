@@ -1,0 +1,8 @@
+com\rhash\viewmodelexample\service\WeaponService.class
+com\rhash\viewmodelexample\controller\WeaponController.class
+com\rhash\viewmodelexample\App.class
+com\rhash\viewmodelexample\dao\WeaponMemoryDao.class
+com\rhash\viewmodelexample\controller\WeaponVMController.class
+com\rhash\viewmodelexample\dao\WeaponDao.class
+com\rhash\viewmodelexample\dto\Weapon.class
+com\rhash\viewmodelexample\dto\WeaponVM.class

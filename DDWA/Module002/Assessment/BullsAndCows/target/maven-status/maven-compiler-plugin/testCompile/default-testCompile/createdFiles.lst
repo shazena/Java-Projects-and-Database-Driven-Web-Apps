@@ -1,0 +1,3 @@
+com\skshazena\bullsandcows\service\BullsAndCowsServiceImplTest.class
+com\skshazena\bullsandcows\dao\GameDaoDBTest.class
+com\skshazena\bullsandcows\dao\RoundDaoDBTest.class
