@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajax Calls With jQuery</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="mainHeading">Ajax Calls With jQuery</h1>
+        </div>
+
+        <div class="container">
+            <form class="form-horizontal" role="form" id="add-form">
+                <div class="form-group">
+                    <label for="add-first-name" class="col-md-4 control-label">First Name:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="add-first-name" placeholder="First Name" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="add-last-name" class="col-md-4 control-label">Last Name:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="add-last-name" placeholder="Last Name" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="add-company" class="col-md-4 control-label"> Company:</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="add-company" placeholder="Company"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="add-email" class="col-md-4 control-label">Email:</label>
+                    <div class="col-md-8">
+                        <input type="email" class="form-control" id="add-email" placeholder="Email" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="add-phone" class="col-md-4 control-label">Phone:</label>
+                    <div class="col-md-8">
+                        <input type="tel" class="form-control" id="add-phone" placeholder="Phone"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-8">
+                        <button type="button" id="add-button" class="btn btn-default">Create Contact</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>All Contacts</h1>
+                    <div id="allContacts">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h1>The New Contact</h1>
+                    <div id="newContact">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
