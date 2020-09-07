@@ -75,7 +75,7 @@ function fetchFiveDayWeather() {
             var counter = 0;
             var referenceDate = fiveDayForecast.list[counter].dt_txt;
             for (let i = 0; i < 7; i++) {
-                if (fiveDayForecast.list[i].dt_txt === referenceDate) {
+                if (fiveDayForecast.list[i].dt_txt.substring(0, 10) === referenceDate.substring(0, 10)) {
                     counter++;
                 }
             }
@@ -89,11 +89,11 @@ function fetchFiveDayWeather() {
             if (counter > 4) {
                 howManyDays--;
                 //show today as the first day
+                //put all the highs of today in an array
+                var temporaryArrayOfHighTemperatures = [];
+                var temporaryArrayOfLowTemperatures = [];
                 for (let j = 0; j < counter; j++) {
-                    //put all the highs of today in an array
-                    var temporaryArrayOfHighTemperatures = [];
                     temporaryArrayOfHighTemperatures.push(fiveDayForecast.list[j].main.temp_max);
-                    var temporaryArrayOfLowTemperatures = [];
                     temporaryArrayOfLowTemperatures.push(fiveDayForecast.list[j].main.temp_min);
                 }
                 //find the maximum of this array and add it to the main High & Low Temperature Array
@@ -106,19 +106,19 @@ function fetchFiveDayWeather() {
             //get the date of the counter and then continue onwards, every 7 is a new day
 
             for (let n = 0; n < howManyDays; n++) {
+                var temporaryArrayOfHighTemperatures = [];
+                var temporaryArrayOfLowTemperatures = [];
                 for (let m = counter; m < counter + 7; m++) {
                     //put all the highs of today in an array
-                    var temporaryArrayOfHighTemperatures = [];
-                    temporaryArrayOfHighTemperatures.push(fiveDayForecast.list[j].main.temp_max);
-                    var temporaryArrayOfLowTemperatures = [];
-                    temporaryArrayOfLowTemperatures.push(fiveDayForecast.list[j].main.temp_min);
+                    temporaryArrayOfHighTemperatures.push(fiveDayForecast.list[m].main.temp_max);
+                    temporaryArrayOfLowTemperatures.push(fiveDayForecast.list[m].main.temp_min);
                 }
                 //find the maximum of this array and add it to the main High & Low Temperature Array
                 highTempArray.push(Math.max(...temporaryArrayOfHighTemperatures));
                 lowTempArray.push(Math.min(...temporaryArrayOfLowTemperatures));
             }
-
-
+            $('#firstHigh').text(highTempArray[0]);
+            $('#firstLow').text(lowTempArray[0]);
 
 
         },
