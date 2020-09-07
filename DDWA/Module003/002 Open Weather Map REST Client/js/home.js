@@ -10,6 +10,7 @@ function fetchCurrentWeather() {
         type: 'GET',
         url: urlForCurrentWeather,
         success: function (currentWeather, status) {
+            clearErrorMessages();
 
             var currentConditions = $('#currentConditions');
             currentConditions.empty();
@@ -49,7 +50,7 @@ function fetchCurrentWeather() {
             $('#errorMessages')
                 .append($('<li>')
                     .attr({class: 'list-group-item list-group-item-danger'})
-                    .text('Error calling web service. Please try again later.'));
+                    .text('Error calling web service for Current Weather. Please try again later.'));
         }
     });
 
@@ -68,6 +69,7 @@ function fetchFiveDayWeather() {
         type: 'GET',
         url: urlForFiveDayWeather,
         success: function (fiveDayForecast, status) {
+            clearErrorMessages();
             //read the dates for 0-7, counter if they are for the same date.
             //get first date, add on to counter if the date is the same.
             //if counter > 4, start with today
@@ -126,10 +128,57 @@ function fetchFiveDayWeather() {
             $('#errorMessages')
                 .append($('<li>')
                     .attr({class: 'list-group-item list-group-item-danger'})
-                    .text('Error calling web service. Please try again later.'));
+                    .text('Error calling web service for Five Day Forecast. Please try again later.'));
         }
     });
 
+}
+
+function clearErrorMessages() {
+    $('#errorMessages').empty();
+}
+
+function checkAndDisplayZipcodeValidationErrors(zipcode) {
+
+    clearErrorMessages();
+
+    // var errorMessages = [];
+    //
+    // input.each(function () {
+    //     if (!this.validity.valid) {
+    //         var errorField = $('label[for=' + this.id + ']').text();
+    //         errorMessages.push(errorField + ' ' + this.validationMessage);
+    //     }
+    // });
+    //
+    // if (errorMessages.length > 0) {
+    //     $.each(errorMessages, function (index, message) {
+    //         $('#errorMessages').append($('<li>').attr({class: 'list-group-item list-group-item-danger'}).text(message))
+    //     });
+    //     return true; //indicating that there were errors
+    // } else {
+    //     return false;//indicating that there were no errors
+    // }
+
+
+    var errorMessageString = "";
+    var isZipcodeValid = true;
+    var regExSequence = new RegExp("[0-9]{5}");
+
+    var zip = zipcode.val();
+
+    if (zip != undefined) {
+        if (zip === "" || zip.length != 5 || !regExSequence.test(zip)) {
+            errorMessageString += "Zipcode: Please enter a 5-digit zip code.";
+            $('#errorMessages').append($('<li>').attr({class: 'list-group-item list-group-item-danger'}).text(errorMessageString))
+            isZipcodeValid = false;
+        }
+    } else {
+        isZipcodeValid = false;
+    }
+
+
+    return isZipcodeValid;
 }
 
 $(document).ready(function () {
@@ -138,9 +187,15 @@ $(document).ready(function () {
     // $('#fiveDay').hide();
     $('#get-weather-button').click(function (event) {
         //TODO validate zip code using HTML and JS
-        fetchCurrentWeather();
-        fetchFiveDayWeather();
-        //remember to clear the stuff before starting another call
+
+        if (!checkAndDisplayZipcodeValidationErrors($('#get-weather-form').find('input'))) {
+            return false;
+        } else {
+
+            fetchCurrentWeather();
+            fetchFiveDayWeather();
+        }
+
 
     });
 

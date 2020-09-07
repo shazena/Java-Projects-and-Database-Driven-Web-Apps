@@ -26,7 +26,7 @@
 
         <!-- beginning of form-->
         <div class = "row align-items-center justify-content-center">
-            <form class = "form-horizontal">
+            <form class = "form-horizontal" id = "get-weather-form">
                 <fieldset>
                     <div class = "form-row align-items-center justify-content-center">
                         <!-- Text input-->
@@ -34,8 +34,9 @@
                         <div class = "col-auto">
                             <input id = "zipcode"
                                    name = "zipcode"
-                                   type = "text"
-                                   maxlength = "5"
+                                   type = "number"
+                                   min = "0"
+                                   max = "99999"
                                    placeholder = "Enter Zipcode"
                                    class = "form-control input-md"
                                    required = ""/>
@@ -66,36 +67,6 @@
         <!--end of form-->
 
         <div class = "row" id = "currentConditions">
-            <!--            <div class = "col-12">-->
-            <!--                <hr/>-->
-            <!--                <h2>Current Conditions in Akron</h2>-->
-            <!--            </div>-->
-
-            <!--            <div class = "col-6" style = "margin-bottom: auto; margin-top: auto">-->
-            <!--                &lt;!&ndash; left column&ndash;&gt;-->
-
-            <!--                <table>-->
-            <!--                    <tbody>-->
-            <!--                    <tr>-->
-            <!--                        <td>-->
-            <!--                            <img src = "http://openweathermap.org/img/w/03d.png" class = "float-left">-->
-            <!--                        </td>-->
-            <!--                        <td>-->
-            <!--                            <p>Clouds: Scattered Clouds</p>-->
-            <!--                        </td>-->
-            <!--                    </tr>-->
-            <!--                    </tbody>-->
-            <!--                </table>-->
-
-
-            <!--            </div>-->
-            <!--            <div class = "col-6">-->
-            <!--                &lt;!&ndash; right column&ndash;&gt;-->
-            <!--                <p>Temperature: </p>-->
-            <!--                <p>Humidity: </p>-->
-            <!--                <p>Wind: </p>-->
-
-            <!--            </div>-->
 
         </div>
 
@@ -110,7 +81,7 @@
                 <p>3 August</p>
                 <img src = "http://openweathermap.org/img/w/02d.png">
                 <p>Clear</p>
-                <p>H 87.26 F L 73.76 F</p>
+                <p>H <span id = "firstHigh"></span> L <span id = "firstLow"></span></p>
             </div>
             <div class = "col">
                 <!--second-->
