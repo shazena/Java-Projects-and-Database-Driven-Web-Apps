@@ -1,10 +1,213 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang = "en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset = "UTF-8">
+    <meta name = "viewport"
+          content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin = "anonymous">
+    <!--    <link href="../Given%20Code/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating%20the%20UI/css/bootstrap.css"-->
+    <!--          rel="stylesheet">-->
+    <link rel = "stylesheet" href = "css/home.css">
+    <title>Company Contacts</title>
+
 </head>
 <body>
-$END$
+    <div class = "container">
+        <h1>Contact Application</h1>
+        <hr>
+        <ul class = "list-group" id = "errorMessages"></ul>
+        <div class = "row">
+            <div class = "col-md-6">
+                <div id = "contactTableDiv">
+                    <h2>My Contacts</h2>
+
+                    <table id = "contactTable" class = "table table-hover">
+                        <tr>
+                            <th width = "40%">Contact Name</th>
+                            <th width = "30%">Company</th>
+                            <th width = "15%"></th>
+                            <th width = "15%"></th>
+                        </tr>
+                        <!--                        The section below will hold the dynamically created contact rows-->
+                        <tbody id = "contentRows"></tbody>
+                    </table>
+                </div>
+
+                <div id = "editFormDiv" style="display: none">
+                    <h2>Edit Contact</h2>
+                    <form role = "form" class = "form-horizontal" id = "edit-form">
+                        <div class = "form-group row">
+                            <label for = "edit-first-name" class = "col-md-4 control-label">
+                                First Name:
+                            </label>
+                            <div class = "col-md-8">
+                                <input type = "text"
+                                       class = "form-control"
+                                       id = "edit-first-name"
+                                       placeholder = "First Name" required/>
+                            </div>
+                        </div>
+                        <div class = "form-group row">
+                            <label for = "edit-last-name" class = "col-md-4 control-label">
+                                Last Name:
+                            </label>
+
+                            <div class = "col-md-8">
+                                <input type = "text"
+                                       class = "form-control"
+                                       id = "edit-last-name"
+                                       placeholder = "Last Name" required/>
+                            </div>
+                        </div>
+                        <div class = "form-group row">
+                            <label for = "edit-company" class = "col-md-4 control-label">
+                                Company:
+                            </label>
+
+                            <div class = "col-md-8">
+                                <input type = "text"
+                                       class = "form-control"
+                                       id = "edit-company"
+                                       placeholder = "Company"/>
+                            </div>
+                        </div>
+                        <div class = "form-group row">
+                            <label for = "edit-email" class = "col-md-4 control-label">
+                                Email:
+                            </label>
+
+                            <div class = "col-md-8">
+                                <input type = "email"
+                                       class = "form-control"
+                                       id = "edit-email"
+                                       placeholder = "Email" required/>
+                            </div>
+                        </div>
+                        <div class = "form-group row">
+                            <label for = "edit-phone" class = "col-md-4 control-label">
+                                Phone:
+                            </label>
+
+                            <div class = "col-md-8">
+                                <input type = "tel"
+                                       class = "form-control"
+                                       id = "edit-phone"
+                                       placeholder = "Phone"/>
+                            </div>
+                        </div>
+                        <div class = "form-group row">
+                            <div class = "offset-md-4 col-md-4">
+                                <input type = "hidden" id = "edit-contact-id">
+                                <button type = "button"
+                                        id = "edit-cancel-button"
+                                        class = "btn btn-outline-primary"
+                                        onclick = "hideEditForm()">
+                                    Cancel
+                                </button>
+                            </div>
+                            <div class = "col-md-4">
+                                <button type = "button"
+                                        id = "edit-button"
+                                        class = "btn btn-outline-primary">
+                                    Update Contact
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class = "col-md-6">
+                <h2>Add New Contact</h2>
+
+                <form role = "form" class = "form-horizontal" id = "add-form">
+                    <div class = "form-group row">
+                        <label for = "add-first-name" class = "col-md-4 control-label">
+                            First Name:
+                        </label>
+
+                        <div class = "col-md-8">
+                            <input type = "text"
+                                   class = "form-control"
+                                   id = "add-first-name"
+                                   placeholder = "First Name" required/>
+                        </div>
+                    </div>
+                    <div class = "form-group row">
+                        <label for = "add-last-name" class = "col-md-4 control-label">
+                            Last Name:
+                        </label>
+
+                        <div class = "col-md-8">
+                            <input type = "text"
+                                   class = "form-control"
+                                   id = "add-last-name"
+                                   placeholder = "Last Name" required/>
+                        </div>
+                    </div>
+                    <div class = "form-group row">
+                        <label for = "add-company" class = "col-md-4 control-label">
+                            Company:
+                        </label>
+
+                        <div class = "col-md-8">
+                            <input type = "text"
+                                   class = "form-control"
+                                   id = "add-company"
+                                   placeholder = "Company"/>
+                        </div>
+                    </div>
+                    <div class = "form-group row">
+                        <label for = "add-email" class = "col-md-4 control-label">
+                            Email:
+                        </label>
+
+                        <div class = "col-md-8">
+                            <input type = "email"
+                                   class = "form-control"
+                                   id = "add-email"
+                                   placeholder = "Email" required/>
+                        </div>
+                    </div>
+                    <div class = "form-group row">
+                        <label for = "add-phone" class = "col-md-4 control-label">
+                            Phone:
+                        </label>
+
+                        <div class = "col-md-8">
+                            <input type = "tel"
+                                   class = "form-control"
+                                   id = "add-phone"
+                                   placeholder = "Phone"/>
+                        </div>
+                    </div>
+
+                    <div class = "form-group row">
+                        <div class = "offset-md-4 col-md-8">
+                            <button type = "button"
+                                    class = "btn btn-outline-primary"
+                                    id = "add-button">
+                                Create Contact
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src = "https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity = "sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin = "anonymous"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin = "anonymous"></script>
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin = "anonymous"></script>
+    <script src = "js/contactList.js"></script>
 </body>
 </html>

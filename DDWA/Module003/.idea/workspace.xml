@@ -23,46 +23,186 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a8aa23f-bab7-40a6-9b3c-708e99340c70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Module003.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/css/eq-height-row.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/css/sticky-footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/js/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/js/jquery-3.0.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LessonCodeAlongs/Lesson 02/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LessonCodeAlongs/Lesson 02/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FlooringMastery/target/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FlooringMastery/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RockPaperScissors/target/classes/com/skshazena/summativeassessment/DogGenetics.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../RockPaperScissors/target/classes/com/skshazena/summativeassessment/DogGenetics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RockPaperScissors/target/classes/com/skshazena/summativeassessment/DogGeneticsNonZero.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../RockPaperScissors/target/classes/com/skshazena/summativeassessment/DogGeneticsNonZero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Code Along/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/001 Contact List Rest Client/Code Along/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Code Along/js/contactList.js" beforeDir="false" afterPath="$PROJECT_DIR$/001 Contact List Rest Client/Code Along/js/contactList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/js/contactList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/js/jquery-2.2.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/js/jquery-2.2.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/js/jquery-3.0.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-a-New-Contact/02-06-03-ContactListCodeAlong-CreatingANewContact/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/js/contactList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/js/jquery-2.2.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/js/jquery-2.2.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/js/jquery-3.0.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Creating-the-UI/02-06-01-ContactListCodeAlong-Creating the UI/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/js/contactList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/js/jquery-2.2.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/js/jquery-2.2.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/js/jquery-3.0.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Deleting-a-Contact/02-06-05-ContactListClientCodeAlong-DeletingAContact/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/js/contactList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/js/jquery-2.2.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/js/jquery-2.2.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/js/jquery-3.0.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Displaying-the-Contact-Table/02-06-02-ContactListCodeAlong-DisplayingAllContactsInTable/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/js/contactList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/js/jquery-2.2.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/js/jquery-2.2.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/js/jquery-3.0.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/js/contactList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/js/jquery-2.2.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/js/jquery-2.2.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/js/jquery-3.0.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Updating-a-Contact/02-06-04-ContactListCodeAlong-UpdatingAContact/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/js/contactList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/js/jquery-2.2.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/js/jquery-2.2.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/js/jquery-3.0.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/001 Contact List Rest Client/Validation-Error-Message/02-06-06-ContactListCodeAlong-AddingClientSideValidationMessages/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/002 Open Weather Map REST Client/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/002 Open Weather Map REST Client/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/002 Open Weather Map REST Client/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/002 Open Weather Map REST Client/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/002 Open Weather Map REST Client/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/002 Open Weather Map REST Client/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiment - BullsAndCows/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Experiment - BullsAndCows/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiment - BullsAndCows/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/Experiment - BullsAndCows/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-Browser-Events/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-Browser-Events/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessonCodeAlongs/Lesson 02/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/LessonCodeAlongs/Lesson 02/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessonCodeAlongs/Lesson 04/Ajax-With-jQuery-SG-Examples/AjaxCallsWithjQuery/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/LessonCodeAlongs/Lesson 04/Ajax-With-jQuery-SG-Examples/AjaxCallsWithjQuery/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessonCodeAlongs/Lesson 04/Ajax-With-jQuery-SG-Examples/AjaxCallsWithjQuery/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/LessonCodeAlongs/Lesson 04/Ajax-With-jQuery-SG-Examples/AjaxCallsWithjQuery/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FlooringMastery/FlooringAudit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../FlooringMastery/FlooringAudit.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1h0vtdJdWHR6qQqJRVxawIp697x" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -75,11 +215,16 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lesson 02 Exercises/jQuery-HTML-Elements/home.html" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="js.last.introduce.type" value="VAR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/002 Open Weather Map REST Client/home.html" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -87,19 +232,44 @@
       <recent name="C:\Users\Shazena\Documents\GITHUB\Java-Projects-and-Database-Driven-Web-Apps\DDWA\Module003\LessonCodeAlongs\Lesson 02" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Lesson2 Ex 1">
+  <component name="RunManager" selected="JavaScript Debug.OpenWeatherClient">
+    <configuration name="Ajax Call" type="JavascriptDebugType" temporary="true" uri="http://localhost:63342/Module003/LessonCodeAlongs/Lesson 04/Ajax-With-jQuery-SG-Examples/AjaxCallsWithjQuery/home.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="BullsAndCowsAjax" type="JavascriptDebugType" uri="http://localhost:63342/Module003/Experiment - BullsAndCows/home.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="ContactList" type="JavascriptDebugType" uri="http://localhost:63342/Module003/001 Contact List Rest Client/Code Along/home.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="ContactListGivenCode" type="JavascriptDebugType" uri="http://localhost:63342/Module003/001 Contact List Rest Client/Given Code/Final-Code/02-06-00-ContactListClientCodeAlong-Complete/home.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="Lesson2 CodeAlong home.html" type="JavascriptDebugType" temporary="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/Module003/LessonCodeAlongs/Lesson 02/home.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="Lesson2 Ex 1" type="JavascriptDebugType" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/Module003/Lesson 02 Exercises/jQuery-HTML-Elements/home.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="Lesson2 Ex 2" type="JavascriptDebugType" uri="http://localhost:63342/Module003/Lesson 02 Exercises/jQuery-Browser-Events/home.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="OpenWeatherClient" type="JavascriptDebugType" uri="http://localhost:63342/Module003/002 Open Weather Map REST Client/home.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.ContactList" />
+      <item itemvalue="JavaScript Debug.OpenWeatherClient" />
+      <item itemvalue="JavaScript Debug.ContactListGivenCode" />
       <item itemvalue="JavaScript Debug.Lesson2 Ex 1" />
+      <item itemvalue="JavaScript Debug.Lesson2 Ex 2" />
+      <item itemvalue="JavaScript Debug.BullsAndCowsAjax" />
       <item itemvalue="JavaScript Debug.Lesson2 CodeAlong home.html" />
+      <item itemvalue="JavaScript Debug.Ajax Call" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.Ajax Call" />
         <item itemvalue="JavaScript Debug.Lesson2 CodeAlong home.html" />
       </list>
     </recent_temporary>
@@ -115,7 +285,16 @@
       <workItem from="1599161043572" duration="4182000" />
       <workItem from="1599178643229" duration="71000" />
       <workItem from="1599178730017" duration="1550000" />
-      <workItem from="1599180636296" duration="2892000" />
+      <workItem from="1599180636296" duration="8172000" />
+      <workItem from="1599236866509" duration="4001000" />
+      <workItem from="1599250762424" duration="193000" />
+      <workItem from="1599255086299" duration="918000" />
+      <workItem from="1599278823361" duration="1713000" />
+      <workItem from="1599333220449" duration="1655000" />
+      <workItem from="1599350568657" duration="16233000" />
+      <workItem from="1599412351633" duration="4004000" />
+      <workItem from="1599421021995" duration="13782000" />
+      <workItem from="1599441025624" duration="13757000" />
     </task>
     <servers />
   </component>
@@ -138,101 +317,140 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="300" key="#Chrome_Settings" timestamp="1599183127689">
+    <state x="560" y="301" key="#Chrome_Settings" timestamp="1599237067993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="560" y="300" key="#Chrome_Settings/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599183127689" />
+    <state x="467" y="248" key="#Chrome_Settings/0.0.1280.680@0.0.1280.680" timestamp="1599199979837" />
+    <state x="560" y="300" key="#Chrome_Settings/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599190426063" />
+    <state x="560" y="301" key="#Chrome_Settings/0.0.1536.824@0.0.1536.824" timestamp="1599237067993" />
+    <state x="560" y="317" key="#Firefox_Settings" timestamp="1599342763819">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="560" y="317" key="#Firefox_Settings/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599342763819" />
     <state x="361" y="53" key="#Plugins" timestamp="1599162199873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="53" key="#Plugins/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162199873" />
-    <state x="570" y="201" key="#Web_Browsers" timestamp="1599183134581">
+    <state x="570" y="201" key="#Web_Browsers" timestamp="1599342407139">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="570" y="201" key="#Web_Browsers/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599183134581" />
-    <state x="223" y="67" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599183140267">
+    <state x="475" y="166" key="#Web_Browsers/0.0.1280.680@0.0.1280.680" timestamp="1599199981387" />
+    <state x="570" y="201" key="#Web_Browsers/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599342407139" />
+    <state x="570" y="201" key="#Web_Browsers/0.0.1536.824@0.0.1536.824" timestamp="1599237069179" />
+    <state x="223" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599423333359">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599183140267" />
-    <state x="548" y="165" key="FileChooserDialogImpl" timestamp="1599183081561">
+    <state x="186" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1599199985532" />
+    <state x="223" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1280.680/-1920.0.1280.680@0.0.1536.824" timestamp="1599423333359" />
+    <state x="223" y="14" width="1089" height="810" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599357491699" />
+    <state x="172" y="0" width="1307" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1599237070960" />
+    <state x="548" y="165" key="FileChooserDialogImpl" timestamp="1599423329324">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="165" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599183081561" />
-    <state width="1515" height="261" key="GridCell.Tab.0.bottom" timestamp="1599162610563">
+    <state x="548" y="165" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1280.680/-1920.0.1280.680@0.0.1536.824" timestamp="1599423329324" />
+    <state x="548" y="165" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599357470755" />
+    <state x="548" y="165" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599237063130" />
+    <state width="1515" height="261" key="GridCell.Tab.0.bottom" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610563" />
-    <state width="1515" height="261" key="GridCell.Tab.0.center" timestamp="1599162610563">
+    <state width="1515" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.0.center" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610563" />
-    <state width="1515" height="261" key="GridCell.Tab.0.left" timestamp="1599162610563">
+    <state width="1515" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.0.left" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610563" />
-    <state width="1515" height="261" key="GridCell.Tab.0.right" timestamp="1599162610563">
+    <state width="1515" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.0.right" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610563" />
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1599162610564">
+    <state width="1515" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610563" />
-    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1599162610563">
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610563" />
-    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1599162610563">
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610563" />
-    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1599162610563">
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610563" />
-    <state width="1515" height="261" key="GridCell.Tab.2.bottom" timestamp="1599162610564">
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.2.bottom" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610564" />
-    <state width="1515" height="261" key="GridCell.Tab.2.center" timestamp="1599162610564">
+    <state width="1515" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.2.center" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610564" />
-    <state width="1515" height="261" key="GridCell.Tab.2.left" timestamp="1599162610564">
+    <state width="1515" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.2.left" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610564" />
-    <state width="1515" height="261" key="GridCell.Tab.2.right" timestamp="1599162610564">
+    <state width="1515" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.2.right" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610564" />
-    <state width="1515" height="261" key="GridCell.Tab.3.bottom" timestamp="1599162610564">
+    <state width="1515" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.3.bottom" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610564" />
-    <state width="1515" height="261" key="GridCell.Tab.3.center" timestamp="1599162610564">
+    <state width="1515" height="261" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.3.center" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610564" />
-    <state width="1515" height="261" key="GridCell.Tab.3.left" timestamp="1599162610564">
+    <state width="1515" height="261" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.3.left" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610564" />
-    <state width="1515" height="261" key="GridCell.Tab.3.right" timestamp="1599162610564">
+    <state width="1515" height="261" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state width="1515" height="261" key="GridCell.Tab.3.right" timestamp="1599439350660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162610564" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1599161371809">
+    <state width="1515" height="261" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1599439350660" />
+    <state x="176" y="55" width="1258" height="710" key="SettingsEditor" timestamp="1599351661857">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599161371809" />
+    <state x="176" y="55" width="1258" height="710" key="SettingsEditor/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599351661857" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1599161995104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599161995104" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599162934713">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599423597153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1280.680/-1920.0.1280.680@0.0.1536.824" timestamp="1599423597153" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1280.680@0.0.1536.824" timestamp="1599162934713" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="Module003" type="b2602c69:ProjectViewProjectNode" />
+        <item name="Module003" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
   </component>
 </project>

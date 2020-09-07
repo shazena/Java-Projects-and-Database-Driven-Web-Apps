@@ -12,5 +12,5 @@ $(document).ready(function () {
     $('#oops').hide();
     $('#footerPlaceholder').remove();
     $('footer').html('<p>Shazena Khan, email@emailAddress.com</p>');
-    $('footer').css({'font': 'Courier', 'fontSize': '24px'});
+    $('footer').css({'font-family': 'Courier', 'fontSize': '24px'});
 });
