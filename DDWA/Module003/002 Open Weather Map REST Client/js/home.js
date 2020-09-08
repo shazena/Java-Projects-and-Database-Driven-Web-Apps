@@ -237,7 +237,6 @@ $(document).ready(function () {
     $('#currentConditions').hide();
     $('#fiveDay').hide();
     $('#get-weather-button').click(function (event) {
-        //TODO validate zip code using HTML and JS
 
         if (!checkAndDisplayZipcodeValidationErrors($('#get-weather-form').find('input'))) {
             return false;
