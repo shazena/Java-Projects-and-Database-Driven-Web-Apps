@@ -45,6 +45,8 @@ function fetchCurrentWeather() {
             secondColumn += '</div>';
 
             currentConditions.append(secondColumn);
+
+            currentConditions.show();
         },
         error: function () {
             $('#errorMessages')
@@ -70,6 +72,15 @@ function fetchFiveDayWeather() {
         url: urlForFiveDayWeather,
         success: function (fiveDayForecast, status) {
             clearErrorMessages();
+
+            var degreeUnit = "";
+
+            if (unitType === "imperial") {
+                degreeUnit = "F";
+            } else {
+                degreeUnit = "C";
+            }
+
             //read the dates for 0-7, counter if they are for the same date.
             //get first date, add on to counter if the date is the same.
             //if counter > 4, start with today
@@ -82,12 +93,19 @@ function fetchFiveDayWeather() {
                 }
             }
 
+            //get the date
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            var dateArray = [];
             var highTempArray = [];
             var lowTempArray = [];
+            var iconArray = [];
+            var conditionArray = [];
 
-            var howManyDays = 4;
+            var howManyDays = 5;
+            var offset = 0;
 
-            //first day temp determiner
+            //first day determiner, greater than 4 means today is the first day, less than means tomorrow is the first day
             if (counter > 4) {
                 howManyDays--;
                 //show today as the first day
@@ -101,6 +119,15 @@ function fetchFiveDayWeather() {
                 //find the maximum of this array and add it to the main High & Low Temperature Array
                 highTempArray.push(Math.max(...temporaryArrayOfHighTemperatures));
                 lowTempArray.push(Math.min(...temporaryArrayOfLowTemperatures));
+
+                var dateConverted = new Date(fiveDayForecast.list[counter].dt_txt.substring(0, 10));
+                var date = dateConverted.getUTCDate();
+                var monthAsString = months[dateConverted.getUTCMonth()];
+                dateArray.push(date + " " + monthAsString);
+
+                iconArray.push(fiveDayForecast.list[counter].weather[0].icon);
+                conditionArray.push(fiveDayForecast.list[counter].weather[0].main);
+                offset += 1;
 
             }
 
@@ -118,10 +145,53 @@ function fetchFiveDayWeather() {
                 //find the maximum of this array and add it to the main High & Low Temperature Array
                 highTempArray.push(Math.max(...temporaryArrayOfHighTemperatures));
                 lowTempArray.push(Math.min(...temporaryArrayOfLowTemperatures));
-            }
-            $('#firstHigh').text(highTempArray[0]);
-            $('#firstLow').text(lowTempArray[0]);
 
+                var dateConverted = new Date(fiveDayForecast.list[n + counter + offset].dt_txt.substring(0, 10));
+                var date = dateConverted.getUTCDate();
+                var monthAsString = months[dateConverted.getUTCMonth()];
+                dateArray.push(date + " " + monthAsString);
+
+                iconArray.push(fiveDayForecast.list[counter + 4].weather[0].icon);
+                conditionArray.push(fiveDayForecast.list[counter + 4].weather[0].main);
+
+                counter += 8;
+            }
+
+            //begin constructing Five Day Forecast Row
+
+            //date, icon, condition, high, low
+            $('#date-1').text(dateArray[0]);
+            $('#icon-1').attr("src", "http://openweathermap.org/img/w/" + iconArray[0] + ".png");
+            $('#condition-1').text(conditionArray[0]);
+            $('#high-1').text(highTempArray[0] + " " + degreeUnit);
+            $('#low-1').text(lowTempArray[0] + " " + degreeUnit);
+
+            $('#date-2').text(dateArray[1]);
+            $('#icon-2').attr("src", "http://openweathermap.org/img/w/" + iconArray[1] + ".png");
+            $('#condition-2').text(conditionArray[1]);
+            $('#high-2').text(highTempArray[1] + " " + degreeUnit);
+            $('#low-2').text(lowTempArray[1] + " " + degreeUnit);
+
+            $('#date-3').text(dateArray[2]);
+            $('#icon-3').attr("src", "http://openweathermap.org/img/w/" + iconArray[2] + ".png");
+            $('#condition-3').text(conditionArray[2]);
+            $('#high-3').text(highTempArray[2] + " " + degreeUnit);
+            $('#low-3').text(lowTempArray[2] + " " + degreeUnit);
+
+            $('#date-4').text(dateArray[3]);
+            $('#icon-4').attr("src", "http://openweathermap.org/img/w/" + iconArray[3] + ".png");
+            $('#condition-4').text(conditionArray[3]);
+            $('#high-4').text(highTempArray[3] + " " + degreeUnit);
+            $('#low-4').text(lowTempArray[3] + " " + degreeUnit);
+
+            $('#date-5').text(dateArray[4]);
+            $('#icon-5').attr("src", "http://openweathermap.org/img/w/" + iconArray[4] + ".png");
+            $('#condition-5').text(conditionArray[4]);
+            $('#high-5').text(highTempArray[4] + " " + degreeUnit);
+            $('#low-5').text(lowTempArray[4] + " " + degreeUnit);
+
+
+            $('#fiveDay').show();
 
         },
         error: function () {
@@ -141,25 +211,6 @@ function clearErrorMessages() {
 function checkAndDisplayZipcodeValidationErrors(zipcode) {
 
     clearErrorMessages();
-
-    // var errorMessages = [];
-    //
-    // input.each(function () {
-    //     if (!this.validity.valid) {
-    //         var errorField = $('label[for=' + this.id + ']').text();
-    //         errorMessages.push(errorField + ' ' + this.validationMessage);
-    //     }
-    // });
-    //
-    // if (errorMessages.length > 0) {
-    //     $.each(errorMessages, function (index, message) {
-    //         $('#errorMessages').append($('<li>').attr({class: 'list-group-item list-group-item-danger'}).text(message))
-    //     });
-    //     return true; //indicating that there were errors
-    // } else {
-    //     return false;//indicating that there were no errors
-    // }
-
 
     var errorMessageString = "";
     var isZipcodeValid = true;
@@ -183,8 +234,8 @@ function checkAndDisplayZipcodeValidationErrors(zipcode) {
 
 $(document).ready(function () {
 
-    // $('#currentConditions').hide();
-    // $('#fiveDay').hide();
+    $('#currentConditions').hide();
+    $('#fiveDay').hide();
     $('#get-weather-button').click(function (event) {
         //TODO validate zip code using HTML and JS
 
