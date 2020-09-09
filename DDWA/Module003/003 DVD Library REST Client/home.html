@@ -16,10 +16,10 @@
 
         <div class = "container" id = "showAllDvds">
 
-            <!--            begin form-->
-            <form class = "d-flex form-row align-items-center">
+            <!--------begin SEARCH form-------->
+            <form style = "display: grid; grid-template-columns: 1fr 6fr;">
                 <!-- Button -->
-                <div class = "col-2 text-left">
+                <div style = "grid-column: span 1;">
                     <label class = "col-form-label sr-only" for = "create-dvd-button">Create Dvd</label>
                     <button id = "create-dvd-button"
                             name = "create-dvd-button"
@@ -31,7 +31,7 @@
 
 
                 <!-- Button -->
-                <div class = "col-10 text-right align-middle align-items-center align-self-center">
+                <div style = "grid-column: 2/3; display: flex; justify-content: flex-end; align-items: center;" >
                     <label class = "col-form-label sr-only" for = "search-button">Search</label>
                     <button id = "search-button"
                             name = "search-button"
@@ -44,7 +44,7 @@
                     <label class = "col-form-label sr-only" for = "category-selection">Category</label>
                     <select id = "category-selection"
                             name = "category-selection"
-                            class = "mx-3"
+                            class="mx-3"
                             required>
                         <option disabled selected>Select Category</option>
                         <option value = "title">Title</option>
@@ -63,9 +63,17 @@
                            required/>
                 </div>
             </form>
-            <!--            end of form-->
+            <!-----------end SEARCH form-------------->
 
             <hr/>
+
+            <!----------------errorMessage show all DIV-------------------->
+            <div class = "errorMessages" id = "errors-show-all-table">
+                <!--                <li class = "list-group-item list-group-item-danger">-->
+                <!--                    Error calling web service for Current Weather. Please try again later.-->
+                <!--                </li>-->
+            </div>
+            <!----------------errorMessage show all END-------------------->
 
             <div class = "row"></div>
             <div class = "col">
@@ -107,65 +115,69 @@
 
     </div> <!-- end of show All Dvds div-->
 
-           <!-- above - showAllDvds ----------------- below - editDvdForm -->
+           <!-- above - showAllDvds ----------------- below - createDvd -->
 
-    <div class = "container" id = "addDvd">
+    <div class = "container add-edit-forms" id = "createDvd">
 
         <div class = "row">
             <!--begin form-->
             <form class = "form-horizontal col-12">
 
                 <!-- Form Name -->
-                <legend>Form Name</legend>
+                <legend>Create Dvd</legend>
 
-                <!-- Text input-->
-                <div class = "form-group">
-                    <label class = "col-2 col-form-label" for = "create-title">Dvd Title: </label>
+                <hr/>
+                <!----------------errorMessage create dvd DIV-------------------->
+                <div class = "errorMessages" id = "errors-create-dvds-form">
+                    <!--                    <li class = "list-group-item list-group-item-danger">-->
+                    <!--                        Error calling web service for Current Weather. Please try again later.-->
+                    <!--                    </li>-->
+                </div>
+                <!----------------errorMessage create dvd DIV-------------------->
+
+
+                <div id = "all-create-form-inputs">
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "create-title">Dvd Title: </label>
                     <input id = "create-title" name = "create-title" type = "text" placeholder = "Enter Title"
-                           class = "input-md col-5" required = "">
-                </div>
+                           class = "input-md" required = "">
 
-                <!-- Text input-->
-                <div class = "form-group">
-                    <label class = "col-2 col-form-label" for = "create-year">Release Year:</label>
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "create-year">Release Year:</label>
                     <input id = "create-year" name = "create-year" type = "text"
-                           placeholder = "Enter Release Year" class = "col-5 input-md">
-                </div>
+                           placeholder = "Enter Release Year" class = "  input-md">
 
-                <!-- Text input-->
-                <div class = "form-group">
-                    <label class = "col-2 col-form-label" for = "create-director">Director:</label>
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "create-director">Director:</label>
                     <input id = "create-director" name = "create-director" type = "text"
-                           placeholder = "Enter Director" class = "col-5">
-                </div>
+                           placeholder = "Enter Director" class = " ">
 
-                <!-- Select Basic -->
-                <div class = "form-group">
-                    <label class = "col-2 col-form-label" for = "create-rating">Rating:</label>
-                    <select id = "create-rating" name = "create-rating" class = "col-2">
+                    <!-- Select Basic -->
+                    <label class = "col-form-label" for = "create-rating">Rating:</label>
+                    <select id = "create-rating" name = "create-rating" style = "width: 20%">
                         <option value = "g">G</option>
                         <option value = "pg">PG</option>
                         <option value = "pg-13">PG-13</option>
                         <option value = "r">R</option>
                     </select>
-                </div>
 
-                <!-- Textarea -->
-                <div class = "form-group">
-                    <label class = "col-2 col-form-label" for = "create-note">Note:</label>
-                    <textarea class = "form-control col-5" id = "create-note"
-                              name = "create-note">Enter Note</textarea>
-                </div>
+                    <!-- Textarea -->
+                    <label class = "col-form-label" for = "create-note">Notes:</label>
+                    <textarea class = "form-control"
+                              id = "create-note"
+                              name = "create-note"
+                              rows = "5">Enter Note</textarea>
 
+                </div>
                 <!-- Buttons -->
-                <div class = "form-group">
-                    <button id = "create-cancel"
+                <div class = "form-group" style = "grid-column: span 2;">
+                    <button id = "create-cancel-button"
                             name = "create-cancel"
                             type = "button"
                             class = "btn btn-primary">
                         Cancel
                     </button>
-                    <button id = "create-create-dvd"
+                    <button id = "create-create-dvd-button"
                             name = "create-create-dvd"
                             type = "button"
                             class = "btn btn-primary">
@@ -177,11 +189,83 @@
             <!--end form-->
         </div>
 
-    </div> <!-- end of add Dvd div -->
+    </div> <!-- end of create Dvd div -->
 
-           <!-- above - addDvd ----------------- below - editDvd -->
+           <!-- above - createDvd ----------------- below - editDvd -->
 
-    <div class = "container" id = "editDvd">
+    <div class = "container add-edit-forms" id = "editDvd">
+
+
+        <div class = "row">
+            <!--begin form-->
+            <form class = "form-horizontal col-12">
+
+                <!-- Form Name -->
+                <legend>Edit Dvd: <span id = "dvd-title-to-edit"></span></legend>
+
+                <hr/>
+                <!----------------errorMessage edit dvd DIV-------------------->
+                <div class = "errorMessages" id = "errors-edit-dvds-form">
+                    <!--                    <li class = "list-group-item list-group-item-danger">-->
+                    <!--                        Error calling web service for Current Weather. Please try again later.-->
+                    <!--                    </li>-->
+                </div>
+                <!----------------errorMessage edit dvd DIV-------------------->
+
+
+                <div id = "all-edit-form-inputs">
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "edit-title">Dvd Title: </label>
+                    <input id = "edit-title" name = "edit-title" type = "text"
+                           class = "input-md" required = "">
+
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "edit-year">Release Year:</label>
+                    <input id = "edit-year" name = "edit-year" type = "text"
+                           class = "  input-md">
+
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "edit-director">Director:</label>
+                    <input id = "edit-director" name = "edit-director" type = "text"
+                           class = " ">
+
+                    <!-- Select Basic -->
+                    <label class = "col-form-label" for = "edit-rating">Rating:</label>
+                    <select id = "edit-rating" name = "edit-rating" style = "width: 20%">
+                        <option value = "g">G</option>
+                        <option value = "pg">PG</option>
+                        <option value = "pg-13">PG-13</option>
+                        <option value = "r">R</option>
+                    </select>
+
+                    <!-- Textarea -->
+                    <label class = "col-form-label" for = "edit-note">Notes:</label>
+                    <textarea class = "form-control"
+                              id = "edit-note"
+                              name = "edit-note"
+                              rows = "5"></textarea>
+
+                </div>
+                <!-- Buttons -->
+                <div class = "form-group" style = "grid-column: span 2;">
+                    <button id = "edit-cancel-button"
+                            name = "edit-cancel"
+                            type = "button"
+                            class = "btn btn-primary">
+                        Cancel
+                    </button>
+                    <button id = "edit-save-dvd-button"
+                            name = "edit-save-dvd"
+                            type = "button"
+                            class = "btn btn-primary">
+                        Save Changes
+                    </button>
+                </div>
+
+            </form>
+            <!--end form-->
+        </div>
+
 
     </div> <!-- end of edit Dvd div -->
 
