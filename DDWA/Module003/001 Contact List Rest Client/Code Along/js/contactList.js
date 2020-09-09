@@ -102,8 +102,8 @@ function loadContacts() {
                 var row = '<tr>';
                 row += '<td>' + name + '</td>';
                 row += '<td>' + company + '</td>';
-                row += '<td><a onclick="showEditForm(' + contactId + ')" class = "text-primary">Edit</a></td>';
-                row += '<td><a onclick="deleteContact(' + contactId + ')"class = "text-primary">Delete</a></td>';
+                row += '<td><a href = "#" onclick="showEditForm(' + contactId + ')" class = "text-primary">Edit</a></td>';
+                row += '<td><a href = "#" onclick="deleteContact(' + contactId + ')"class = "text-primary">Delete</a></td>';
                 row += '</tr>';
 
                 contentRows.append(row);

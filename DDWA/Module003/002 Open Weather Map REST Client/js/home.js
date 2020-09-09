@@ -87,7 +87,7 @@ function fetchFiveDayWeather() {
             //if counter < 4, start with tomorrow
             var counter = 0;
             var referenceDate = fiveDayForecast.list[counter].dt_txt;
-            for (let i = 0; i < 7; i++) {
+            for (let i = 0; i < 8; i++) {
                 if (fiveDayForecast.list[i].dt_txt.substring(0, 10) === referenceDate.substring(0, 10)) {
                     counter++;
                 }
@@ -120,14 +120,14 @@ function fetchFiveDayWeather() {
                 highTempArray.push(Math.max(...temporaryArrayOfHighTemperatures));
                 lowTempArray.push(Math.min(...temporaryArrayOfLowTemperatures));
 
-                var dateConverted = new Date(fiveDayForecast.list[counter].dt_txt.substring(0, 10));
+                var dateConverted = new Date(fiveDayForecast.list[counter-1].dt_txt.substring(0, 10));
                 var date = dateConverted.getUTCDate();
                 var monthAsString = months[dateConverted.getUTCMonth()];
                 dateArray.push(date + " " + monthAsString);
 
                 iconArray.push(fiveDayForecast.list[counter].weather[0].icon);
                 conditionArray.push(fiveDayForecast.list[counter].weather[0].main);
-                offset += 1;
+                offset += 1;// if one day has already been selected, offset by one
 
             }
 
