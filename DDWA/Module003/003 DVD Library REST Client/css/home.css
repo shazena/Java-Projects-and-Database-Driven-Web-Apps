@@ -2,15 +2,9 @@ body {
     margin-top: 30px;
 }
 
-#all-create-form-inputs {
+#all-create-form-inputs, #all-edit-form-inputs, #dvdDetails {
     display: grid;
-    grid-template-columns: 20% 70%;
-    width: 70%;
-}
-
-#all-edit-form-inputs {
-    display: grid;
-    grid-template-columns: 20% 70%;
+    grid-template-columns: 20% 80%;
     width: 70%;
 }
 

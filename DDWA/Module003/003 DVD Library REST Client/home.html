@@ -31,7 +31,7 @@
 
 
                 <!-- Button -->
-                <div style = "grid-column: 2/3; display: flex; justify-content: flex-end; align-items: center;" >
+                <div style = "grid-column: 2/3; display: flex; justify-content: flex-end; align-items: center;">
                     <label class = "col-form-label sr-only" for = "search-button">Search</label>
                     <button id = "search-button"
                             name = "search-button"
@@ -44,7 +44,7 @@
                     <label class = "col-form-label sr-only" for = "category-selection">Category</label>
                     <select id = "category-selection"
                             name = "category-selection"
-                            class="mx-3"
+                            class = "mx-3"
                             required>
                         <option disabled selected>Select Category</option>
                         <option value = "title">Title</option>
@@ -124,7 +124,7 @@
             <form class = "form-horizontal col-12">
 
                 <!-- Form Name -->
-                <legend>Create Dvd</legend>
+                <legend><h1>Create Dvd</h1></legend>
 
                 <hr/>
                 <!----------------errorMessage create dvd DIV-------------------->
@@ -201,7 +201,7 @@
             <form class = "form-horizontal col-12">
 
                 <!-- Form Name -->
-                <legend>Edit Dvd: <span id = "dvd-title-to-edit"></span></legend>
+                <legend><h1>Edit Dvd: <span id = "dvd-title-to-edit"></span></h1></legend>
 
                 <hr/>
                 <!----------------errorMessage edit dvd DIV-------------------->
@@ -269,11 +269,35 @@
 
     </div> <!-- end of edit Dvd div -->
 
-           <!-- above - editDvds ----------------- below - showOneDvd -->
+           <!-- above - editDvds ----------------- below - viewDvd -->
 
-    <div class = "container" id = "showOneDvd">
+    <div class = "container" id = "viewDvdContainer">
 
-    </div> <!-- end of show One Dvd div -->
+        <h1 id = "viewDvdTitle">The Good Movie</h1>
+
+        <hr/>
+
+        <div id = "dvdDetails">
+
+            <p>Release Year: </p>
+            <p id = "viewDvdYear">2004</p>
+            <p>Director: </p>
+            <p id = "viewDvdDirector">Quentin Tarantino</p>
+            <p>Rating: </p>
+            <p id = "viewDvdRating">R</p>
+            <p>Notes: </p>
+            <p id = "viewDvdNotes">This is an awesome movie!</p>
+
+        </div>
+
+
+    </div> <!-- end of view Dvd div -->
+
+           <!-- above - viewDvd ----------------- below - deleteDvdModal -->
+
+    <div class = "container" id = "deleteOneDvdModal">
+
+    </div> <!-- end of delete Dvd Modal div -->
 
 
     </div> <!-- end of main container-->

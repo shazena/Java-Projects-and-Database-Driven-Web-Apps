@@ -33,4 +33,8 @@ $(document).ready(function () {
     //when you press the button in the modal, run the ajax call with the id to DELETE the dvd.
     //on finishing the call, close the modal.
 
+    //on clicking the title of the movie
+    //hide the showAllDvds table
+    //then show the div for the oneDvd.
+
 });
