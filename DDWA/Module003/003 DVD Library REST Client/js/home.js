@@ -14,15 +14,31 @@ function fetchSearchResults(category, searchTerm) {
 
     $.ajax({
         type: 'GET',
-        URL: 'https://tsg-dvds.herokuapp.com/dvds/title/Minions',
-        success: function (dvdInfo, status) {
-            var dvd = dvdInfo[0];
-            $('#viewDvdTitle').text(dvd.title);
-            $('#viewDvdYear').html(dvd.releaseYear);
-            $('#viewDvdDirector').html(dvd.director);
-            $('#viewDvdRating').html(dvd.rating);
-            $('#viewDvdNotes').html(dvd.notes);
+        url: urlForApi,
+        success: function (dvdArray, status) {
+            $('#dvdDetails').empty();
+            $('#errors-view-dvd').empty();
 
+            if (dvdArray.length === 0) {
+                $('#errors-view-dvd')
+                    .append($('<li>')
+                        .attr({class: 'list-group-item list-group-item-danger'})
+                        .text('Error: No Dvds found for that search term.'));
+            }
+
+            var dvdsAsHTML = "";
+
+            $.each(dvdArray, function (index, dvd) {
+
+                dvdsAsHTML += '<h1>' + dvd.title + '</h1><hr/><div class="dvdDetailsExceptTitle"><p>Release Year:</p><p>';
+                dvdsAsHTML += dvd.releaseYear + '</p><p>Director:</p><p>';
+                dvdsAsHTML += dvd.director + '</p><p>Rating: </p><p>';
+                dvdsAsHTML += dvd.rating.toUpperCase() + '</p><p>Notes:</p><p>';
+                dvdsAsHTML += dvd.notes + '</p></div>';
+
+            });
+
+            $('#dvdDetails').append(dvdsAsHTML);
 
             $('#showAllDvds').hide();
             $('#viewDvdContainer').show();
@@ -37,6 +53,14 @@ function fetchSearchResults(category, searchTerm) {
 
 }
 
+
+function clearCreateDvdForm() {
+    $('#create-title').val('');
+    $('#create-year').val('');
+    $('#create-director').val('');
+    $('#create-rating').val('g');
+    $('#create-note').val('');
+}
 
 $(document).ready(function () {
     //hide the add form
@@ -63,32 +87,10 @@ $(document).ready(function () {
         if (!validateSearchInput(category, searchTerm)) {
             return false;
         }
+        fetchSearchResults(category, searchTerm);
 
-        var urlForApi = "https://tsg-dvds.herokuapp.com/dvds/" + category + "/" + searchTerm;
-
-        $.ajax({
-            type: 'GET',
-            url: urlForApi,
-            success: function (data) {
-                alert(data[0]);
-                $('#viewDvdTitle').html(data.title);
-                $('#viewDvdYear').html(data.releaseYear);
-                $('#viewDvdDirector').html(data.director);
-                $('#viewDvdRating').html(data.rating);
-                $('#viewDvdNotes').html(data.notes);
-
-
-                $('#showAllDvds').hide();
-                $('#viewDvdContainer').show();
-            },
-            error: function () {
-                $('#errors-show-all-table')
-                    .append($('<li>')
-                        .attr({class: 'list-group-item list-group-item-danger'})
-                        .text('Error: That Dvd could not be found.'));
-            }
-        });
-
+        $('#category-selection').val('Select Category');
+        $('#search-input').val('');
 
     });
 
@@ -97,13 +99,58 @@ $(document).ready(function () {
         $('#showAllDvds').show();
     })
 
-    //how do you check to see the value of the select box?
 
     //on click of the create button,
     //hide the all tables form
     //show the add form
+
+    $('#create-dvd-button').click(function (event) {
+        $('#showAllDvds').hide();
+        $('#createDvd').show();
+    });
+
     //on click of the cancel button, empty values of all inputs and hide the form, and show the alldvds table
+    $('#create-cancel-button').click(function () {
+
+        clearCreateDvdForm();
+
+        $('#createDvd').hide();
+
+        $('#showAllDvds').show();
+    });
     //on click of the create dvd button, run ajax call to add to server.
+    $('#create-create-dvd-button').click(function (event) {
+
+        $.ajax({
+            type: 'POST',
+            url: 'https://tsg-dvds.herokuapp.com/dvd',
+            data: JSON.stringify({
+                title: $('#create-title').val(),
+                releaseYear: $('#create-year').val(),
+                director: $('#create-director').val(),
+                rating: $('#create-rating').val(),
+                notes: $('#create-note').val()
+            }),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            'dataType': 'json',
+            success: function () {
+                $('#errors-create-dvds-form').empty();
+                clearCreateDvdForm();
+                $('#createDvd').hide();
+                $('#showAllDvds').show();
+            },
+            error: function () {
+                $('#errors-create-dvds-form')
+                    .append($('<li>')
+                        .attr({class: 'list-group-item list-group-item-danger'})
+                        .text('Error calling web service. Please try again later.'));
+            }
+        })
+    });
+
     //after adding to the server, add the movie to the table and load the table. show the table of all dvds again.
 
     //Q: is there any kind of validation that needs to be ran on the individual entries of the create dvd form?

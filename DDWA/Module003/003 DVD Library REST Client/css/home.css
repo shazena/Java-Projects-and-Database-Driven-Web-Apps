@@ -2,7 +2,7 @@ body, table {
     margin-top: 30px;
 }
 
-#all-create-form-inputs, #all-edit-form-inputs, #dvdDetails {
+#all-create-form-inputs, #all-edit-form-inputs, .dvdDetailsExceptTitle {
     display: grid;
     grid-template-columns: 20% 80%;
     width: 70%;

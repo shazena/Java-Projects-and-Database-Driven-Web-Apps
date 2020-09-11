@@ -166,7 +166,8 @@
                     <textarea class = "form-control"
                               id = "create-note"
                               name = "create-note"
-                              rows = "5">Enter Note</textarea>
+                              placeholder="Enter Note"
+                              rows = "5"></textarea>
 
                 </div>
                 <!-- Buttons -->
@@ -273,20 +274,15 @@
 
     <div class = "container" id = "viewDvdContainer">
 
-        <h1 id = "viewDvdTitle"></h1>
-
-        <hr/>
-
+        <!----------------errorMessage view dvd DIV-------------------->
+        <div class = "errorMessages" id = "errors-view-dvd">
+            <!--                    <li class = "list-group-item list-group-item-danger">-->
+            <!--                        Error calling web service for Current Weather. Please try again later.-->
+            <!--                    </li>-->
+        </div>
+        <!----------------errorMessage view dvd DIV-------------------->
         <div id = "dvdDetails">
 
-            <p>Release Year: </p>
-            <p id = "viewDvdYear"></p>
-            <p>Director: </p>
-            <p id = "viewDvdDirector">Quentin Tarantino</p>
-            <p>Rating: </p>
-            <p id = "viewDvdRating">R</p>
-            <p>Notes: </p>
-            <p id = "viewDvdNotes">This is an awesome movie!</p>
 
         </div>
 

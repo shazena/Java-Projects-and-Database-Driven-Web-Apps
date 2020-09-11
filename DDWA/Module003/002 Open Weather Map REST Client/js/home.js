@@ -73,6 +73,8 @@ function fetchFiveDayWeather() {
         success: function (fiveDayForecast, status) {
             clearErrorMessages();
 
+            var weatherArray = fiveDayForecast.list;
+
             var degreeUnit = "";
 
             if (unitType === "imperial") {
@@ -86,9 +88,9 @@ function fetchFiveDayWeather() {
             //if counter > 4, start with today
             //if counter < 4, start with tomorrow
             var counter = 0;
-            var referenceDate = fiveDayForecast.list[counter].dt_txt;
+            var referenceDate = weatherArray[counter].dt_txt;
             for (let i = 0; i < 8; i++) {
-                if (fiveDayForecast.list[i].dt_txt.substring(0, 10) === referenceDate.substring(0, 10)) {
+                if (weatherArray[i].dt_txt.substring(0, 10) === referenceDate.substring(0, 10)) {
                     counter++;
                 }
             }
@@ -113,20 +115,20 @@ function fetchFiveDayWeather() {
                 var temporaryArrayOfHighTemperatures = [];
                 var temporaryArrayOfLowTemperatures = [];
                 for (let j = 0; j < counter; j++) {
-                    temporaryArrayOfHighTemperatures.push(fiveDayForecast.list[j].main.temp_max);
-                    temporaryArrayOfLowTemperatures.push(fiveDayForecast.list[j].main.temp_min);
+                    temporaryArrayOfHighTemperatures.push(weatherArray[j].main.temp_max);
+                    temporaryArrayOfLowTemperatures.push(weatherArray[j].main.temp_min);
                 }
                 //find the maximum of this array and add it to the main High & Low Temperature Array
                 highTempArray.push(Math.max(...temporaryArrayOfHighTemperatures));
                 lowTempArray.push(Math.min(...temporaryArrayOfLowTemperatures));
 
-                var dateConverted = new Date(fiveDayForecast.list[counter-1].dt_txt.substring(0, 10));
+                var dateConverted = new Date(weatherArray[counter-1].dt_txt.substring(0, 10));
                 var date = dateConverted.getUTCDate();
                 var monthAsString = months[dateConverted.getUTCMonth()];
                 dateArray.push(date + " " + monthAsString);
 
-                iconArray.push(fiveDayForecast.list[counter].weather[0].icon);
-                conditionArray.push(fiveDayForecast.list[counter].weather[0].main);
+                iconArray.push(weatherArray[counter].weather[0].icon);
+                conditionArray.push(weatherArray[counter].weather[0].main);
                 offset += 1;// if one day has already been selected, offset by one
 
             }
@@ -139,20 +141,20 @@ function fetchFiveDayWeather() {
                 var temporaryArrayOfLowTemperatures = [];
                 for (let m = counter; m < counter + 7; m++) {
                     //put all the highs of today in an array
-                    temporaryArrayOfHighTemperatures.push(fiveDayForecast.list[m].main.temp_max);
-                    temporaryArrayOfLowTemperatures.push(fiveDayForecast.list[m].main.temp_min);
+                    temporaryArrayOfHighTemperatures.push(weatherArray[m].main.temp_max);
+                    temporaryArrayOfLowTemperatures.push(weatherArray[m].main.temp_min);
                 }
                 //find the maximum of this array and add it to the main High & Low Temperature Array
                 highTempArray.push(Math.max(...temporaryArrayOfHighTemperatures));
                 lowTempArray.push(Math.min(...temporaryArrayOfLowTemperatures));
 
-                var dateConverted = new Date(fiveDayForecast.list[n + counter + offset].dt_txt.substring(0, 10));
+                var dateConverted = new Date(weatherArray[n + counter + offset].dt_txt.substring(0, 10));
                 var date = dateConverted.getUTCDate();
                 var monthAsString = months[dateConverted.getUTCMonth()];
                 dateArray.push(date + " " + monthAsString);
 
-                iconArray.push(fiveDayForecast.list[counter + 4].weather[0].icon);
-                conditionArray.push(fiveDayForecast.list[counter + 4].weather[0].main);
+                iconArray.push(weatherArray[counter + 4].weather[0].icon);
+                conditionArray.push(weatherArray[counter + 4].weather[0].main);
 
                 counter += 8;
             }
