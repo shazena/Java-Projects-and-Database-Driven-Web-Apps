@@ -15,13 +15,13 @@ function fetchSearchResults(category, searchTerm) {
     $.ajax({
         type: 'GET',
         URL: 'https://tsg-dvds.herokuapp.com/dvds/title/Minions',
-        success: function (dvd, status) {
-            alert(dvd[0]);
-            // $('#viewDvdTitle').html(data.title);
-            // $('#viewDvdYear').html(data.releaseYear);
-            // $('#viewDvdDirector').html(data.director);
-            // $('#viewDvdRating').html(data.rating);
-            // $('#viewDvdNotes').html(data.notes);
+        success: function (dvdInfo, status) {
+            var dvd = dvdInfo[0];
+            $('#viewDvdTitle').text(dvd.title);
+            $('#viewDvdYear').html(dvd.releaseYear);
+            $('#viewDvdDirector').html(dvd.director);
+            $('#viewDvdRating').html(dvd.rating);
+            $('#viewDvdNotes').html(dvd.notes);
 
 
             $('#showAllDvds').hide();
@@ -64,7 +64,30 @@ $(document).ready(function () {
             return false;
         }
 
-        fetchSearchResults(category, searchTerm);
+        var urlForApi = "https://tsg-dvds.herokuapp.com/dvds/" + category + "/" + searchTerm;
+
+        $.ajax({
+            type: 'GET',
+            url: urlForApi,
+            success: function (data) {
+                alert(data[0]);
+                $('#viewDvdTitle').html(data.title);
+                $('#viewDvdYear').html(data.releaseYear);
+                $('#viewDvdDirector').html(data.director);
+                $('#viewDvdRating').html(data.rating);
+                $('#viewDvdNotes').html(data.notes);
+
+
+                $('#showAllDvds').hide();
+                $('#viewDvdContainer').show();
+            },
+            error: function () {
+                $('#errors-show-all-table')
+                    .append($('<li>')
+                        .attr({class: 'list-group-item list-group-item-danger'})
+                        .text('Error: That Dvd could not be found.'));
+            }
+        });
 
 
     });
