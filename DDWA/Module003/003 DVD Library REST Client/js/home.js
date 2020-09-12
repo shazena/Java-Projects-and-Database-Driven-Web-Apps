@@ -8,7 +8,28 @@ function validateSearchInput(category, searchTerm) {
     } else return true;
 }
 
-function fetchSearchResults(category, searchTerm) {
+function validateTitleAndYear(title, year) {
+    var errorCounter = 0;
+    var errorsAsHTML = "";
+    if (!/\S/.test(title)) {
+        errorsAsHTML += '<li class="list-group-item list-group-item-danger">Please enter a title for the DVD.</li>';
+        errorCounter++;
+    }
+
+    var today = new Date();
+    var regExSequence = new RegExp("[0-9]{4}");
+
+
+    if (!regExSequence.test(year) || year.length != 4 || year > today.getFullYear()) {
+        errorsAsHTML += '<li class="list-group-item list-group-item-danger">Please enter a 4-digit year.</li>';
+        errorCounter++;
+    }
+
+    return errorsAsHTML;
+
+}
+
+function getSearchResults(category, searchTerm) {
 
     var urlForApi = "https://tsg-dvds.herokuapp.com/dvds/" + category + "/" + searchTerm;
 
@@ -26,25 +47,21 @@ function fetchSearchResults(category, searchTerm) {
                         .text('Error: No Dvds found for that search term.'));
             }
 
-            var dvdsAsHTML = "";
 
             $.each(dvdArray, function (index, dvd) {
 
-                dvdsAsHTML += '<h1>' + dvd.title + '</h1><hr/><div class="dvdDetailsExceptTitle"><p>Release Year:</p><p>';
-                dvdsAsHTML += dvd.releaseYear + '</p><p>Director:</p><p>';
-                dvdsAsHTML += dvd.director + '</p><p>Rating: </p><p>';
-                dvdsAsHTML += dvd.rating.toUpperCase() + '</p><p>Notes:</p><p>';
-                dvdsAsHTML += dvd.notes + '</p></div>';
+                var dvdsAsHTML = formatRowOfDvdTable(dvd);
+
+                $('#dvdDetails').append(dvdsAsHTML);
 
             });
 
-            $('#dvdDetails').append(dvdsAsHTML);
 
             $('#showAllDvds').hide();
             $('#viewDvdContainer').show();
         },
         error: function () {
-            $('#errors-show-all-table')
+            $('#errors-view-dvd')
                 .append($('<li>')
                     .attr({class: 'list-group-item list-group-item-danger'})
                     .text('Error: That Dvd could not be found.'));
@@ -77,7 +94,7 @@ function createDvdOnServer() {
             title: $('#create-title').val(),
             releaseYear: $('#create-year').val(),
             director: $('#create-director').val(),
-            rating: $('#create-rating').val(),
+            rating: $('#create-rating').val().toUpperCase(),
             notes: $('#create-note').val()
         }),
         headers: {
@@ -114,16 +131,18 @@ function loadAllDvds() {
             var tableBodyHTML = "";
             //for each dvd, add it to the table.
             $.each(dvdArray, function (index, dvd) {
-                tableBodyHTML += '<tr><td>';
+                tableBodyHTML += '<tr><td><a href = "#" onclick="viewThisDvd(';
+                tableBodyHTML += dvd.id;
+                tableBodyHTML += ')">';
                 tableBodyHTML += dvd.title;
-                tableBodyHTML += '</td><td>';
+                tableBodyHTML += '</a></td><td>';
                 tableBodyHTML += dvd.releaseYear;
                 tableBodyHTML += '</td><td>';
                 tableBodyHTML += dvd.director;
                 tableBodyHTML += '</td><td>';
                 tableBodyHTML += dvd.rating.toUpperCase();
                 tableBodyHTML += '</td><td><a href = "#" onclick="editDvd(';
-                tableBodyHTML += dvd.id + ')">Edit</a> | <a href = "#" onclick="deleteDvd(';
+                tableBodyHTML += dvd.id + ')">Edit</a> | <a href = "#"  data-toggle = "modal" data-target = "#deleteModal" onclick="deleteDvd(';
                 tableBodyHTML += dvd.id + ')">Delete</a></td></tr>';
 
             })
@@ -139,39 +158,89 @@ function loadAllDvds() {
     })
 }
 
+function formatRowOfDvdTable(dvd) {
+    var dvdAsHTML = "";
+    dvdAsHTML += '<h1>' + dvd.title + '</h1><hr/><div class="dvdDetailsExceptTitle"><p>Release Year:</p><p>';
+    dvdAsHTML += dvd.releaseYear + '</p><p>Director:</p><p>';
+    dvdAsHTML += dvd.director + '</p><p>Rating: </p><p>';
+    dvdAsHTML += dvd.rating.toUpperCase() + '</p><p>Notes:</p><p>';
+    dvdAsHTML += dvd.notes + '</p></div>';
+    return dvdAsHTML;
+}
+
+function viewThisDvd(id) {
+    //run ajax call to get dvd by id
+    //hide table of all dvds
+    //show the details of one dvd.
+    $.ajax({
+        type: 'GET',
+        url: 'https://tsg-dvds.herokuapp.com/dvd/' + id,
+        success: function (dvd) {
+            $('#errors-view-dvd').empty();
+            $('#dvdDetails').empty();
+
+            var dvdAsHTML = formatRowOfDvdTable(dvd);
+
+
+            $('#dvdDetails').append(dvdAsHTML);
+
+            $('#showAllDvds').hide();
+            $('#viewDvdContainer').show();
+        },
+        error: function () {
+            $('#errors-view-dvd')
+                .append($('<li>')
+                    .attr({class: 'list-group-item list-group-item-danger'})
+                    .text('Error calling web service. Try again later.'));
+        }
+    });
+}
+
 function editDvd(id) {
+    //When you click on the edit button, it will hide the all dvds table
+    //then we will run the ajax call to the server to get the item by the id number
+    //and fill in the inputs of the edit form to match the results of the call
+    //then it will show the edit form
     alert('This is the id number of that dvd ' + id);
+
+    $('#showAllDvds').hide();
+    $.ajax({
+        type: 'GET',
+        url: 'https://tsg-dvds.herokuapp.com/dvd/' + id,
+        success: function (dvd) {
+            $('#errors-edit-dvds-form').empty();
+
+            $('#dvd-title-to-edit').text(dvd.title);
+
+            $('#edit-dvd-id').val(id);
+            $('#edit-title').val(dvd.title);
+            $('#edit-year').val(dvd.releaseYear);
+            $('#edit-director').val(dvd.director);
+            $('#edit-rating').val(dvd.rating.toLowerCase());
+            $('#edit-note').val(dvd.notes);
+
+            $('#editDvd').show();
+        },
+        error: function () {
+            $('#errors-edit-dvds-form')
+                .append($('<li>')
+                    .attr({class: 'list-group-item list-group-item-danger'})
+                    .text('Error calling web service. Try again later.'));
+        }
+    })
+
+
+    //this needs to show the edit form
+    //hide the table
+    //put the id in the hidden input so it can be accessed.
 }
 
 function deleteDvd(id) {
     alert('This is the id DELETE of that dvd ' + id);
+    //bring up the modal
+    //put the hidden id in the modal
+    //////then the okay button in the modal will run the delete.
 
-}
-
-function validateTitleAndYear(title, year) {
-    var errorCounter = 0;
-    if (!/\S/.test(title)) {
-        $('#errors-create-dvds-form')
-            .append($('<li>')
-                .attr({class: 'list-group-item list-group-item-danger'})
-                .text('That title is not allowed.'));
-        errorCounter++;
-    }
-
-    var today = new Date();
-    var regExSequence = new RegExp("[0-9]{4}");
-
-
-    if (!regExSequence.test(year) || year.length != 4 || year > today.getFullYear()) {
-        $('#errors-create-dvds-form')
-            .append($('<li>')
-                .attr({class: 'list-group-item list-group-item-danger'})
-                .text('That year is not valid.'));
-        errorCounter++;
-    }
-    if (errorCounter > 0) {
-        return false;
-    } else return true;
 }
 
 $(document).ready(function () {
@@ -202,7 +271,7 @@ $(document).ready(function () {
         if (!validateSearchInput(category, searchTerm)) {
             return false;
         }
-        fetchSearchResults(category, searchTerm);
+        getSearchResults(category, searchTerm);
 
         $('#category-selection').val('Select Category');
         $('#search-input').val('');
@@ -237,7 +306,9 @@ $(document).ready(function () {
 
         var title = $('#create-title').val();
         var year = $('#create-year').val();
-        if (!validateTitleAndYear(title, year)) {
+        var validation = validateTitleAndYear(title, year);
+        if (validation != "") {
+            $('#errors-create-dvds-form').html(validation);
             return false;
         }
 
@@ -246,18 +317,75 @@ $(document).ready(function () {
 
     });
 
-    //When you click on the edit button, it will hide the all dvds table
-    //then we will run the ajax call to the server to get the item by the id number
-    //and fill in the inputs of the edit form to match the results of the call
-    //then it will show the edit form
 
     //on clicking the cancel button of the edit form, empty the values of all inputs
     //hide the edit form
     //show the all dvds table div
+    $('#edit-cancel-button').click(function () {
+        clearEditDvdForm();
+        $('#editDvd').hide();
+        $('#showAllDvds').show();
+    });
 
-    //on clicking the save changes button, run ajax call to put to server the new values
+    //on clicking the save changes button (get hidden id), run ajax call to PUT to server the new values
     //probably run whatever validation first.
-    //you will need to make sure that the user did not enter something blank for the title. Check for whitespace.
+    //you will need to make sure that the user did not enter something blank for the title. Check for whitespace!!!
+    $('#edit-save-dvd-button').click(function () {
+        var id = $('#edit-dvd-id').val();
+        var title = $('#edit-title').val();
+        var year = $('#edit-year').val();
+        var director = $('#edit-director').val();
+        var rating = $('#edit-rating').val().toUpperCase();
+        var notes = $('#edit-note').val();
+
+        var validation = validateTitleAndYear(title, year);
+
+        if (validation != "") {
+            $('#errors-edit-dvds-form').html(validation);
+            return false;
+        } else {
+
+            $.ajax({
+                type: 'PUT',
+                url: 'https://tsg-dvds.herokuapp.com/dvd/' + id,
+                data: JSON.stringify({
+                    id: id,
+                    title: title,
+                    releaseYear: year,
+                    director: director,
+                    rating: rating,
+                    notes: notes
+                }),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                'dataType': 'json',
+                success: function () {
+                    // alert('This is the id number of that dvd ' + id);
+                    // $('#errors-edit-dvds-form').empty();
+                    // clearEditDvdForm();
+                    // loadAllDvds();
+                    // $('#editDvd').hide();
+                    // $('#showAllDvds').show();
+                },
+                error: function () {
+                    $('#errors-edit-dvds-form')
+                        .append($('<li>')
+                            .attr({class: 'list-group-item list-group-item-danger'})
+                            .text('Error calling web service. Please try again later.'));
+                    return false;
+                }
+            })
+
+            $('#errors-edit-dvds-form').empty();
+            clearEditDvdForm();
+            loadAllDvds();
+            $('#editDvd').hide();
+            $('#showAllDvds').show();
+        }
+
+    });
 
     //on clicking the delete button, get the id that is "hidden" in it.
     //make the modal show up, but pass this hidden id to it.
@@ -265,29 +393,18 @@ $(document).ready(function () {
     //when you press the button in the modal, run the ajax call with the id to DELETE the dvd.
     //on finishing the call, close the modal.
 
-    // $('#exampleModal').on('show.bs.modal', function (event) {
-    //     var button = $(event.relatedTarget); // Button that triggered the modal
-    //     var recipient = button.data('whatever'); // Extract info from data-* attributes
-    //     // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    //     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    //     var idToDelete = button.data('idNumber');
-    //     var modal = $(this);
-    //     $('#idToDeleteSpace').text(recipient);
-    //     // modal.find('.modal-title').text('New message to ' + recipient);
-    //     // modal.find('.modal-body input').val(recipient);
-    //
-    //
-    // });
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var recipient = button.data('whatever'); // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var idToDelete = button.data('idNumber');
+        var modal = $(this);
+        $('#idToDeleteSpace').text(recipient);
+        // modal.find('.modal-title').text('New message to ' + recipient);
+        // modal.find('.modal-body input').val(recipient);
 
+    });
 
-    //on clicking the title of the movie
-    //hide the showAllDvds table
-    //then show the div for the oneDvd.
 
 }); /*end of the document ready function*/
-
-//error code from previous lessons:
-// $('#errorMessages')
-//     .append($('<li>')
-//         .attr({class: 'list-group-item list-group-item-danger'})
-//         .text('Error calling web service for Five Day Forecast. Please try again later.'));
