@@ -86,13 +86,13 @@
                     <th id = "edit-delete-column"><p style = "visibility: hidden; margin-bottom: 0px">Edit | Delete</p>
                     </th>
                     </thead>
-                    <tbody id = "all-dvds-body">
+                    <tbody id = "all-dvds-body"> <!--begin table body-->
                     <tr>
                         <td>The Good Movie</td>
                         <td>2004</td>
                         <td>Quentin Tarantino</td>
                         <td>R</td>
-                        <td>Edit | Delete</td>
+                        <td><a href = "#" onclick="editDvd(1)">Edit</a> | <a href = "#" onclick="deleteDvd(1)">Delete</a></td>
                     </tr>
                     <tr>
                         <td>The Good Movie</td>
@@ -108,7 +108,7 @@
                         <td>R</td>
                         <td>Edit | Delete</td>
                     </tr>
-                    </tbody>
+                    </tbody> <!--end table body-->
                 </table>
             </div>
         </div>
@@ -121,7 +121,7 @@
 
         <div class = "row">
             <!--begin form-->
-            <form class = "form-horizontal col-12">
+            <form class = "form-horizontal col-12" id = "theAddForm">
 
                 <!-- Form Name -->
                 <legend><h1>Create Dvd</h1></legend>
@@ -144,7 +144,7 @@
 
                     <!-- Text input-->
                     <label class = "col-form-label" for = "create-year">Release Year:</label>
-                    <input id = "create-year" name = "create-year" type = "text"
+                    <input id = "create-year" name = "create-year" type = "number" max = "9999"
                            placeholder = "Enter Release Year" class = "  input-md">
 
                     <!-- Text input-->
@@ -166,7 +166,7 @@
                     <textarea class = "form-control"
                               id = "create-note"
                               name = "create-note"
-                              placeholder="Enter Note"
+                              placeholder = "Enter Note"
                               rows = "5"></textarea>
 
                 </div>
@@ -222,8 +222,8 @@
 
                     <!-- Text input-->
                     <label class = "col-form-label" for = "edit-year">Release Year:</label>
-                    <input id = "edit-year" name = "edit-year" type = "text"
-                           class = "  input-md">
+                    <input id = "edit-year" name = "edit-year" type = "number" max = "9999"
+                           class = "input-md">
 
                     <!-- Text input-->
                     <label class = "col-form-label" for = "edit-director">Director:</label>

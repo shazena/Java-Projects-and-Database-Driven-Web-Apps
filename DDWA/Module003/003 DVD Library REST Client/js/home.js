@@ -53,13 +53,125 @@ function fetchSearchResults(category, searchTerm) {
 
 }
 
-
 function clearCreateDvdForm() {
     $('#create-title').val('');
     $('#create-year').val('');
     $('#create-director').val('');
     $('#create-rating').val('g');
     $('#create-note').val('');
+}
+
+function clearEditDvdForm() {
+    $('#edit-title').val('');
+    $('#edit-year').val('');
+    $('#edit-director').val('');
+    $('#edit-rating').val('g');
+    $('#edit-note').val('');
+}
+
+function createDvdOnServer() {
+    $.ajax({
+        type: 'POST',
+        url: 'https://tsg-dvds.herokuapp.com/dvd',
+        data: JSON.stringify({
+            title: $('#create-title').val(),
+            releaseYear: $('#create-year').val(),
+            director: $('#create-director').val(),
+            rating: $('#create-rating').val(),
+            notes: $('#create-note').val()
+        }),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        'dataType': 'json',
+        success: function () {
+            $('#errors-create-dvds-form').empty();
+            clearCreateDvdForm();
+            $('#createDvd').hide();
+            loadAllDvds();
+            $('#showAllDvds').show();
+        },
+        error: function () {
+            $('#errors-create-dvds-form')
+                .append($('<li>')
+                    .attr({class: 'list-group-item list-group-item-danger'})
+                    .text('Error calling web service. Please try again later.'));
+        }
+    })
+}
+
+function loadAllDvds() {
+
+    //get all dvds from the server
+    $.ajax({
+        type: 'GET',
+        url: 'https://tsg-dvds.herokuapp.com/dvds',
+        success: function (dvdArray, status) {
+
+            $('#all-dvds-body').empty();
+
+            var tableBodyHTML = "";
+            //for each dvd, add it to the table.
+            $.each(dvdArray, function (index, dvd) {
+                tableBodyHTML += '<tr><td>';
+                tableBodyHTML += dvd.title;
+                tableBodyHTML += '</td><td>';
+                tableBodyHTML += dvd.releaseYear;
+                tableBodyHTML += '</td><td>';
+                tableBodyHTML += dvd.director;
+                tableBodyHTML += '</td><td>';
+                tableBodyHTML += dvd.rating.toUpperCase();
+                tableBodyHTML += '</td><td><a href = "#" onclick="editDvd(';
+                tableBodyHTML += dvd.id + ')">Edit</a> | <a href = "#" onclick="deleteDvd(';
+                tableBodyHTML += dvd.id + ')">Delete</a></td></tr>';
+
+            })
+
+            $('#all-dvds-body').append(tableBodyHTML);
+        },
+        error: function () {
+            $('#errors-show-all-table')
+                .append($('<li>')
+                    .attr({class: 'list-group-item list-group-item-danger'})
+                    .text('Error calling Web service. Try again later.'));
+        }
+    })
+}
+
+function editDvd(id) {
+    alert('This is the id number of that dvd ' + id);
+}
+
+function deleteDvd(id) {
+    alert('This is the id DELETE of that dvd ' + id);
+
+}
+
+function validateTitleAndYear(title, year) {
+    var errorCounter = 0;
+    if (!/\S/.test(title)) {
+        $('#errors-create-dvds-form')
+            .append($('<li>')
+                .attr({class: 'list-group-item list-group-item-danger'})
+                .text('That title is not allowed.'));
+        errorCounter++;
+    }
+
+    var today = new Date();
+    var regExSequence = new RegExp("[0-9]{4}");
+
+
+    if (!regExSequence.test(year) || year.length != 4 || year > today.getFullYear()) {
+        $('#errors-create-dvds-form')
+            .append($('<li>')
+                .attr({class: 'list-group-item list-group-item-danger'})
+                .text('That year is not valid.'));
+        errorCounter++;
+    }
+    if (errorCounter > 0) {
+        return false;
+    } else return true;
 }
 
 $(document).ready(function () {
@@ -71,6 +183,9 @@ $(document).ready(function () {
     $('#editDvd').hide();
     $('#viewDvdContainer').hide();
     $('#deleteOneDvdModal').hide();
+
+    loadAllDvds();
+
     //on click of the search button, validate the inputs
     //check to see if both a search term and category have been chosen
     //if not, show the specific error
@@ -103,7 +218,6 @@ $(document).ready(function () {
     //on click of the create button,
     //hide the all tables form
     //show the add form
-
     $('#create-dvd-button').click(function (event) {
         $('#showAllDvds').hide();
         $('#createDvd').show();
@@ -111,49 +225,26 @@ $(document).ready(function () {
 
     //on click of the cancel button, empty values of all inputs and hide the form, and show the alldvds table
     $('#create-cancel-button').click(function () {
-
         clearCreateDvdForm();
-
         $('#createDvd').hide();
-
         $('#showAllDvds').show();
     });
+
     //on click of the create dvd button, run ajax call to add to server.
     $('#create-create-dvd-button').click(function (event) {
 
-        $.ajax({
-            type: 'POST',
-            url: 'https://tsg-dvds.herokuapp.com/dvd',
-            data: JSON.stringify({
-                title: $('#create-title').val(),
-                releaseYear: $('#create-year').val(),
-                director: $('#create-director').val(),
-                rating: $('#create-rating').val(),
-                notes: $('#create-note').val()
-            }),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            'dataType': 'json',
-            success: function () {
-                $('#errors-create-dvds-form').empty();
-                clearCreateDvdForm();
-                $('#createDvd').hide();
-                $('#showAllDvds').show();
-            },
-            error: function () {
-                $('#errors-create-dvds-form')
-                    .append($('<li>')
-                        .attr({class: 'list-group-item list-group-item-danger'})
-                        .text('Error calling web service. Please try again later.'));
-            }
-        })
+        $('#errors-create-dvds-form').empty();
+
+        var title = $('#create-title').val();
+        var year = $('#create-year').val();
+        if (!validateTitleAndYear(title, year)) {
+            return false;
+        }
+
+        createDvdOnServer();
+        //after adding to the server, add the movie to the table and load the table. show the table of all dvds again.
+
     });
-
-    //after adding to the server, add the movie to the table and load the table. show the table of all dvds again.
-
-    //Q: is there any kind of validation that needs to be ran on the individual entries of the create dvd form?
 
     //When you click on the edit button, it will hide the all dvds table
     //then we will run the ajax call to the server to get the item by the id number
@@ -193,7 +284,7 @@ $(document).ready(function () {
     //hide the showAllDvds table
     //then show the div for the oneDvd.
 
-});
+}); /*end of the document ready function*/
 
 //error code from previous lessons:
 // $('#errorMessages')
