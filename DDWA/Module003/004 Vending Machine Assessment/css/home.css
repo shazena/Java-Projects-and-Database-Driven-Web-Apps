@@ -1,0 +1,25 @@
+body {
+    margin-top: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#itemsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.itemToPurchase {
+    margin: 15px;
+    padding: 30px;
+    background-color: papayawhip;
+}
+
+.formContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
