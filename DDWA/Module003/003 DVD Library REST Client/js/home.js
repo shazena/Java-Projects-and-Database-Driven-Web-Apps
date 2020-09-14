@@ -34,7 +34,7 @@ function getSearchResults(category, searchTerm) {
     var urlForApi = "https://tsg-dvds.herokuapp.com/dvds/" + category + "/" + searchTerm;
 
     $.ajax({
-        type: 'GET',
+        method: 'GET',
         url: urlForApi,
         success: function (dvdArray, status) {
             $('#dvdDetails').empty();
@@ -70,15 +70,8 @@ function getSearchResults(category, searchTerm) {
 
 }
 
-function clearCreateDvdForm() {
-    $('#create-title').val('');
-    $('#create-year').val('');
-    $('#create-director').val('');
-    $('#create-rating').val('g');
-    $('#create-note').val('');
-}
-
 function clearEditDvdForm() {
+    $('#edit-dvd-id').val('');
     $('#edit-title').val('');
     $('#edit-year').val('');
     $('#edit-director').val('');
@@ -88,7 +81,7 @@ function clearEditDvdForm() {
 
 function createDvdOnServer() {
     $.ajax({
-        type: 'POST',
+        method: 'POST',
         url: 'https://tsg-dvds.herokuapp.com/dvd',
         data: JSON.stringify({
             title: $('#create-title').val(),
@@ -104,7 +97,8 @@ function createDvdOnServer() {
         'dataType': 'json',
         success: function () {
             $('#errors-create-dvds-form').empty();
-            clearCreateDvdForm();
+            let form = $('#theAddForm');
+            $(form)[0].reset();
             $('#createDvd').hide();
             loadAllDvds();
             $('#showAllDvds').show();
@@ -122,7 +116,7 @@ function loadAllDvds() {
 
     //get all dvds from the server
     $.ajax({
-        type: 'GET',
+        method: 'GET',
         url: 'https://tsg-dvds.herokuapp.com/dvds',
         success: function (dvdArray, status) {
 
@@ -142,7 +136,9 @@ function loadAllDvds() {
                 tableBodyHTML += '</td><td>';
                 tableBodyHTML += dvd.rating.toUpperCase();
                 tableBodyHTML += '</td><td><a href = "#" onclick="editDvd(';
-                tableBodyHTML += dvd.id + ')">Edit</a> | <a href = "#"  data-toggle = "modal" data-target = "#deleteModal" onclick="deleteDvd(';
+                // tableBodyHTML += dvd.id + ')">Edit</a> | <a href = "#"  data-toggle = "modal" data-target = "#deleteModal" data-dvdId="';
+                // tableBodyHTML += dvd.id + '">Delete</a></td></tr>';
+                tableBodyHTML += dvd.id + ')">Edit</a> | <a href = "#" onclick="deleteDvd(';
                 tableBodyHTML += dvd.id + ')">Delete</a></td></tr>';
 
             })
@@ -173,7 +169,7 @@ function viewThisDvd(id) {
     //hide table of all dvds
     //show the details of one dvd.
     $.ajax({
-        type: 'GET',
+        method: 'GET',
         url: 'https://tsg-dvds.herokuapp.com/dvd/' + id,
         success: function (dvd) {
             $('#errors-view-dvd').empty();
@@ -201,11 +197,10 @@ function editDvd(id) {
     //then we will run the ajax call to the server to get the item by the id number
     //and fill in the inputs of the edit form to match the results of the call
     //then it will show the edit form
-    alert('This is the id number of that dvd ' + id);
 
     $('#showAllDvds').hide();
     $.ajax({
-        type: 'GET',
+        method: 'GET',
         url: 'https://tsg-dvds.herokuapp.com/dvd/' + id,
         success: function (dvd) {
             $('#errors-edit-dvds-form').empty();
@@ -236,7 +231,8 @@ function editDvd(id) {
 }
 
 function deleteDvd(id) {
-    alert('This is the id DELETE of that dvd ' + id);
+    $('#deleteModal').modal('show');
+    $('#deleteModal').find('#delete-dvd-id').val(id);
     //bring up the modal
     //put the hidden id in the modal
     //////then the okay button in the modal will run the delete.
@@ -251,7 +247,7 @@ $(document).ready(function () {
     $('#createDvd').hide();
     $('#editDvd').hide();
     $('#viewDvdContainer').hide();
-    $('#deleteOneDvdModal').hide();
+    // $('#deleteOneDvdModal').hide();
 
     loadAllDvds();
 
@@ -293,8 +289,11 @@ $(document).ready(function () {
     });
 
     //on click of the cancel button, empty values of all inputs and hide the form, and show the alldvds table
-    $('#create-cancel-button').click(function () {
-        clearCreateDvdForm();
+    $('#create-cancel-button').click(function (e) {
+
+        let form = $('#theAddForm');
+        $(form)[0].reset();
+
         $('#createDvd').hide();
         $('#showAllDvds').show();
     });
@@ -346,7 +345,7 @@ $(document).ready(function () {
         } else {
 
             $.ajax({
-                type: 'PUT',
+                method: 'PUT',
                 url: 'https://tsg-dvds.herokuapp.com/dvd/' + id,
                 data: JSON.stringify({
                     id: id,
@@ -380,9 +379,13 @@ $(document).ready(function () {
 
             $('#errors-edit-dvds-form').empty();
             clearEditDvdForm();
-            loadAllDvds();
-            $('#editDvd').hide();
-            $('#showAllDvds').show();
+            var millisecondsToWait = 100;
+            setTimeout(function () {
+                loadAllDvds();
+                $('#editDvd').hide();
+                $('#showAllDvds').show();
+            }, millisecondsToWait);
+
         }
 
     });
@@ -393,18 +396,38 @@ $(document).ready(function () {
     //when you press the button in the modal, run the ajax call with the id to DELETE the dvd.
     //on finishing the call, close the modal.
 
-    $('#exampleModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        var recipient = button.data('whatever'); // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var idToDelete = button.data('idNumber');
-        var modal = $(this);
-        $('#idToDeleteSpace').text(recipient);
-        // modal.find('.modal-title').text('New message to ' + recipient);
-        // modal.find('.modal-body input').val(recipient);
 
-    });
+    $('#delete-yes-button').click(function (event) {
+        var id = $('#delete-dvd-id').val();
+        $.ajax({
+            method: 'DELETE',
+            url: 'https://tsg-dvds.herokuapp.com/dvd/' + id,
+            success: function () {
+                // $('#deleteModal').modal('hide');
+                // $('#deleteModal').on('hide.bs.modal', function (e) {
+                //     loadAllDvds();
+                // })
+            }
+            // ,
+            // error: function () {
+            //     $('#errors-edit-dvds-form')
+            //         .append($('<li>')
+            //             .attr({class: 'list-group-item list-group-item-danger'})
+            //             .text('Error calling web service. Please try again later.'));
+            //     return false;
+            // }
+        });
+        var millisecondsToWait = 200;
+        setTimeout(function () {
+            $('#deleteModal').modal('hide');
+            loadAllDvds();
+
+        }, millisecondsToWait);
+        // $('#deleteModal').on('hide.bs.modal', function (e) {
+        //     loadAllDvds();
+        // });
+        // loadAllDvds();
+    })
 
 
 }); /*end of the document ready function*/
