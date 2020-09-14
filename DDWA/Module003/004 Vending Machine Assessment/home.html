@@ -8,171 +8,97 @@
     <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin = "anonymous">
+    <link href = "https://fonts.googleapis.com/css2?family=VT323&display=swap" rel = "stylesheet">
     <link rel = "stylesheet" href = "css/home.css">
     <title>Vending Machine</title>
 </head>
 <body>
 
-    <h1>Vending Machine</h1>
-    <hr/>
 
     <div class = "container">
+        <h1>Vending Machine</h1>
+        <hr/>
 
         <div class = "row" style = "display: grid; grid-template-columns: 2fr 1fr;">
             <div id = "itemsContainer">
 
-                <div class = "itemToPurchase">
-                    <p class = "itemId" data-idForUser = "1" data-idForServer = "3" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice1">9</span></p>
-                </div>
-                <div class = "itemToPurchase">
-                    <p class = "itemId" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice2">9</span></p>
-                </div>
-                <div class = "itemToPurchase">
-                    <p class = "itemId" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice3">9</span></p>
-                </div>
-                <div class = "itemToPurchase">
-                    <p class = "itemId" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice4">9</span></p>
-                </div>
-                <div class = "itemToPurchase">
-                    <p class = "itemId" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice5">9</span></p>
-                </div>
-                <div class = "itemToPurchase">
-                    <p class = "itemId" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice6">9</span></p>
-                </div>
-                <div class = "itemToPurchase">
-                    <p class = "itemId" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice7">9</span></p>
-                </div>
-                <div class = "itemToPurchase">
-                    <p class = "itemId" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice8">9</span></p>
-                </div>
-                <div class = "itemToPurchase">
-                    <p class = "itemId" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice9">9</span></p>
-                </div>
-                <div class = "itemToPurchase">
-                    <p class = "itemId" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice10">9</span></p>
-                </div>
-                <div class = "itemToPurchase">
-                    <p class = "itemId" style = "text-align: left">1</p>
-                    <p class = "itemName" style = "text-align: center;">Snickers</p>
-                    <p class = "itemPrice" style = "text-align: center;">$1.85</p>
-                    <p class = "itemQuantity" style = "text-align: center;">Quantity Left: <span
-                            id = "itemPrice11">9</span></p>
-                </div>
 
             </div> <!--end of 2/3 section for items-->
 
             <div id = "formsContainer">
                 <div class = "formContainer row" id = "enterMoneyFormContainer">
 
-                    <h2 class="m-2">Total $ In</h2>
+                    <h2>Total $ In</h2>
+
                     <form id = "enterMoneyForm">
-                        <input type = "text" disabled name = "moneyInput" id = "moneyInput" class="m-3">
-                        <div class = "row" style="justify-content: center">
+                        <input type = "text" disabled name = "moneyInput" id = "moneyInput" class = "m-2">
+                        <div class = "row" style = "justify-content: center">
                             <button type = "button"
                                     name = "addDollarButton"
                                     id = "addDollarButton"
-                                    class = "btn btn-outline-secondary m-2">Add Dollar
+                                    class = "btn btn-outline-light m-2">Add Dollar
                             </button>
                             <button type = "button"
                                     name = "addQuarterButton"
                                     id = "addQuarterButton"
-                                    class = "btn btn-outline-secondary m-2">Add Quarter
+                                    class = "btn btn-outline-light m-2">Add Quarter
                             </button>
                         </div>
-                        <div class = "row" style="justify-content: center">
+                        <div class = "row" style = "justify-content: center">
                             <button type = "button"
                                     name = "addDimeButton"
                                     id = "addDimeButton"
-                                    class = "btn btn-outline-secondary m-2">Add Dime
+                                    class = "btn btn-outline-light m-2">Add Dime
                             </button>
                             <button type = "button"
                                     name = "addNickelButton"
                                     id = "addNickelButton"
-                                    class = "btn btn-outline-secondary m-2">Add Nickel
+                                    class = "btn btn-outline-light m-2">Add Nickel
                             </button>
                         </div>
                     </form>
 
 
                 </div> <!--form for entering money-->
-                <hr/>
-                <div class = "formContainer" id = "messagesFormContainer">
+                <hr class = "formDivider"/>
+                <div class = "formContainer row" id = "messagesAndPurchaseFormContainer">
 
-                    <div class = "formContainer row" id = "enterMoneyFormContainer2">
+                    <h2>Messages</h2>
+                    <form id = "messagePurchaseForm">
 
-                        <h2 class="m-2">Total # In</h2>
-                        <form id = "enterMoneyForm2">
-                            <input type = "text" disabled name = "moneyInput2" id = "moneyInput2" class="m-3">
-                            <div class = "row" style="justify-content: center">
-                                <button type = "button"
-                                        name = "addDollarButton2"
-                                        id = "addDollarButton2"
-                                        class = "btn btn-outline-secondary m-2">Add Dollar
-                                </button>
-                                <button type = "button"
-                                        name = "addQuarterButton2"
-                                        id = "addQuarterButton2"
-                                        class = "btn btn-outline-secondary m-2">Add Quarter
-                                </button>
-                            </div>
-                            <div class = "row" style="justify-content: center">
-                                <button type = "button"
-                                        name = "addDimeButton2"
-                                        id = "addDimeButton2"
-                                        class = "btn btn-outline-secondary m-2">Add Dime
-                                </button>
-                                <button type = "button"
-                                        name = "addNickelButton2"
-                                        id = "addNickelButton2"
-                                        class = "btn btn-outline-secondary m-2">Add Nickel
-                                </button>
-                            </div>
-                        </form>
+                        <div class = "form-row m-2">
+                            <input type = "text" style = "width: 100%" disabled name = "messagesDisplay"
+                                   id = "messagesDisplay" class = "">
+                        </div>
 
+                        <div class = "form-row m-3" style = "justify-content: center;">
+                            <label for = "itemIdDisplay" class = "col-form-label">Item: </label>
+                            <input type = "text" disabled name = "itemIdDisplay" id = "itemIdDisplay">
+                        </div>
 
-                </div> <!--form for messages-->
-                <hr/>
+                        <div class = "row m-2" style = "justify-content: center">
+                            <button type = "button"
+                                    name = "purchaseButton"
+                                    id = "purchaseButton"
+                                    class = "btn btn-outline-light m-2">Make Purchase
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div> <!--form for messages and Make Purchase-->
+                <hr class = "formDivider"/>
                 <div class = "formContainer" id = "changeFormContainer">
+
+                    <h2>Change</h2>
+
+                    <form id = "changeForm">
+                        <input type = "text" name = "changeOutput" id = "changeOutput" disabled style = "width: 70%">
+
+                        <button type = "button" class = "btn btn-outline-light m-3"
+                                id = "changeReturnButton">Change Return
+                        </button>
+                    </form>
 
                 </div> <!--form for change-->
 
