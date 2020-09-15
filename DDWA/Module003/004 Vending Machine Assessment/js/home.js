@@ -44,7 +44,9 @@ function updateMoney(money) {
 
 //error function for purchase
 function updateMessage(message) {
-    $('#messagesDisplay').val(message.responseJSON.message);
+    if (message != "") {
+        $('#messagesDisplay').val(message.responseJSON.message);
+    }
 }
 
 //callback function for purchase
