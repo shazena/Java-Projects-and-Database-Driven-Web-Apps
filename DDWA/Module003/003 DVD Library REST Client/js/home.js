@@ -1,3 +1,58 @@
+let ds = new DataService();
+
+function formatViewOneDvd(dvd) {
+    var dvdAsHTML = "";
+    dvdAsHTML += '<h1>' + dvd.title + '</h1><hr/><div class="dvdDetailsExceptTitle"><p>Release Year:</p><p>';
+    dvdAsHTML += dvd.releaseYear + '</p><p>Director:</p><p>';
+    dvdAsHTML += dvd.director + '</p><p>Rating: </p><p>';
+    dvdAsHTML += dvd.rating.toUpperCase() + '</p><p>Notes:</p><p>';
+    dvdAsHTML += dvd.notes + '</p></div>';
+    return dvdAsHTML;
+}
+
+
+function formatRowOfDvdTable(dvd) {
+    var rowAsString = "";
+    rowAsString += '<tr><td><a href = "#" onclick="viewThisDvd(';
+    rowAsString += dvd.id;
+    rowAsString += ')">';
+    rowAsString += dvd.title;
+    rowAsString += '</a></td><td>';
+    rowAsString += dvd.releaseYear;
+    rowAsString += '</td><td>';
+    rowAsString += dvd.director;
+    rowAsString += '</td><td>';
+    // rowAsString += dvd.rating.toUpperCase();
+    rowAsString += dvd.rating;
+    rowAsString += '</td><td><a href = "#" onclick="editDvd(';
+    // tableBodyHTML += dvd.id + ')">Edit</a> | <a href = "#"  data-toggle = "modal" data-target = "#deleteModal" data-dvdId="';
+    // tableBodyHTML += dvd.id + '">Delete</a></td></tr>';
+    rowAsString += dvd.id + ')">Edit</a> | <a href = "#" onclick="deleteDvd(';
+    rowAsString += dvd.id + ')">Delete</a></td></tr>';
+    return rowAsString;
+}
+
+function handleAllDvdsTableErrors() {
+    $('#errors-show-all-table')
+        .append($('<li>')
+            .attr({class: 'list-group-item list-group-item-danger'})
+            .text('Error calling Web service. Try again later.'));
+}
+
+function loadAllDvds(dvdArray) {
+
+    $('#all-dvds-body').empty();
+
+    var tableBodyHTML = "";
+    //for each dvd, add it to the table.
+    for (let i = 0; i < dvdArray.length; i++) {
+        const dvd = dvdArray[i];
+        $('#all-dvds-body').append(formatRowOfDvdTable(dvd));
+    }
+}
+
+
+
 function validateSearchInput(category, searchTerm) {
     if (category === null || searchTerm === "") {
         $('#errors-show-all-table')
@@ -50,7 +105,7 @@ function getSearchResults(category, searchTerm) {
 
             $.each(dvdArray, function (index, dvd) {
 
-                var dvdsAsHTML = formatRowOfDvdTable(dvd);
+                var dvdsAsHTML = formatViewOneDvd(dvd);
 
                 $('#dvdDetails').append(dvdsAsHTML);
 
@@ -94,6 +149,7 @@ function createDvdOnServer() {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
+
         'dataType': 'json',
         success: function () {
             $('#errors-create-dvds-form').empty();
@@ -112,57 +168,6 @@ function createDvdOnServer() {
     })
 }
 
-function loadAllDvds() {
-
-    //get all dvds from the server
-    $.ajax({
-        method: 'GET',
-        url: 'https://tsg-dvds.herokuapp.com/dvds',
-        success: function (dvdArray, status) {
-
-            $('#all-dvds-body').empty();
-
-            var tableBodyHTML = "";
-            //for each dvd, add it to the table.
-            $.each(dvdArray, function (index, dvd) {
-                tableBodyHTML += '<tr><td><a href = "#" onclick="viewThisDvd(';
-                tableBodyHTML += dvd.id;
-                tableBodyHTML += ')">';
-                tableBodyHTML += dvd.title;
-                tableBodyHTML += '</a></td><td>';
-                tableBodyHTML += dvd.releaseYear;
-                tableBodyHTML += '</td><td>';
-                tableBodyHTML += dvd.director;
-                tableBodyHTML += '</td><td>';
-                tableBodyHTML += dvd.rating.toUpperCase();
-                tableBodyHTML += '</td><td><a href = "#" onclick="editDvd(';
-                // tableBodyHTML += dvd.id + ')">Edit</a> | <a href = "#"  data-toggle = "modal" data-target = "#deleteModal" data-dvdId="';
-                // tableBodyHTML += dvd.id + '">Delete</a></td></tr>';
-                tableBodyHTML += dvd.id + ')">Edit</a> | <a href = "#" onclick="deleteDvd(';
-                tableBodyHTML += dvd.id + ')">Delete</a></td></tr>';
-
-            })
-
-            $('#all-dvds-body').append(tableBodyHTML);
-        },
-        error: function () {
-            $('#errors-show-all-table')
-                .append($('<li>')
-                    .attr({class: 'list-group-item list-group-item-danger'})
-                    .text('Error calling Web service. Try again later.'));
-        }
-    })
-}
-
-function formatRowOfDvdTable(dvd) {
-    var dvdAsHTML = "";
-    dvdAsHTML += '<h1>' + dvd.title + '</h1><hr/><div class="dvdDetailsExceptTitle"><p>Release Year:</p><p>';
-    dvdAsHTML += dvd.releaseYear + '</p><p>Director:</p><p>';
-    dvdAsHTML += dvd.director + '</p><p>Rating: </p><p>';
-    dvdAsHTML += dvd.rating.toUpperCase() + '</p><p>Notes:</p><p>';
-    dvdAsHTML += dvd.notes + '</p></div>';
-    return dvdAsHTML;
-}
 
 function viewThisDvd(id) {
     //run ajax call to get dvd by id
@@ -175,7 +180,7 @@ function viewThisDvd(id) {
             $('#errors-view-dvd').empty();
             $('#dvdDetails').empty();
 
-            var dvdAsHTML = formatRowOfDvdTable(dvd);
+            var dvdAsHTML = formatViewOneDvd(dvd);
 
 
             $('#dvdDetails').append(dvdAsHTML);
@@ -249,7 +254,10 @@ $(document).ready(function () {
     $('#viewDvdContainer').hide();
     // $('#deleteOneDvdModal').hide();
 
-    loadAllDvds();
+    // loadAllDvds();
+    ds.getDvds(loadAllDvds, handleAllDvdsTableErrors);
+
+
 
     //on click of the search button, validate the inputs
     //check to see if both a search term and category have been chosen
@@ -427,7 +435,7 @@ $(document).ready(function () {
         //     loadAllDvds();
         // });
         // loadAllDvds();
-    })
+    });
 
 
 }); /*end of the document ready function*/
