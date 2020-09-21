@@ -1,15 +1,30 @@
 body {
     margin-top: 30px;
+    background-color: ghostwhite;
+}
+
+body.darkMode {
     background-color: black;
+}
+
+body.darkMode #darkModeToggleIcon {
+    color: whitesmoke;
 }
 
 h1, h2 {
     text-align: center;
-    color: lightgrey;
     font-family: 'VT323', monospace;
 }
 
-hr {
+body.darkMode h1 {
+    color: lightgrey;
+}
+
+body.darkMode h2 {
+    color: lightgrey;
+}
+
+body.darkMode hr {
     border-color: darkgray;
 }
 
@@ -17,7 +32,7 @@ hr {
     width: 75%;
 }
 
-p {
+body.darkMode p {
     color: ghostwhite;
 }
 
@@ -29,11 +44,16 @@ p {
 .itemToPurchase {
     margin: 15px;
     padding: 30px;
-    background-color: dimgray;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    background-color: lightgrey;
 }
+
+body.darkMode .itemToPurchase {
+    background-color: dimgray;
+}
+
 
 .itemId {
     text-align: left
@@ -57,7 +77,7 @@ p {
     text-align: center;
 }
 
-label {
+body.darkMode label {
     color: lightgrey;
 }
 
@@ -67,9 +87,13 @@ label {
 
 input {
     text-align: center;
+}
+
+body.darkMode input {
     background-color: lightgrey;
 }
 
-input:disabled {
+body.darkMode input:disabled {
     color: black;
 }
+

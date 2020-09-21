@@ -12,10 +12,11 @@
     <link rel = "stylesheet" href = "css/home.css">
     <title>Vending Machine</title>
 </head>
-<body>
-
+<body class = "darkMode">
 
     <div class = "container">
+        <i onclick = "toggleDarkMode()" id = "darkModeToggleIcon" class = "fa fa-sun-o"
+           style = "font-size: 20px; float: right;"></i>
         <h1>Vending Machine</h1>
         <hr/>
 
@@ -74,7 +75,8 @@
 
                         <div class = "form-row m-3" style = "justify-content: center;">
                             <label for = "itemIdDisplay" class = "col-form-label">Item: </label>
-                            <input type = "text" disabled name = "itemIdDisplay" id = "itemIdDisplay" data-idforserver = "">
+                            <input type = "text" disabled name = "itemIdDisplay" id = "itemIdDisplay"
+                                   data-idforserver = "">
                         </div>
 
                         <div class = "row m-2" style = "justify-content: center">
@@ -118,7 +120,8 @@
     <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin = "anonymous"></script>
-    <script src="js/dataService.js"></script>
+    <script src = "https://use.fontawesome.com/70752389cd.js"></script>
+    <script src = "js/dataService.js"></script>
     <script src = "js/home.js"></script>
 </body>
 </html>

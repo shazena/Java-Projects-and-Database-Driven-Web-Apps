@@ -37,10 +37,6 @@ function loadAllItems(itemList) {
 // ///////////////////////////////////////////////////////////
 // PAGE EVENT METHODS
 
-//method from Professor
-function updateMoney(money) {
-
-}
 
 //error function for purchase
 function updateMessage(message) {
@@ -221,15 +217,20 @@ function coinStringMaker(coinArray) {
                     }
                 } else {
                     if (coinArray[i] == 1) {
-                        stringChange += coinNameArray[i] + " ";
+                        stringChange += coinNameArray[i] + ", ";
                     } else {
-                        stringChange += coinNameArray[i] + "s ";
+                        stringChange += coinNameArray[i] + "s, ";
                     }
                 }
             }
+
         }
     }
 
+    if (stringChange.charAt(stringChange.length - 2) === ",") {
+        console.log('whoop whoop!');
+        stringChange = stringChange.slice(0, stringChange.length - 2);
+    }
     return stringChange;
 }
 
@@ -252,3 +253,15 @@ function calculateReturnedChange(money) {
     return coinStringMaker(coinArray);
 }
 
+
+function toggleDarkMode() {
+    var body = $('body');
+    body.toggleClass('darkMode');
+    var buttons = $('button');
+    buttons.toggleClass('btn-outline-light');
+    buttons.toggleClass('btn-outline-dark');
+    var toggleIcon = $('#darkModeToggleIcon');
+    toggleIcon.toggleClass('fa-moon-o');
+    toggleIcon.toggleClass('fa-sun-o');
+
+}

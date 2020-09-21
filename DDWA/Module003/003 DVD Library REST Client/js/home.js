@@ -39,18 +39,23 @@ function handleAllDvdsTableErrors() {
             .text('Error calling Web service. Try again later.'));
 }
 
+function handleViewDvdErrors() {
+    $('#errors-view-dvd')
+        .append($('<li>')
+            .attr({class: 'list-group-item list-group-item-danger'})
+            .text('Error: That Dvd could not be found.'));
+}
+
 function loadAllDvds(dvdArray) {
 
     $('#all-dvds-body').empty();
 
-    var tableBodyHTML = "";
     //for each dvd, add it to the table.
     for (let i = 0; i < dvdArray.length; i++) {
         const dvd = dvdArray[i];
         $('#all-dvds-body').append(formatRowOfDvdTable(dvd));
     }
 }
-
 
 
 function validateSearchInput(category, searchTerm) {
@@ -84,6 +89,7 @@ function validateTitleAndYear(title, year) {
 
 }
 
+
 function getSearchResults(category, searchTerm) {
 
     var urlForApi = "https://tsg-dvds.herokuapp.com/dvds/" + category + "/" + searchTerm;
@@ -103,7 +109,7 @@ function getSearchResults(category, searchTerm) {
             }
 
 
-            $.each(dvdArray, function (index, dvd) {
+            $.each(dvdArray, function (dvd) {
 
                 var dvdsAsHTML = formatViewOneDvd(dvd);
 
@@ -116,10 +122,7 @@ function getSearchResults(category, searchTerm) {
             $('#viewDvdContainer').show();
         },
         error: function () {
-            $('#errors-view-dvd')
-                .append($('<li>')
-                    .attr({class: 'list-group-item list-group-item-danger'})
-                    .text('Error: That Dvd could not be found.'));
+            handleViewDvdErrors();
         }
     });
 
@@ -254,14 +257,56 @@ $(document).ready(function () {
     $('#viewDvdContainer').hide();
     // $('#deleteOneDvdModal').hide();
 
-    // loadAllDvds();
     ds.getDvds(loadAllDvds, handleAllDvdsTableErrors);
-
 
 
     //on click of the search button, validate the inputs
     //check to see if both a search term and category have been chosen
     //if not, show the specific error
+
+    $(document).on('click', '#search-button', onClickSearchButton);
+
+    function onClickSearchButton() {
+        $('#errors-show-all-table').empty();
+        //gather inputs, send to validation function
+        //if true, continue, if false, return false to end this process.
+        var category = $('#category-selection').val();
+        var searchTerm = $('#search-input').val();
+
+        //validation for search inputs
+        //if category is null, throw error
+        //if search term is a blank string, throw error.
+        if (!validateSearchInput(category, searchTerm)) {
+            return false;
+        }
+
+        ds.getDvdBySearchTerm(category, searchTerm,function (){
+            $('#dvdDetails').empty();
+            $('#errors-view-dvd').empty();
+
+            if (dvdArray.length === 0) {
+                $('#errors-view-dvd')
+                    .append($('<li>')
+                        .attr({class: 'list-group-item list-group-item-danger'})
+                        .text('Error: No Dvds found for that search term.'));
+            }
+
+
+            $.each(dvdArray, function (dvd) {
+
+                var dvdsAsHTML = formatViewOneDvd(dvd);
+
+                $('#dvdDetails').append(dvdsAsHTML);
+
+            });
+
+
+            $('#showAllDvds').hide();
+            $('#viewDvdContainer').show();
+        }, handleViewDvdErrors)
+    }
+
+
     $('#search-button').click(function (event) {
         $('#errors-show-all-table').empty();
         //gather inputs, send to validation function
