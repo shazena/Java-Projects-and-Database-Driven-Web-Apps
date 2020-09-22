@@ -8,7 +8,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-        <title>TODO Insert Title Here</title>
+        <title>Course Manager - Edit Course</title>
     </head>
     <body>
         <!-- Main Body of Page -->
@@ -38,17 +38,26 @@
                         <div class="form-group row">
                             <label for="name" class="col-3 col-form-label">Name</label>
                             <div class="col-9">
-                                <input type="text" name="name" id="name" class="form-control"
-                                       th:value="${course.name}"/>
+                                <input type="text" name="name" id="name" class="form-control" 
+                                       th:value="${course.name}" />
+                                <div th:if="${#fields.hasErrors('course.name')}">
+                                    <p th:each="error : ${#fields.errors('course.name')}" 
+                                       class="alert alert-danger" th:text="${error}">
+                                        Bad name </p>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="description" class="col-3 col-form-label">
                                 Description</label>
                             <div class="col-9">
-                                <input type="text" name="description" 
-                                       id="description" class="form-control"
+                                <input type="text" name="description" id="description" class="form-control"
                                        th:value="${course.description}"/>
+                                <div th:if="${#fields.hasErrors('course.description')}">
+                                    <p th:each="error : ${#fields.errors('course.description')}"
+                                       class="alert alert-danger" th:text="${error}">
+                                        Bad description</p>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -67,15 +76,18 @@
                         <div class="form-group row">
                             <label for="students" class="col-3 col-form-label">Students</label>
                             <div class="col-9">
-                                <select multiple id="students" name="studentId" 
-                                        class="form-control">
+                                <select multiple id="students" name="studentId" class="form-control">
                                     <option th:each="student : ${students}" 
                                             th:value="${student.id}" 
-                                            th:text="${student.firstName + ' ' 
-                                            + student.lastName}"
+                                            th:text="${student.firstName + ' ' + student.lastName}"
                                             th:selected="${course.students.contains(student)}">
                                         Student Name</option>
                                 </select>
+                                <div th:if="${#fields.hasErrors('course.students')}">
+                                    <p th:each="error : ${#fields.errors('course.students')}" 
+                                       class="alert alert-danger" th:text="${error}"> 
+                                        Bad student </p>
+                                </div>
                             </div>
                         </div>
                         <input type="hidden" name="id" th:value="${course.id}"/>
