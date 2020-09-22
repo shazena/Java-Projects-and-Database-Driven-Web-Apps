@@ -1,6 +1,8 @@
 package com.skshazena.classroster.dto;
 
 import java.util.Objects;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -11,7 +13,13 @@ import java.util.Objects;
 public class Student {
 
     private int id;
+
+    @NotBlank(message = "First name must not be empty.")
+    @Size(max = 30, message = "First name must be less than 30 characters.")
     private String firstName;
+
+    @NotBlank(message = "Last name must not be empty.")
+    @Size(max = 50, message = "Last name must be less than 50 characters.")
     private String lastName;
 
     public int getId() {

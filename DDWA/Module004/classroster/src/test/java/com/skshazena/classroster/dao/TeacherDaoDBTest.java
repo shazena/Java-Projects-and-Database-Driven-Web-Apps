@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.skshazena.classroster.dao;
 
 import com.skshazena.classroster.dto.Course;
@@ -10,12 +5,12 @@ import com.skshazena.classroster.dto.Student;
 import com.skshazena.classroster.dto.Teacher;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -41,15 +36,15 @@ public class TeacherDaoDBTest {
     public TeacherDaoDBTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
         List<Teacher> teachers = teacherDao.getAllTeachers();
         for (Teacher teacher : teachers) {
@@ -67,7 +62,7 @@ public class TeacherDaoDBTest {
         }
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 

@@ -10,12 +10,11 @@ import com.skshazena.classroster.dto.Student;
 import com.skshazena.classroster.dto.Teacher;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+//import org.junit.Test;
+//import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -41,15 +40,15 @@ public class StudentDaoDBTest {
     public StudentDaoDBTest() {
     }
 
-    @BeforeClass
-    public static void setUpClass() {
-    }
+//    @BeforeClass
+//    public static void setUpClass() {
+//    }
+//
+//    @AfterClass
+//    public static void tearDownClass() {
+//    }
 
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
-    @Before
+   @BeforeEach
     public void setUp() {
         List<Teacher> teachers = teacherDao.getAllTeachers();
         for (Teacher teacher : teachers) {
@@ -66,10 +65,10 @@ public class StudentDaoDBTest {
             courseDao.deleteCourseById(course.getId());
         }
     }
-
-    @After
-    public void tearDown() {
-    }
+//
+//    @After
+//    public void tearDown() {
+//    }
 
     @Test
     public void testAddAndGetStudent() {
