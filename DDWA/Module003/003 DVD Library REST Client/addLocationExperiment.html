@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta http-equiv = "content-type" content = "text/html; charset=UTF-8">
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Superhero Sighting Tracker</title>
+    <!-- Bootstrap core CSS -->
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin = "anonymous">
+    <link rel = "stylesheet" href = "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity = "sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin = ""/>
+    <!-- Custom styles for this template -->
+    <link href = "css/dashboard.css" rel = "stylesheet">
+    <link href = "css/superheroSightingsStyles.css" rel = "stylesheet">
+
+
+    <style>
+        .sidebar {
+            /*Each page will get a different image for the sidebar. Change the image in the URL property below*/
+            background-image: url(/images/LocationsA.jpg);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 50%;
+        }
+    </style>
+
+</head>
+
+<!--    INSTRUCTIONS:
+    1. In the sidebar, change the span class to "currentPageLink" so that the current page is underlined.
+    2. Don't forget to update the image in the CSS above to be for the correct page!
+    3. For the table name, replace the contents of the specified h2.
+    4. For the form header, replace the contents of the specified h2 with class "formHeader".
+    5. The following is a template of one item in a form. col-sizes are already fixed.
+    <div class="form-group row">
+        <label for="name" class="col-3 col-form-label">Name</label>
+        <div class="col-9">
+            <input type="text" name="name" id="name" class="form-control">
+        </div>
+    </div>
+-->
+
+
+<body>
+    <nav class = "navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class = "navbar-brand col-sm-3 col-md-2 mr-0" href = "/">Superhero Tracker</a>
+    </nav>
+
+    <div class = "container-fluid">
+        <div class = "row">
+            <nav class = "col-md-2 d-none d-md-block bg-light sidebar">
+                <div class = "sidebar-sticky">
+                    <ul class = "nav flex-column">
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "superheroes">
+                                <span class = "">Superheroes</span>
+                            </a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "powers">
+                                <span class = "">Powers</span>
+                            </a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "locations">
+                                <span class = "currentPageLink">Locations</span>
+                            </a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "organizations">
+                                <span class = "">Organizations</span>
+                            </a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "sightings">
+                                <span class = "">Sightings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> <!-- end sidebar -->
+
+            <main role = "main" class = "col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class = "content" style = "display: grid; grid-template-columns: 2fr 1fr;">
+
+                    <div class = "left text-center m-3">
+
+                        <!--TABLE HEADING BEGIN-->
+
+                        <h2>Locations</h2>
+
+                        <!--TABLE HEADING END-->
+
+                        <!--START OF TABLE-->
+
+                        <table class = "table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Zip</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><a href = "locationDetails?id=1"><span>Cobblestone Ale House</span></a></td>
+                                <td>400 1st St</td>
+                                <td>Liverpool</td>
+                                <td>NY</td>
+                                <td>13088</td>
+                                <td><a href = "/locationEdit?id=1">Edit</a></td>
+                                <td><a href = "/locationDelete?id=1">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href = "locationDetails?id=2"><span>The International Museum of World War II</span></a>
+                                </td>
+                                <td>8 Mercer Rd</td>
+                                <td>Natick</td>
+                                <td>MA</td>
+                                <td>01760</td>
+                                <td><a href = "/locationEdit?id=2">Edit</a></td>
+                                <td><a href = "/locationDelete?id=2">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href = "locationDetails?id=3"><span>Barnes and Noble</span></a></td>
+                                <td>267 7th Ave</td>
+                                <td>Brooklyn</td>
+                                <td>NY</td>
+                                <td>11215</td>
+                                <td><a href = "/locationEdit?id=3">Edit</a></td>
+                                <td><a href = "/locationDelete?id=3">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href = "locationDetails?id=4"><span>Go Get Em Tiger Coffee Shop</span></a></td>
+                                <td>230 N Larchmont Blvd</td>
+                                <td>Los Angeles</td>
+                                <td>CA</td>
+                                <td>90004</td>
+                                <td><a href = "/locationEdit?id=4">Edit</a></td>
+                                <td><a href = "/locationDelete?id=4">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href = "locationDetails?id=5"><span>Shenanigans Night Club</span></a></td>
+                                <td>820 34th St N</td>
+                                <td>Texas City</td>
+                                <td>TX</td>
+                                <td>77590</td>
+                                <td><a href = "/locationEdit?id=5">Edit</a></td>
+                                <td><a href = "/locationDelete?id=5">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href = "locationDetails?id=6"><span>Connecticut Air &amp; Space Center</span></a>
+                                </td>
+                                <td>550 Main St</td>
+                                <td>Stratford</td>
+                                <td>CT</td>
+                                <td>06615</td>
+                                <td><a href = "/locationEdit?id=6">Edit</a></td>
+                                <td><a href = "/locationDelete?id=6">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href = "locationDetails?id=7"><span>Labcorp</span></a></td>
+                                <td>406 Carriage Dr</td>
+                                <td>Beckley</td>
+                                <td>WV</td>
+                                <td>25801</td>
+                                <td><a href = "/locationEdit?id=7">Edit</a></td>
+                                <td><a href = "/locationDelete?id=7">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href = "locationDetails?id=8"><span>Shazena Khan</span></a></td>
+                                <td>14321 Hoover Ave</td>
+                                <td>Briarwood</td>
+                                <td>NY</td>
+                                <td>11435</td>
+                                <td><a href = "/locationEdit?id=8">Edit</a></td>
+                                <td><a href = "/locationDelete?id=8">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href = "locationDetails?id=9"><span>Shazena Khan</span></a></td>
+                                <td>14321 Hoover Ave</td>
+                                <td>Briarwood</td>
+                                <td>NY</td>
+                                <td>11435</td>
+                                <td><a href = "/locationEdit?id=9">Edit</a></td>
+                                <td><a href = "/locationDelete?id=9">Delete</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <!--END OF TABLE-->
+                    </div>
+                    <div class = "right text-center m-3">
+
+                        <!--FORM HEADER START-->
+
+                        <h2 class = "formHeader">Add Location</h2>
+
+                        <!--FORM HEADER END-->
+
+
+                        <!--BEGIN ADD FORM-->
+
+                        <form action = "addLocation" method = "POST">
+
+                            <div class = "form-group row">
+                                <label for = "locationName" class = "col-3 col-form-label">Name</label>
+                                <div class = "col-9">
+                                    <input type = "text" name = "locationName" id = "locationName"
+                                           class = "form-control" required>
+                                </div>
+                            </div>
+
+                            <div class = "form-group row">
+                                <label for = "address" class = "col-3 col-form-label">
+                                    Address</label>
+                                <div class = "col-9">
+                                    <input type = "text" name = "address" id = "address" class = "form-control"
+                                           required>
+                                </div>
+                            </div>
+                            <div class = "form-group row">
+                                <label for = "city" class = "col-3 col-form-label">
+                                    City</label>
+                                <div class = "col-9">
+                                    <input type = "text" name = "city" id = "city" class = "form-control" required>
+                                </div>
+                            </div>
+
+                            <div class = "form-group row">
+                                <label for = "state" class = "col-3 col-form-label">State Abbr.</label>
+                                <div class = "col-9">
+                                    <input type = "text" name = "state" id = "state" class = "form-control"
+                                           maxlength = "2" minlength = "2" required>
+                                </div>
+                            </div>
+                            <div class = "form-group row">
+                                <label for = "zip" class = "col-3 col-form-label">Zip</label>
+                                <div class = "col-9">
+                                    <input ] name = "zip" type = "number" min = "0" max = "99999" id = "zip"
+                                           class = "form-control" required>
+                                </div>
+                            </div>
+                            <div class = "form-group row">
+                                <label for = "description" class = "col-3 col-form-label">Description</label>
+                                <div class = "col-9">
+                                    <textarea name = "description" id = "description" class = "form-control"
+                                              required></textarea>
+                                </div>
+                            </div>
+                            <!--END OF MAIN FORM INPUTS-->
+                            <!--BEGIN MODAL-->
+
+                            <div class = "modal fade" id = "locationConfirmationModal" tabindex = "-1" role = "dialog"
+                                 aria-labelledby = "locationConfirmationModalLabel" aria-hidden = "true">
+                                <div class = "modal-dialog modal-lg" role = "document">
+                                    <div class = "modal-content">
+                                        <div class = "modal-header">
+                                            <h5 class = "modal-title" id = "locationConfirmationModalLabel">
+                                                Confirmation</h5>
+                                            <button type = "button" class = "close" data-dismiss = "modal"
+                                                    aria-label = "Close">
+                                                <span aria-hidden = "true">&times;</span>
+                                            </button>
+                                        </div> <!--end of modal header-->
+                                        <div class = "modal-body">
+                                            <div class = "row">
+                                                <!--<input name = "delete-dvd-id" id = "delete-dvd-id" type = "hidden">-->
+                                                <p>Please confirm the location on the map</p>
+                                            </div>
+                                            <div class = "row" id = "map" style = "height: 400px;"></div>
+
+                                            <div class = "row" style = "justify-content: center;">
+                                                <button type = "button" class = "btn btn-secondary"
+                                                        data-dismiss = "modal">Cancel
+                                                </button>
+                                                <button type = "submit" class = "btn btn-primary mx-2"
+                                                        id = "submitButton"
+                                                        data-toggle = "modal">Confirm
+                                                </button>
+                                            </div>
+                                        </div> <!--end of modal body-->
+                                    </div> <!-- end of modal content-->
+                                </div> <!--end of modal dialogue-->
+                            </div>
+
+
+                            <!--END MODAL-->
+                            <!--BEGIN SUBMIT BUTTON FOR FORM-->
+                            <!--<button type = "submit" class = "btn btn-primary">Add Location</button>-->
+                            <input type = "hidden" id = "latitude" name = "latitude">
+                            <input type = "hidden" id = "longitude" name = "longitude">
+                            <button type = "button" class = "btn btn-primary" onclick = "showConfirmationModal()">
+                                Confirm Location
+                            </button>
+                        </form>
+
+                        <!-- END OF FORM -->
+                    </div>
+                </div>
+
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript =============== -->
+    <script src = "https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity = "sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin = "anonymous"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin = "anonymous"></script>
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin = "anonymous"></script>
+    <!-- Leaflet JS -->
+    <script src = "https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity = "sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin = ""></script>
+    <script>
+
+
+        for (const arrayKey in array) {
+            
+        }        
+        
+
+        function makeCallGetLatitudeandLongitude() {
+            var locationName = document.getElementById("locationName").value;
+            var address = document.getElementById("address").value;
+            var city = document.getElementById("city").value;
+            var state = document.getElementById("state").value;
+            var zip = document.getElementById("zip").value;
+            var country = "USA";
+
+            var urlForApi = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + address + " " + city + " " + state + " " + zip + " " + country + ".json?access_token=pk.eyJ1Ijoic2hhemVuYSIsImEiOiJja2ZpeGhicnowNXBkMzVtcWo1bnBsNzdwIn0.0PQfe_ZktBVA1Vr6jUqt-w&cachebuster=1602054407321&autocomplete=false&country=us&limit=1";
+
+            $.ajax({
+                method: 'GET',
+                url: urlForApi,
+                success: function (location, status) {
+                    //getLatitude
+                    //getLongitude
+                    //set at center, zoom to 12 or something
+                    //use latitude and longitude for marker. Add LocationName that they enter to be on the marker.
+                    // alert(status);
+                    var coordinateHolder = location.features[0].geometry.coordinates;
+
+                    var longitude = coordinateHolder[0];
+                    var latitude = coordinateHolder[1];
+
+                    document.getElementById("longitude").value = longitude;
+                    document.getElementById("latitude").value = latitude;
+
+
+                    var mymap = L.map('map').setView([latitude, longitude], 18);
+
+                    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hhemVuYSIsImEiOiJja2ZpeGhicnowNXBkMzVtcWo1bnBsNzdwIn0.0PQfe_ZktBVA1Vr6jUqt-w', {
+                        maxZoom: 18,
+                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                        id: 'mapbox/streets-v11',
+                        // tileSize: 512,
+                        // zoomOffset: -1
+                    }).addTo(mymap);
+
+
+                    L.marker([latitude, longitude]).addTo(mymap).bindPopup(locationName).openPopup();
+                    $('#locationConfirmationModal').modal('show');
+                    $('#locationConfirmationModal').on('shown.bs.modal', function () {
+                        mymap.invalidateSize();
+                    });
+
+
+                },
+                error: function () {
+                    alert("something went wrong...");
+                }
+            });
+        }
+
+
+        function showConfirmationModal() {
+            makeCallGetLatitudeandLongitude();
+            $('#locationConfirmationModal').modal('show');
+        }
+
+
+        // var mymap = L.map('map').setView([40.683173, -98.071907], 4);
+        //
+        // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hhemVuYSIsImEiOiJja2ZpeGhicnowNXBkMzVtcWo1bnBsNzdwIn0.0PQfe_ZktBVA1Vr6jUqt-w', {
+        //     maxZoom: 18,
+        //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        //             '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        //             'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        //     id: 'mapbox/streets-v11',
+        //     // tileSize: 512,
+        //     // zoomOffset: -1
+        // }).addTo(mymap);
+        //
+        // L.marker([40.700273, -73.902810]).addTo(mymap);
+    </script>
+
+</body>
+
+</html>

@@ -24,6 +24,18 @@ public class Teacher {
 
     @Size(max = 50, message = "Specialty must be less than 50 characters")
     private String specialty;
+    
+    private String photoFileName;
+    
+    
+    public String getPhotoFileName() {
+        return photoFileName;
+    }
+
+    public void setPhotoFileName(String photoFileName) {
+        this.photoFileName = photoFileName;
+    }
+    
 
     public int getId() {
         return id;
@@ -98,5 +110,6 @@ public class Teacher {
     public String toString() {
         return "Teacher{" + "id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", specialty=" + specialty + '}';
     }
+
 
 }

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport"
+          content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin = "anonymous">
+    <link rel = "stylesheet" href = "css/home.css">
+    <title>Dvd Library Client</title>
+</head>
+<body>
+    <div class = "container">
+
+        <div class = "container" id = "showAllDvds">
+
+            <!--------begin SEARCH form-------->
+            <form style = "display: grid; grid-template-columns: 1fr 6fr;">
+                <!-- Button -->
+                <div style = "grid-column: span 1;">
+                    <label class = "col-form-label sr-only" for = "create-dvd-button">Create Dvd</label>
+                    <button id = "create-dvd-button"
+                            name = "create-dvd-button"
+                            type = "button"
+                            class = "btn btn-primary">
+                        Create Dvd
+                    </button>
+                </div>
+
+
+                <!-- Button -->
+                <div style = "grid-column: 2/3; display: flex; justify-content: flex-end; align-items: center;">
+                    <label class = "col-form-label sr-only" for = "search-button">Search</label>
+                    <button id = "search-button"
+                            name = "search-button"
+                            type = "button"
+                            class = "btn btn-primary">
+                        Search
+                    </button>
+
+                    <!-- Select Basic -->
+                    <label class = "col-form-label sr-only" for = "category-selection">Category</label>
+                    <select id = "category-selection"
+                            name = "category-selection"
+                            class = "mx-3"
+                            required>
+                        <option disabled selected>Select Category</option>
+                        <option value = "title">Title</option>
+                        <option value = "year">Release Year</option>
+                        <option value = "director">Director</option>
+                        <option value = "rating">Rating</option>
+                    </select>
+
+                    <!-- Search input-->
+                    <label class = "col-form-label sr-only" for = "search-input">Search</label>
+                    <input id = "search-input"
+                           name = "search-input"
+                           type = "text"
+                           placeholder = "Search Term"
+                           class = "input-md"
+                           required/>
+                </div>
+            </form>
+            <!-----------end SEARCH form-------------->
+
+            <hr/>
+
+            <!----------------errorMessage show all DIV-------------------->
+            <div class = "errorMessages" id = "errors-show-all-table">
+                <!--                <li class = "list-group-item list-group-item-danger">-->
+                <!--                    Error calling web service for Current Weather. Please try again later.-->
+                <!--                </li>-->
+            </div>
+            <!----------------errorMessage show all END-------------------->
+
+            <div class = "row"></div>
+            <div class = "col">
+                <table id = "all-dvds-table" class = "table text-center table-striped table-bordered">
+                    <thead class = "thead-light">
+                    <th>Title</th>
+                    <th>Release Date</th>
+                    <th>Director</th>
+                    <th>Rating</th>
+                    <th id = "edit-delete-column"><p style = "visibility: hidden; margin-bottom: 0px">Edit | Delete</p>
+                    </th>
+                    </thead>
+                    <tbody id = "all-dvds-body"> <!--begin table body-->
+                    <tr>
+                        <td>The Good Movie</td>
+                        <td>2004</td>
+                        <td>Quentin Tarantino</td>
+                        <td>R</td>
+                        <td><a href = "#" onclick="editDvd(1)">Edit</a> | <a href = "#" onclick="deleteDvd(1)">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>The Good Movie</td>
+                        <td>2004</td>
+                        <td>Quentin Tarantino</td>
+                        <td>R</td>
+                        <td>Edit | Delete</td>
+                    </tr>
+                    <tr>
+                        <td>The Good Movie</td>
+                        <td>2004</td>
+                        <td>Quentin Tarantino</td>
+                        <td>R</td>
+                        <td>Edit | Delete</td>
+                    </tr>
+                    </tbody> <!--end table body-->
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- end of show All Dvds div-->
+
+           <!-- above - showAllDvds ----------------- below - createDvd -->
+
+    <div class = "container add-edit-forms" id = "createDvd">
+
+        <div class = "row">
+            <!--begin form-->
+            <form class = "form-horizontal col-12" id = "theAddForm">
+
+                <!-- Form Name -->
+                <legend><h1>Create Dvd</h1></legend>
+
+                <hr/>
+                <!----------------errorMessage create dvd DIV-------------------->
+                <div class = "errorMessages" id = "errors-create-dvds-form">
+                    <!--                    <li class = "list-group-item list-group-item-danger">-->
+                    <!--                        Error calling web service for Current Weather. Please try again later.-->
+                    <!--                    </li>-->
+                </div>
+                <!----------------errorMessage create dvd DIV-------------------->
+
+
+                <div id = "all-create-form-inputs">
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "create-title">Dvd Title: </label>
+                    <input id = "create-title" name = "create-title" type = "text" placeholder = "Enter Title"
+                           class = "input-md" required = "">
+
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "create-year">Release Year:</label>
+                    <input id = "create-year" name = "create-year" type = "number" max = "9999"
+                           placeholder = "Enter Release Year" class = "  input-md">
+
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "create-director">Director:</label>
+                    <input id = "create-director" name = "create-director" type = "text"
+                           placeholder = "Enter Director" class = " ">
+
+                    <!-- Select Basic -->
+                    <label class = "col-form-label" for = "create-rating">Rating:</label>
+                    <select id = "create-rating" name = "create-rating" style = "width: 20%">
+                        <option value = "g">G</option>
+                        <option value = "pg">PG</option>
+                        <option value = "pg-13">PG-13</option>
+                        <option value = "r">R</option>
+                    </select>
+
+                    <!-- Textarea -->
+                    <label class = "col-form-label" for = "create-note">Notes:</label>
+                    <textarea class = "form-control"
+                              id = "create-note"
+                              name = "create-note"
+                              placeholder = "Enter Note"
+                              rows = "5"></textarea>
+
+                </div>
+                <!-- Buttons -->
+                <div class = "form-group" style = "grid-column: span 2;">
+                    <button id = "create-cancel-button"
+                            name = "create-cancel"
+                            type = "button"
+                            class = "btn btn-primary">
+                        Cancel
+                    </button>
+                    <button id = "create-create-dvd-button"
+                            name = "create-create-dvd"
+                            type = "button"
+                            class = "btn btn-primary">
+                        Create Dvd
+                    </button>
+                </div>
+
+            </form>
+            <!--end form-->
+        </div>
+
+    </div> <!-- end of create Dvd div -->
+
+           <!-- above - createDvd ----------------- below - editDvd -->
+
+    <div class = "container add-edit-forms" id = "editDvd">
+
+
+        <div class = "row">
+            <!--begin form-->
+            <form class = "form-horizontal col-12">
+
+                <!-- Form Name -->
+                <legend><h1>Edit Dvd: <span id = "dvd-title-to-edit"></span></h1></legend>
+
+                <hr/>
+                <!----------------errorMessage edit dvd DIV-------------------->
+                <div class = "errorMessages" id = "errors-edit-dvds-form">
+                    <!--                    <li class = "list-group-item list-group-item-danger">-->
+                    <!--                        Error calling web service for Current Weather. Please try again later.-->
+                    <!--                    </li>-->
+                </div>
+                <!----------------errorMessage edit dvd DIV-------------------->
+
+                <input type = "hidden" name = "edit-dvd-id" id = "edit-dvd-id">
+
+                <div id = "all-edit-form-inputs">
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "edit-title">Dvd Title: </label>
+                    <input id = "edit-title" name = "edit-title" type = "text"
+                           class = "input-md" required = "">
+
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "edit-year">Release Year:</label>
+                    <input id = "edit-year" name = "edit-year" type = "number" max = "9999"
+                           class = "input-md">
+
+                    <!-- Text input-->
+                    <label class = "col-form-label" for = "edit-director">Director:</label>
+                    <input id = "edit-director" name = "edit-director" type = "text"
+                           class = " ">
+
+                    <!-- Select Basic -->
+                    <label class = "col-form-label" for = "edit-rating">Rating:</label>
+                    <select id = "edit-rating" name = "edit-rating" style = "width: 20%">
+                        <option value = "g">G</option>
+                        <option value = "pg">PG</option>
+                        <option value = "pg-13">PG-13</option>
+                        <option value = "r">R</option>
+                    </select>
+
+                    <!-- Textarea -->
+                    <label class = "col-form-label" for = "edit-note">Notes:</label>
+                    <textarea class = "form-control"
+                              id = "edit-note"
+                              name = "edit-note"
+                              rows = "5"></textarea>
+
+                </div>
+                <!-- Buttons -->
+                <div class = "form-group" style = "grid-column: span 2;">
+                    <button id = "edit-cancel-button"
+                            name = "edit-cancel"
+                            type = "button"
+                            class = "btn btn-primary">
+                        Cancel
+                    </button>
+                    <button id = "edit-save-dvd-button"
+                            name = "edit-save-dvd"
+                            type = "button"
+                            class = "btn btn-primary">
+                        Save Changes
+                    </button>
+                </div>
+
+            </form>
+            <!--end form-->
+        </div>
+
+
+    </div> <!-- end of edit Dvd div -->
+
+           <!-- above - editDvds ----------------- below - viewDvd -->
+
+    <div class = "container" id = "viewDvdContainer">
+
+        <!----------------errorMessage view dvd DIV-------------------->
+        <div class = "errorMessages" id = "errors-view-dvd">
+            <!--                    <li class = "list-group-item list-group-item-danger">-->
+            <!--                        Error calling web service for Current Weather. Please try again later.-->
+            <!--                    </li>-->
+        </div>
+        <!----------------errorMessage view dvd DIV-------------------->
+        <div id = "dvdDetails">
+
+
+        </div>
+
+        <button id = "viewDvdBackButton"
+                name = "viewDvdBackButton"
+                type = "button"
+                class = "btn btn-primary">Back
+        </button>
+
+
+    </div> <!-- end of view Dvd div -->
+
+           <!-- above - viewDvd ----------------- below - deleteDvdModal -->
+
+    <div class = "container" id = "deleteOneDvdModal">
+
+<!--        <button type = "button" class = "btn btn-primary" data-toggle = "modal" data-target = "#exampleModal"-->
+<!--                data-whatever = "@getbootstrap">Open modal for @getbootstrap-->
+<!--        </button>-->
+
+        <div class = "modal fade" id = "deleteModal" tabindex = "-1" role = "dialog"
+             aria-labelledby = "deleteModalLabel" aria-hidden = "true">
+            <div class = "modal-dialog" role = "document">
+                <div class = "modal-content">
+                    <div class = "modal-header">
+                        <h5 class = "modal-title" id = "deleteModalLabel">Confirmation</h5>
+                        <button type = "button" class = "close" data-dismiss = "modal" aria-label = "Close">
+                            <span aria-hidden = "true">&times;</span>
+                        </button>
+                    </div> <!--end of modal header-->
+                    <div class = "modal-body">
+                        <input name = "delete-dvd-id" id = "delete-dvd-id" type = "hidden">
+                        <p>Are you sure you want to delete this Dvd <span id = "idToDeleteSpace"></span> from your
+                           collection?</p>
+                        <button type = "button" class = "btn btn-secondary" data-dismiss = "modal">Cancel</button>
+                        <button type = "button" class = "btn btn-primary mx-2" id = "delete-yes-button" data-dismiss = "modal">Yes</button>
+                    </div> <!--end of modal body-->
+                </div> <!-- end of modal content-->
+            </div> <!--end of modal dialogue-->
+        </div>
+
+
+    </div> <!-- end of delete Dvd Modal div -->
+
+
+    </div> <!-- end of main container-->
+
+
+    <script src = "https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity = "sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin = "anonymous"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin = "anonymous"></script>
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin = "anonymous"></script>
+    <script src = "js/dataService2.js"></script>
+    <script src = "js/home3.js"></script>
+</body>
+</html>

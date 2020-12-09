@@ -56,8 +56,8 @@ public class MainController {
     @GetMapping("testConditional")
     public String testConditional(Model model) {
         model.addAttribute("truth", true);
-        model.addAttribute("theNumber", 22);
-        model.addAttribute("aString", "differentCase");
+        model.addAttribute("theNumber", 33);
+        model.addAttribute("aString", "punk");
 
         return "testConditional";
     }

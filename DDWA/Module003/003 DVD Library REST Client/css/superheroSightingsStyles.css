@@ -1,0 +1,11 @@
+.currentPageLink{
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+}
+h2.formHeader{
+    margin-bottom: 20px;
+}
+
+h2.detailsHeader{
+    border-bottom: 1px solid black;
+}

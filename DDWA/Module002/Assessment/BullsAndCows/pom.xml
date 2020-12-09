@@ -54,5 +54,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+    <name>BullsAndCowsAPI</name>
 </project>

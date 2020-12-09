@@ -42,12 +42,13 @@ public class TeacherDaoDB implements TeacherDao {
     @Override
     @Transactional
     public Teacher addTeacher(Teacher teacher) {
-        final String INSERT_TEACHER = "INSERT INTO teacher(firstName, lastName, specialty) "
-                + "VALUES(?,?,?)";
+        final String INSERT_TEACHER = "INSERT INTO teacher(firstName, lastName, specialty, photoFilename) "
+                + "VALUES(?,?,?,?)";
         jdbc.update(INSERT_TEACHER,
                 teacher.getFirstName(),
                 teacher.getLastName(),
-                teacher.getSpecialty());
+                teacher.getSpecialty(),
+                teacher.getPhotoFileName());
 
         int newId = jdbc.queryForObject("SELECT LAST_INSERT_ID()", Integer.class);
         teacher.setId(newId);
@@ -58,11 +59,12 @@ public class TeacherDaoDB implements TeacherDao {
     @Override
     public void updateTeacher(Teacher teacher) {
         final String UPDATE_TEACHER = "UPDATE teacher SET firstName = ?, lastName = ?, "
-                + "specialty = ? WHERE id = ?";
+                + "specialty = ?, photoFilename = ? WHERE id = ?";
         jdbc.update(UPDATE_TEACHER,
                 teacher.getFirstName(),
                 teacher.getLastName(),
                 teacher.getSpecialty(),
+                teacher.getPhotoFileName(),
                 teacher.getId());
 
     }
@@ -91,6 +93,7 @@ public class TeacherDaoDB implements TeacherDao {
             teacher.setFirstName(rs.getString("firstName"));
             teacher.setLastName(rs.getString("lastName"));
             teacher.setSpecialty(rs.getString("specialty"));
+            teacher.setPhotoFileName(rs.getString("photoFilename"));
 
             return teacher;
         }

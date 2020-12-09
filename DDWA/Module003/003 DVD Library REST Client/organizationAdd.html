@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th = "http://www.thymeleaf.org">
+
+<!--CHANGES IN ADD TABLE STYLING FOR ORGANIZATION!!!
+labels have class col-4 and the fields col-8
+-->
+
+<head>
+    <meta http-equiv = "content-type" content = "text/html; charset=UTF-8">
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Superhero Sighting Tracker</title>
+    <!-- Bootstrap core CSS -->
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin = "anonymous">
+    <link rel = "stylesheet" href = "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity = "sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin = ""/>
+    <!-- Custom styles for this template -->
+    <link href = "css/dashboard.css" th:href = "@{/css/dashboard.css}" rel = "stylesheet">
+    <link href = "css/superheroSightingsStyles.css" th:href = "@{/css/superheroSightingsStyles.css}"
+          rel = "stylesheet">
+
+
+    <style th:inline = "text">
+        .sidebar {
+            /*Each page will get a different image for the sidebar. Change the image in the URL property below*/
+            background-image: url([[@{/images/OrganizationsGL.jpg}]]);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 50%;
+        }
+    </style>
+
+</head>
+
+<!--    INSTRUCTIONS:
+    1. In the sidebar, change the span class to "currentPageLink" so that the current page is underlined.
+    2. Don't forget to update the image in the CSS above to be for the correct page!
+    3. For the table name, replace the contents of the specified h2.
+    4. For the form header, replace the contents of the specified h2 with class "formHeader".
+    5. The following is a template of one item in a form. col-sizes are already fixed.
+    <div class="form-group row">
+        <label for="name" class="col-3 col-form-label">Name</label>
+        <div class="col-9">
+            <input type="text" name="name" id="name" class="form-control">
+        </div>
+    </div>
+-->
+
+
+<body onload = "hideExtraFields()">
+    <nav class = "navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class = "navbar-brand col-sm-3 col-md-2 mr-0" href = "/">Superhero Tracker</a>
+    </nav>
+
+    <div class = "container-fluid">
+        <div class = "row">
+            <nav class = "col-md-2 d-none d-md-block bg-light sidebar">
+                <div class = "sidebar-sticky">
+                    <ul class = "nav flex-column">
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "superheroes">
+                                <span class = "">Superheroes</span>
+                            </a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "powers">
+                                <span class = "">Powers</span>
+                            </a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "locations">
+                                <span class = "">Locations</span>
+                            </a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "organizations">
+                                <span class = "currentPageLink">Organizations</span>
+                            </a>
+                        </li>
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "sightings">
+                                <span class = "">Sightings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> <!-- end sidebar -->
+
+            <main role = "main" class = "col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class = "content" style = "display: grid; grid-template-columns: 2fr 1fr;">
+
+                    <div class = "left text-center m-3">
+
+                        <!--TABLE HEADING BEGIN-->
+
+                        <h2>Organizations</h2>
+
+                        <!--TABLE HEADING END-->
+
+                        <!--START OF TABLE-->
+
+                        <table class = "table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone Number</th>
+                                <th>Location Name</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each = "organization : ${allOrganizations}">
+                                <td><a href = "#" th:href = "@{organizationDetails(id=${organization.orgId})}"><span
+                                        th:text = "${organization.orgName}">Organization Name</span></a></td>
+                                <td th:text = "${organization.phoneNumber}">Phone Number</td>
+                                <td th:text = "${organization.location.locationName}">Location Name</td>
+                                <td><a href = "#" th:href = "@{/organizationEdit(id=${organization.orgId})}">Edit</a>
+                                </td>
+                                <td><a href = "#"
+                                       th:href = "@{/organizationDelete(id=${organization.orgId})}">Delete</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <!--END OF TABLE-->
+                    </div>
+                    <div class = "right text-center m-3">
+
+                        <!--FORM HEADER START-->
+
+                        <h2 class = "formHeader">Add Organization</h2>
+
+                        <!--FORM HEADER END-->
+
+                        <!--BEGIN ADD FORM-->
+
+                        <form action = "addOrganization" method = "POST">
+                            <div class = "form-group row">
+                                <label for = "name" class = "col-4 col-form-label">Name</label>
+                                <div class = "col-8">
+                                    <input type = "text" name = "name" id = "name" class = "form-control"
+                                           placeholder = "">
+                                </div>
+                            </div>
+                            <div class = "form-group row">
+                                <label for = "phoneNum" class = "col-4 col-form-label">Phone</label>
+                                <div class = "col-8">
+                                    <input type = "text" name = "phoneNum" id = "phoneNum" maxlength = "14"
+                                           class = "form-control"/>
+                                </div>
+                            </div>
+
+                            <!--START SELECT LOCATION-->
+
+                            <div class = "form-group row" id = "locationExistingDiv">
+                                <label for = "locationExisting" class = "col-4 col-form-label">
+                                    Location</label>
+                                <div class = "col-8">
+                                    <select id = "locationExisting" name = "locationExisting" class = "form-control">
+                                        <option disabled selected value = "?!?">Select Location</option>
+                                        <option th:each = "location : ${locations}"
+                                                th:value = "${location.locationId}"
+                                                th:text = "${location.locationName}">
+                                            Location Name
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!--END SELECT LOCATION-->
+
+                            <button id = "locationChangeToNewLocation" type = "button"
+                                    onclick = "changeToNewLocationInput()"
+                                    class = "btn btn-outline-dark btn-sm my-2 col-12">
+                                Click here to enter a new location instead
+                            </button>
+                            <button id = "locationChangeToSelectLocation" type = "button"
+                                    onclick = "changeToSelectLocationInput()"
+                                    class = "btn btn-outline-dark btn-sm my-2 col-12">
+                                Click here to select a location instead
+                            </button>
+
+
+                            <!--START NEW LOCATION ENTRY-->
+                            <div class = "form-group row" id = "locationNameDiv">
+                                <label for = "locationName" class = "col-4 col-form-label">Location Name</label>
+                                <div class = "col-8">
+                                    <input type = "text" name = "locationName" id = "locationName"
+                                           class = "form-control">
+                                </div>
+                            </div>
+
+                            <div class = "form-group row" id = "locationAddressDiv">
+                                <label for = "address" class = "col-4 col-form-label">Address</label>
+                                <div class = "col-8">
+                                    <input type = "text" name = "address" id = "address" class = "form-control">
+                                </div>
+                            </div>
+                            <div class = "form-group row" id = "locationCityDiv">
+                                <label for = "city" class = "col-4 col-form-label">
+                                    City</label>
+                                <div class = "col-8">
+                                    <input type = "text" name = "city" id = "city" class = "form-control">
+                                </div>
+                            </div>
+
+                            <div class = "form-group row" id = "locationStateDiv">
+                                <label for = "state" class = "col-4 col-form-label">State Abbr.</label>
+                                <div class = "col-8">
+                                    <input type = "text" name = "state" id = "state" class = "form-control"
+                                           maxlength = "2" minlength = "2">
+                                </div>
+                            </div>
+                            <div class = "form-group row" id = "locationZipDiv">
+                                <label for = "zip" class = "col-4 col-form-label">Zip</label>
+                                <div class = "col-8">
+                                    <input name = "zip" type = "number" min = "0" max = "99999" id = "zip"
+                                           class = "form-control">
+                                </div>
+                            </div>
+                            <div class = "form-group row" id = "locationDescriptionDiv">
+                                <label for = "locationDescription" class = "col-4 col-form-label">Location
+                                                                                                  Description</label>
+                                <div class = "col-8">
+                                        <textarea name = "locationDescription" id = "locationDescription"
+                                                  class = "form-control"></textarea>
+                                </div>
+                            </div>
+                            <!--END NEW LOCATION ENTRY-->
+
+
+                            <div class = "form-group row">
+                                <label for = "description" class = "col-4 col-form-label">
+                                    Organization Description</label>
+                                <div class = "col-8">
+                                    <textarea name = "description" id = "description" class = "form-control"
+                                              placeholder = ""></textarea>
+                                </div>
+                            </div>
+
+                            <div class = "form-group row">
+                                <label for = "superheroes" class = "col-4 col-form-label">
+                                    Superheroes</label>
+                                <div class = "col-8">
+                                    <select multiple id = "superheroes" name = "superheroId"
+                                            class = "form-control">
+                                        <option disabled selected value = "?!?">Select Superhero</option>
+                                        <option th:each = "superhero : ${superheroes}"
+                                                th:value = "${superhero.superheroId}"
+                                                th:text = "${superhero.superheroName}">
+                                            Superhero Name
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!--BEGIN BUTTON AND HIDDEN INPUTS-->
+                            <input type = "hidden" id = "latitude" name = "latitude">
+                            <input type = "hidden" id = "longitude" name = "longitude">
+
+                            <div id = "confirmLocationGetModalButtonDiv">
+                                <button id = "confirmLocationGetModalButton" type = "button"
+                                        class = "btn btn-primary col-12"
+                                        onclick = "showConfirmationModal()">
+                                    Confirm Location to Add Organization
+                                </button>
+                            </div>
+
+                            <div id = "addOrganizationButtonDiv">
+                                <button id = "addOrganizationButton" type = "submit" name = "action" value = "add"
+                                        class = "btn btn-primary col-12">
+                                    Add Organization
+                                </button>
+                            </div>
+                            <!--END BUTTON AND HIDDEN INPUTS-->
+
+
+                            <!--BEGIN MODAL-->
+
+                            <div class = "modal fade" id = "locationConfirmationModal" tabindex = "-1" role = "dialog"
+                                 aria-labelledby = "locationConfirmationModalLabel" aria-hidden = "true">
+                                <div class = "modal-dialog modal-lg" role = "document">
+                                    <div class = "modal-content">
+                                        <div class = "modal-header">
+                                            <h5 class = "modal-title" id = "locationConfirmationModalLabel">
+                                                Confirmation</h5>
+                                            <button type = "button" class = "close" data-dismiss = "modal"
+                                                    aria-label = "Close">
+                                                <span aria-hidden = "true">&times;</span>
+                                            </button>
+                                        </div> <!--end of modal header-->
+                                        <div class = "modal-body">
+                                            <div class = "row">
+                                                <!--<input name = "delete-dvd-id" id = "delete-dvd-id" type = "hidden">-->
+                                                <p>Please confirm the location on the map</p>
+                                            </div>
+                                            <div class = "row" id = "map" style = "height: 400px;"></div>
+
+                                            <div class = "row" style = "justify-content: center;">
+                                                <button type = "button" class = "btn btn-secondary" name = "action"
+                                                        value = "cancel"
+                                                        data-dismiss = "modal">Cancel
+                                                </button>
+                                                <button type = "submit" class = "btn btn-primary mx-2"
+                                                        id = "submitButton" name = "action" value = "add"
+                                                        data-toggle = "modal">Confirm Location and Add Organization
+                                                </button>
+                                            </div>
+                                        </div> <!--end of modal body-->
+                                    </div> <!-- end of modal content-->
+                                </div> <!--end of modal dialogue-->
+                            </div>
+
+
+                            <!--END MODAL-->
+
+                        </form>
+
+                        <!-- END OF FORM -->
+                    </div>
+                </div>
+
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript =============== -->
+    <script src = "https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity = "sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin = "anonymous"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin = "anonymous"></script>
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin = "anonymous"></script>
+    <script src = "https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity = "sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin = ""></script>
+
+    <script>
+        //js for formatting the phone number as user types it
+
+        let telEl = document.querySelector('#phoneNum');
+
+        telEl.addEventListener('keyup', (e) => {
+            let val = e.target.value;
+            e.target.value = val
+                    .replace(/\D/g, '')
+                    .replace(/(\d{1,3})(\d{1,3})?(\d{1,4})?/g, function (txt, f, s, t) {
+                        if (t) {
+                            return `(${f}) ${s}-${t}`
+                        } else if (s) {
+                            return `(${f}) ${s}`
+                        } else if (f) {
+                            return `(${f})`
+                        }
+                    });
+        })
+    </script>
+
+    <script>
+        //makes Location API Calls
+        function makeCallGetLatitudeandLongitude() {
+            var locationName = document.getElementById("locationName").value;
+            var address = document.getElementById("address").value;
+            var city = document.getElementById("city").value;
+            var state = document.getElementById("state").value;
+            var zip = document.getElementById("zip").value;
+            var country = "USA";
+
+            var urlForApi = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + address + " " + city + " " + state + " " + zip + " " + country + ".json?access_token=pk.eyJ1Ijoic2hhemVuYSIsImEiOiJja2ZpeGhicnowNXBkMzVtcWo1bnBsNzdwIn0.0PQfe_ZktBVA1Vr6jUqt-w&cachebuster=1602054407321&autocomplete=false&country=us&limit=1";
+
+            $.ajax({
+                method: 'GET',
+                url: urlForApi,
+                success: function (location, status) {
+                    //getLatitude
+                    //getLongitude
+                    //set at center, zoom to 12 or something
+                    //use latitude and longitude for marker. Add LocationName that they enter to be on the marker.
+                    // alert(status);
+                    var coordinateHolder = location.features[0].geometry.coordinates;
+
+                    var longitude = coordinateHolder[0];
+                    var latitude = coordinateHolder[1];
+
+                    document.getElementById("longitude").value = longitude;
+                    document.getElementById("latitude").value = latitude;
+
+                    var mymap = L.map('map').setView([latitude, longitude], 18);
+
+                    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hhemVuYSIsImEiOiJja2ZpeGhicnowNXBkMzVtcWo1bnBsNzdwIn0.0PQfe_ZktBVA1Vr6jUqt-w', {
+                        maxZoom: 18,
+                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                        id: 'mapbox/streets-v11',
+                        // tileSize: 512,
+                        // zoomOffset: -1
+                    }).addTo(mymap);
+
+
+                    L.marker([latitude, longitude]).addTo(mymap).bindPopup(locationName).openPopup();
+                    $('#locationConfirmationModal').modal('show');
+                    $('#locationConfirmationModal').on('shown.bs.modal', function () {
+                        mymap.invalidateSize();
+                    });
+
+                },
+                error: function () {
+                    alert("something went wrong...");
+
+                }
+            });
+        }
+
+
+        function showConfirmationModal() {
+            makeCallGetLatitudeandLongitude();
+            $('#locationConfirmationModal').modal('show');
+        }
+    </script>
+    <script>
+        //For Hiding and Showing various form inputs
+
+        //individual inputs
+        var locationExistingInput = document.getElementById('locationExisting');
+        var locationNameInput = document.getElementById('locationName');
+        var locationAddressInput = document.getElementById('address');
+        var locationCityInput = document.getElementById('city');
+        var locationStateInput = document.getElementById('state');
+        var locationZipInput = document.getElementById('zip');
+        var locationDescriptionInput = document.getElementById('locationDescription');
+
+        var locationNewInputs = [locationNameInput, locationAddressInput, locationCityInput, locationStateInput, locationZipInput]
+
+        var locationExistingDiv = document.getElementById('locationExistingDiv');
+        var locationNameDiv = document.getElementById('locationNameDiv');
+        var locationAddressDiv = document.getElementById('locationAddressDiv');
+        var locationCityDiv = document.getElementById('locationCityDiv');
+        var locationStateDiv = document.getElementById('locationStateDiv');
+        var locationZipDiv = document.getElementById('locationZipDiv');
+        var locationDescriptionDiv = document.getElementById('locationDescriptionDiv');
+
+        var locationNewElements = [locationNameDiv, locationAddressDiv, locationCityDiv, locationStateDiv, locationZipDiv, locationDescriptionDiv];
+
+        //2 location buttons
+        var locationChangeToNewLocationButton = document.getElementById('locationChangeToNewLocation');
+        var locationChangeToSelectLocationButton = document.getElementById('locationChangeToSelectLocation');
+
+
+        var submitSelectedLocationButtonDiv = document.getElementById('addOrganizationButtonDiv');
+        var confirmLocationGetModalButtonDiv = document.getElementById('confirmLocationGetModalButtonDiv');
+
+        function hideExtraFields() {
+            //TODO set requirements on fields!!!
+            //set display status of items on page
+            locationChangeToSelectLocationButton.style.display = 'none';
+            confirmLocationGetModalButtonDiv.style.display = 'none';
+            manipulateNewLocationElementsDisplayStyle('none');
+
+            //set required on certain elements
+            locationExistingInput.required = true;
+
+        }
+
+        function manipulateNewLocationElementsDisplayStyle(displayStyle) {
+            for (var i = 0; i < locationNewElements.length; i++) {
+                locationNewElements[i].style.display = displayStyle;
+            }
+        }
+
+        function manipulateNewLocationElementsRequiredStatus(trueOrFalse) {
+            for (var i = 0; i < locationNewInputs.length; i++) {
+                locationNewInputs[i].required = trueOrFalse;
+            }
+        }
+
+        function changeToNewLocationInput() {
+            locationChangeToNewLocationButton.style.display = 'none';
+            locationChangeToSelectLocationButton.style.display = 'inherit';
+            locationExistingDiv.style.display = 'none';
+            submitSelectedLocationButtonDiv.style.display = 'none';
+            confirmLocationGetModalButtonDiv.style.display = 'flex';
+
+            manipulateNewLocationElementsDisplayStyle('flex');
+
+            //required fields
+            for (var i = 0; i < locationNewElements.length; i++) {
+                locationNewElements[i].required = true;
+            }
+            locationExistingInput.required = false;
+
+            //clear values of fields that were hidden
+            locationExistingInput.value = "?!?";
+
+        }
+
+        function changeToSelectLocationInput() {
+            locationChangeToNewLocationButton.style.display = 'inherit';
+            locationChangeToSelectLocationButton.style.display = 'none';
+            locationExistingDiv.style.display = 'flex';
+            manipulateNewLocationElementsDisplayStyle('none');
+            submitSelectedLocationButtonDiv.style.display = 'inherit';
+            confirmLocationGetModalButtonDiv.style.display = 'none';
+
+            //required fields
+            manipulateNewLocationElementsRequiredStatus(false);
+            locationExistingInput.required = true;
+
+            //clear values of fields that were hidden
+            for (var i = 0; i < locationNewInputs.length; i++) {
+                locationNewInputs[i].value = "";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

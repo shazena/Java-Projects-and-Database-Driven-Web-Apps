@@ -1,9 +1,12 @@
 package com.skshazena.classroster.controller;
 
 import com.skshazena.classroster.dao.CourseDao;
+import com.skshazena.classroster.dao.ImageDao;
 import com.skshazena.classroster.dao.StudentDao;
 import com.skshazena.classroster.dao.TeacherDao;
 import com.skshazena.classroster.dto.Teacher;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -16,6 +19,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  *
@@ -35,7 +40,12 @@ public class TeacherController {
     @Autowired
     CourseDao courseDao;
 
+    @Autowired
+    ImageDao imageDao;
+
     Set<ConstraintViolation<Teacher>> violations = new HashSet<>();
+
+    private final String TEACHER_UPLOAD_DIR = "Teachers";
 
     @GetMapping("teachers")
     public String displayTeachers(Model model) {
@@ -48,7 +58,10 @@ public class TeacherController {
     }
 
     @PostMapping("addTeacher")
-    public String addTeacher(HttpServletRequest request) {
+    public String addTeacher(HttpServletRequest request, @RequestParam("file") MultipartFile file) {
+
+        String fileLocation = imageDao.saveImage(file, Long.toString(LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)), TEACHER_UPLOAD_DIR);
+
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String specialty = request.getParameter("specialty");
@@ -57,6 +70,7 @@ public class TeacherController {
         teacher.setFirstName(firstName);
         teacher.setLastName(lastName);
         teacher.setSpecialty(specialty);
+        teacher.setPhotoFileName(fileLocation);
 
         Validator validate = Validation.buildDefaultValidatorFactory().getValidator();
         violations = validate.validate(teacher);

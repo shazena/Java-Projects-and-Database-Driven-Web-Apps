@@ -106,6 +106,7 @@ public class CourseDaoDB implements CourseDao {
                 course.getTeacher().getId(),
                 course.getId());
 
+        //have to do this because the courseStudent table has a reference to the course table.
         final String DELETE_COURSE_STUDENT = "DELETE FROM course_student WHERE courseId = ?";
         jdbc.update(DELETE_COURSE_STUDENT, course.getId());
         insertCourseStudent(course);
