@@ -7,7 +7,7 @@ var DataService = function () {
     self.getItems = function (callback, errorFunction) {
         $.ajax({
             method: 'GET',
-            url: 'https://tsg-vending.herokuapp.com/items',
+            url: 'http://vending.us-east-1.elasticbeanstalk.com/items',
             success: callback,
             error: errorFunction
         });
@@ -16,7 +16,7 @@ var DataService = function () {
     self.purchaseItem = function (money, itemId, callback, errorFunction) {
         $.ajax({
             method: 'POST',
-            url: 'https://tsg-vending.herokuapp.com/money/' + money + '/item/' + itemId,
+            url: 'http://vending.us-east-1.elasticbeanstalk.com/money/' + money + '/item/' + itemId,
             success: callback,
             error: errorFunction
         })
